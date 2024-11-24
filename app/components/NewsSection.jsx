@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { ChevronRight } from "lucide-react"; // Import the icon from lucide-react
+import { ChevronRight, ChevronLeft } from "lucide-react"; // Import the icons from lucide-react
 
 export default function NewsSection() {
   const [articles, setArticles] = useState([]);
@@ -28,19 +28,15 @@ export default function NewsSection() {
       .catch((error) => console.error("Error fetching data:", error));
   }, []);
 
-  useEffect(() => {
-    if (articles.length > 1) {
-      const interval = setInterval(() => {
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % articles.length);
-      }, 5000); // Slide every 5 seconds
-
-      return () => clearInterval(interval);
-    }
-  }, [articles.length]);
-
   const handleNext = () => {
     if (articles.length > 1) {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % articles.length);
+    }
+  };
+
+  const handlePrevious = () => {
+    if (articles.length > 1) {
+      setCurrentIndex((prevIndex) => (prevIndex - 1 + articles.length) % articles.length);
     }
   };
 
@@ -49,11 +45,11 @@ export default function NewsSection() {
       <h1 className="text-8xl font-black mb-16 tracking-tighter pl-8 md:pl-12">NEWS</h1>
 
       <div className="relative pl-8 md:pl-12">
-        <div className="flex gap-8 w-full overflow-hidden transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
+        <div className="flex gap-8 w-full overflow-x-auto scrollbar-thin scrollbar-thumb-gray-800 scrollbar-track-gray-200 transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
           {articles.map((article, index) => (
             <Link key={article.id} href={article.link} className="group flex-shrink-0 w-80">
               <div className="space-y-4">
-                <div className="aspect-[4/3] relative overflow-hidden">
+                <div className="aspect-[4/3] relative overflow">
                   <Image
                     src={article.image.src}
                     alt={article.image.alt || "Image description not available"}
@@ -69,9 +65,14 @@ export default function NewsSection() {
           ))}
         </div>
         {articles.length > 1 && (
-          <button onClick={handleNext} className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full hover:bg-gray-700 transition-colors duration-300">
-            <ChevronRight size={24} className="hover:scale-110 transition-transform duration-300" /> {/* Use the icon instead of text */}
-          </button>
+          <>
+            <button onClick={handlePrevious} className="hidden md:block absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full hover:bg-gray-700 transition-colors duration-300">
+              <ChevronLeft size={24} className="hover:scale-110 transition-transform duration-300" />
+            </button>
+            <button onClick={handleNext} className="hidden md:block absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full hover:bg-gray-700 transition-colors duration-300">
+              <ChevronRight size={24} className="hover:scale-110 transition-transform duration-300" />
+            </button>
+          </>
         )}
       </div>
 
@@ -98,6 +99,15 @@ export default function NewsSection() {
           .flex > :global(a) {
             width: 100%;
           }
+        }
+        .scrollbar-thin {
+          scrollbar-width: thin;
+        }
+        .scrollbar-thumb-gray-800 {
+          scrollbar-color: #2d3748 #edf2f7;
+        }
+        .scrollbar-track-gray-200 {
+          scrollbar-color: #edf2f7 #edf2f7;
         }
       `}</style>
     </div>

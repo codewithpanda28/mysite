@@ -25,11 +25,19 @@ export default function Page() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [artists, setArtists] = useState([]);
 
+  
+  const [isOpen, setIsOpen] = useState(false);
+
+  const togglePopup = () => {
+    setIsOpen(!isOpen);
+  };
+
   useEffect(() => {
     fetch("https://api.unsplash.com/photos/?client_id=jP4BDlHEIUMFbr0J2o-89wS8YB1ZQ4DB2UvnXzu1ZtU")
       .then(response => response.json())
       .then(data => {
-        const fetchedArtists = data.map(photo => ({
+        const fetchedArtists = data.map((photo, index) => ({
+          id: index, // Add a unique id for each artist
           name: photo.user.name,
           image: photo.urls.small,
           bio: photo.description || "No bio available."
@@ -44,31 +52,32 @@ export default function Page() {
       {/* Fixed header */}
   <header className="fixed top-0 md:left-[20%] w-full md:w-auto left-[1%] right-0 flex justify-between items-center p-4 z-10">
   <div className="relative mr-[10px] z-50 flex justify-center md:justify-start lg:left-auto sm:left-0">
-    <svg
-      id="b"
-      xmlns="http://www.w3.org/2000/svg"
-      width="34" 
-      height="34"
-      viewBox="0 0 79.3 79.3"
-    >
-      <polygon
-        points="79.3 0 57 0 39.7 17.4 22.3 0 0 0 0 22.3 17.4 39.7 0 57 0 79.3 22.3 79.3 39.7 62 57 79.3 79.3 79.3 79.3 57 62 39.7 79.3 22.3 79.3 0"
-        fill="currentColor"
-      ></polygon>
-    </svg>
+   <svg
+  id="b"
+  xmlns="http://www.w3.org/2000/svg"
+  width="34"
+  height="34"
+  viewBox="0 0 79.3 79.3"
+  class="transition-transform duration-300 ease-in-out hover:scale-110 hover:text-blue-500"
+>
+  <polygon
+    points="79.3 0 57 0 39.7 17.4 22.3 0 0 0 0 22.3 17.4 39.7 0 57 0 79.3 22.3 79.3 39.7 62 57 79.3 79.3 79.3 79.3 57 62 39.7 79.3 22.3 79.3 0"
+    fill="currentColor"
+  ></polygon>
+</svg>
   </div>
   <div className="flex flex-col gap-1.5">
     {/* <div className="w-6 h-0.5 bg-black"></div>
     <div className="w-6 h-0.5 bg-black"></div> */}
         {/* Hamburger Menu Trigger */}
-        <button
-        onClick={() => setIsMenuOpen(true)}
-        className="fixed top-4 right-4 z-50 flex flex-col gap-1.5 p-2"
-        aria-label="Open menu"
-      >
-        <div className="w-10 h-1 bg-black"></div>
-        <div className="w-10 h-1 bg-black"></div>
-      </button>
+      <button
+  onClick={() => setIsMenuOpen(true)}
+  className="fixed top-4 right-4 z-50 flex flex-col gap-1.5 p-2 transform transition-transform duration-300 hover:scale-105 hover:rotate-3 hover:skew-y-1"
+  aria-label="Open menu"
+>
+  <div className="w-10 h-1 bg-black transition-all duration-300 hover:bg-gray-700"></div>
+  <div className="w-10 h-1 bg-black transition-all duration-300 hover:bg-gray-700"></div>
+</button>
 
    {/* Menu Panel */}
 <div
@@ -89,13 +98,13 @@ export default function Page() {
     };
   }, [isMenuOpen])}
 
-  <div className="relative h-full p-8 flex flex-col overflow-y-auto">
-    <button
-      onClick={() => setIsMenuOpen(false)}
-      className="absolute right-4 top-4 text-white hover:opacity-75 transition-opacity font-black"
-    >
-      <X size={24} />
-    </button>
+  <div className="relative h-full p-5 flex flex-col overflow-y-auto">
+  <button
+    onClick={() => setIsMenuOpen(false)}
+    className="absolute right-4 top-4 text-white hover:opacity-75 transition-opacity font-black text-2xl hover:text-shadow-lg"
+>
+    <X size={40} />
+</button>
 
     <nav className="mt-16 flex-1">
       <ul className="space-y-0">
@@ -113,16 +122,18 @@ export default function Page() {
       <div className="mt-4 absolute bottom-24 space-x-8">
         {/* Large image on top */}
 
-<Image
-  src="https://cdn.prod.website-files.com/62f1dc4f15468ed2a2d18a29/62f44ffa01f1ea03da4355a6_logoAsset%201.svg"
-  alt="Logo"
+
+
+<img
+  src="https://cdn.prod.website-files.com/62f1dc4f15468ed2a2d18a29/62f450d6844ebd0e826a11f2_Group%201%403x.png"
+  alt="Group Image"
   width={500} // Specify the width
   height={300} // Specify the height
 />
         
         {/* 3 images below in a row */}
         <div className="grid grid-cols-3 gap-4">
-          <Image src="https://cdn.prod.website-files.com/62f1dc4f15468ed2a2d18a29/62f992528c6d84fc5d0a106e_hardwareAsset%202.svg" alt="Image 2"width={100} height={100}  />
+          <Image src="https://cdn.prod.website-files.com/62f1dc4f15468ed2a2d18a29/62f992528c6d84fc5d0a106e_hardwareAsset%202.svg" alt="Image 2" width={100} height={100}  />
           <Image src="https://cdn.prod.website-files.com/62f1dc4f15468ed2a2d18a29/62f992524d32ee50fbb1bda9_oneloveAsset%203.svg" alt="Image 3" width={100} height={100} />
           <Image src="https://cdn.prod.website-files.com/62f1dc4f15468ed2a2d18a29/62f99252a3e05d214d74b494_lnAsset%204.svg" alt="Image 4" width={100} height={100}  />
         </div>
@@ -141,12 +152,12 @@ export default function Page() {
     {/* Vertical Welcome text */}
 
   {/* Lineup Text Trigger */}
-  <button
-        onClick={() => setIsPanelOpen(true)}
-        className="fixed left-0 top-1/2 -translate-y-1/2 transform -rotate-90 bg-white text-[#6046FF] px-4 py-2 rounded-t-lg font-bold text-xl z-30 hover:scale-105 transition-transform"
-      >
-        LINEUP
-      </button>
+<button
+  onClick={() => setIsPanelOpen(true)}
+  className="fixed left-0 top-1/2 -translate-y-1/2 transform -rotate-90 bg-white text-[#6046FF] px-4 py-2 rounded-t-lg font-bold text-xl z-30 hover:scale-105 transition-transform hover:bg-[#f0f0ff] hover:text-[#3023FF] shadow-lg hover:shadow-xl"
+>
+  LINEUP
+</button>
 
       {/* Main Artist Grid Panel */}
   <div
@@ -172,7 +183,7 @@ export default function Page() {
     <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1 mt-12">
       {artists.map((artist) => (
         <button
-          key={artist.name}
+          key={artist.id} // Use the unique id as the key
           className="relative aspect-square overflow-hidden group"
           onClick={() => setSelectedArtist(artist)}
         >
@@ -258,14 +269,17 @@ export default function Page() {
 
           {/* Artist lineup */}
           <div className="container">
-         <Image
+         <img
   src="https://cdn.prod.website-files.com/62f1dc4f15468ed2a2d18a29/62f450d6844ebd0e826a11f2_Group%201%403x.png"
   loading="lazy"
   sizes="(max-width: 479px) 200px, (max-width: 767px) 300px, (max-width: 991px) 400px, 500px"
   srcSet="https://assets-global.website-files.com/62f1dc4f15468ed2a2d18a29/62f450d6844ebd0e826a11f2_Group%201%403x-p-500.png 500w, https://assets-global.website-files.com/62f1dc4f15468ed2a2d18a29/62f450d6844ebd0e826a11f2_Group%201%403x-p-800.png 800w, https://assets-global.website-files.com/62f1dc4f15468ed2a2d18a29/62f450d6844ebd0e826a11f2_Group%201%403x-p-1080.png 1080w, https://assets-global.website-files.com/62f1dc4f15468ed2a2d18a29/62f450d6844ebd0e826a11f2_Group%201%403x-p-1600.png 1600w, https://assets-global.website-files.com/62f1dc4f15468ed2a2d18a29/62f450d6844ebd0e826a11f2_Group%201%403x-p-2000.png 2000w, https://assets-global.website-files.com/62f1dc4f15468ed2a2d18a29/62f450d6844ebd0e826a11f2_Group%201%403x.png 2361w"
   alt="Festival X 2022"
+  width={500}
+  height={300}
   className="hero_logo mt-4"
   style={{ marginTop: '4rem' }}
+
 />
             <div className="text-white  mt-10">
 <div className="text-4xl md:text-6xl font-extrabold tracking-tighter">
@@ -274,86 +288,86 @@ export default function Page() {
 <div className="text-4xl md:text-6xl font-extrabold tracking-tighter">
   DON TOLIVER
 </div>
-              <div className="flex flex-wrap items-center gap-0 text-2xl font-bold mt-2 leading-none">
-                <span className="text-[#FF69B4] border border-[#ff6984] rounded-[30px] text-sm py-0 px-2">
-                  A-Z
-                </span>
-                <span>BOYS NOIZE</span>
-                <span className="text-[#FF69B4]">•</span>
-                <span>GREEN VELVET</span>
-                <span className="text-[#FF69B4]">•</span>
-                <span>JOHN SUMMIT</span>
-              </div>
-              <div className="flex flex-wrap items-center gap-0 text-2xl font-bold leading-none">
-                <span>LUUDE</span>
-                <span className="text-[#FF69B4]">•</span>
-                <span>MARLO</span>
-                <span className="text-[#FF69B4]">•</span>
-                <span>NINA KRAVIZ</span>
-                <span className="text-[#FF69B4]">•</span>
-                <span>SUB FOCUS</span>
-                <span className="bg-white text-black text-xs px-2 py-0.5 rounded-full">
-                  DJ SET & ID
-                </span>
-              </div>
-              <div className="flex flex-wrap items-center gap-0 text-2xl font-bold leading-none">
-                <span>TCHAMI</span>
-                <span className="text-[#FF69B4]">•</span>
-                <span>WILKINSON</span>
-                <span className="bg-white text-black text-xs px-2 py-0.5 rounded-full">
-                  DJ SET
-                </span>
-              </div>
-              <div className="flex flex-wrap items-center gap-0 text-xl font-bold mt-2 leading-none">
-                <span className="text-[#FF69B4] border border-[#ff6984] rounded-[30px] text-sm py-0 px-2">
-                  A-Z
-                </span>
-                <span>ANNA LUNOE</span>
-                <span className="text-[#FF69B4]">•</span>
-                <span>BABYFACE MAL</span>
-                <span className="text-[#FF69B4]">•</span>
-                <span>BADRAPPER</span>
-              </div>
-              <div className="flex flex-wrap items-center gap-0 text-xl font-bold leading-none">
-                <span>BEAUZ</span>
-                <span className="text-[#FF69B4]">•</span>
-                <span>BLASTOYZ</span>
-                <span className="text-[#FF69B4]">•</span>
-                <span>CHACE</span>
-                <span className="text-[#FF69B4]">•</span>
-                <span>CHOOMBA</span>
-                <span className="text-[#FF69B4]">•</span>
-                <span>COSMIC GATE</span>
-              </div>
-              <div className="flex flex-wrap items-center gap-0 text-xl font-bold leading-none">
-                <span>FRANKY RIZARDO</span>
-                <span className="text-[#FF69B4]">•</span>
-                <span>HALIENE</span>
-              </div>
-              <div className="flex flex-wrap items-center gap-0 text-xl font-bold leading-none">
-                <span>KEY4050</span>
-                <span className="text-xs font-bold text-black m-1 p-1 bg-white rounded-lg items-center">
-                  FT. JOHN CALLAHAN & BRYAN KEARNEY
-                </span>
-                <span className="text-[#FF69B4]">•</span>
-                <span>LAURA KING</span>
-                <span className="text-[#FF69B4]">•</span>
-                <span>LEN FAKI</span>
-              </div>
-              <div className="flex flex-wrap items-center gap-0 text-xl font-bold leading-none">
-                <span>NIFRA</span>
-                <span className="text-[#FF69B4]">•</span>
-                <span>NORA EN PURE</span>
-                <span className="text-[#FF69B4]">•</span>
-                <span>PROSPA</span>
-                <span className="text-[#FF69B4]">•</span>
-                <span>SUNSET BROS</span>
-              </div>
-              <div className="flex flex-wrap items-center gap-0 text-xl font-bold leading-none">
-                <span>TAGLO</span>
-                <span className="text-[#FF69B4]">•</span>
-                <span>TYSON BRIEN</span>
-              </div>
+             <div className="flex flex-wrap items-center gap-0 text-2xl font-bold mt-2 leading-none">
+  <span className="text-[#FF69B4] border border-[#ff6984] rounded-[30px] text-sm py-0 px-2 hover:text-[#ff6984] hover:transition hover:duration-300">
+    A-Z
+  </span>
+  <span className="hover:text-[#ff6984] hover:transition hover:duration-300">BOYS NOIZE</span>
+  <span className="text-[#FF69B4] hover:text-[#ff6984] hover:transition hover:duration-300">•</span>
+  <span className="hover:text-[#ff6984] hover:transition hover:duration-300">GREEN VELVET</span>
+  <span className="text-[#FF69B4] hover:text-[#ff6984] hover:transition hover:duration-300">•</span>
+  <span className="hover:text-[#ff6984] hover:transition hover:duration-300">JOHN SUMMIT</span>
+</div>
+<div className="flex flex-wrap items-center gap-0 text-2xl font-bold leading-none">
+  <span className="hover:text-[#ff6984] hover:transition hover:duration-300">LUUDE</span>
+  <span className="text-[#FF69B4] hover:text-[#ff6984] hover:transition hover:duration-300">•</span>
+  <span className="hover:text-[#ff6984] hover:transition hover:duration-300">MARLO</span>
+  <span className="text-[#FF69B4] hover:text-[#ff6984] hover:transition hover:duration-300">•</span>
+  <span className="hover:text-[#ff6984] hover:transition hover:duration-300">NINA KRAVIZ</span>
+  <span className="text-[#FF69B4] hover:text-[#ff6984] hover:transition hover:duration-300">•</span>
+  <span className="hover:text-[#ff6984] hover:transition hover:duration-300">SUB FOCUS</span>
+  <span className="bg-white text-black text-xs px-2 py-0.5 rounded-full hover:text-[#ff6984] hover:transition hover:duration-300">
+    DJ SET & ID
+  </span>
+</div>
+<div className="flex flex-wrap items-center gap-0 text-2xl font-bold leading-none">
+  <span className="hover:text-[#ff6984] hover:transition hover:duration-300">TCHAMI</span>
+  <span className="text-[#FF69B4] hover:text-[#ff6984] hover:transition hover:duration-300">•</span>
+  <span className="hover:text-[#ff6984] hover:transition hover:duration-300">WILKINSON</span>
+  <span className="bg-white text-black text-xs px-2 py-0.5 rounded-full hover:text-[#ff6984] hover:transition hover:duration-300">
+    DJ SET
+  </span>
+</div>
+<div className="flex flex-wrap items-center gap-0 text-xl font-bold mt-2 leading-none">
+  <span className="text-[#FF69B4] border border-[#ff6984] rounded-[30px] text-sm py-0 px-2 hover:text-[#ff6984] hover:transition hover:duration-300">
+    A-Z
+  </span>
+  <span className="hover:text-[#ff6984] hover:transition hover:duration-300">ANNA LUNOE</span>
+  <span className="text-[#FF69B4] hover:text-[#ff6984] hover:transition hover:duration-300">•</span>
+  <span className="hover:text-[#ff6984] hover:transition hover:duration-300">BABYFACE MAL</span>
+  <span className="text-[#FF69B4] hover:text-[#ff6984] hover:transition hover:duration-300">•</span>
+  <span className="hover:text-[#ff6984] hover:transition hover:duration-300">BADRAPPER</span>
+</div>
+<div className="flex flex-wrap items-center gap-0 text-xl font-bold leading-none">
+  <span className="hover:text-[#ff6984] hover:transition hover:duration-300">BEAUZ</span>
+  <span className="text-[#FF69B4] hover:text-[#ff6984] hover:transition hover:duration-300">•</span>
+  <span className="hover:text-[#ff6984] hover:transition hover:duration-300">BLASTOYZ</span>
+  <span className="text-[#FF69B4] hover:text-[#ff6984] hover:transition hover:duration-300">•</span>
+  <span className="hover:text-[#ff6984] hover:transition hover:duration-300">CHACE</span>
+  <span className="text-[#FF69B4] hover:text-[#ff6984] hover:transition hover:duration-300">•</span>
+  <span className="hover:text-[#ff6984] hover:transition hover:duration-300">CHOOMBA</span>
+  <span className="text-[#FF69B4] hover:text-[#ff6984] hover:transition hover:duration-300">•</span>
+  <span className="hover:text-[#ff6984] hover:transition hover:duration-300">COSMIC GATE</span>
+</div>
+<div className="flex flex-wrap items-center gap-0 text-xl font-bold leading-none">
+  <span className="hover:text-[#ff6984] hover:transition hover:duration-300">FRANKY RIZARDO</span>
+  <span className="text-[#FF69B4] hover:text-[#ff6984] hover:transition hover:duration-300">•</span>
+  <span className="hover:text-[#ff6984] hover:transition hover:duration-300">HALIENE</span>
+</div>
+<div className="flex flex-wrap items-center gap-0 text-xl font-bold leading-none">
+  <span className="hover:text-[#ff6984] hover:transition hover:duration-300">KEY4050</span>
+  <span className="text-xs font-bold text-black m-1 p-1 bg-white rounded-lg items-center hover:text-[#ff6984] hover:transition hover:duration-300">
+    FT. JOHN CALLAHAN & BRYAN KEARNEY
+  </span>
+  <span className="text-[#FF69B4] hover:text-[#ff6984] hover:transition hover:duration-300">•</span>
+  <span className="hover:text-[#ff6984] hover:transition hover:duration-300">LAURA KING</span>
+  <span className="text-[#FF69B4] hover:text-[#ff6984] hover:transition hover:duration-300">•</span>
+  <span className="hover:text-[#ff6984] hover:transition hover:duration-300">LEN FAKI</span>
+</div>
+<div className="flex flex-wrap items-center gap-0 text-xl font-bold leading-none">
+  <span className="hover:text-[#ff6984] hover:transition hover:duration-300">NIFRA</span>
+  <span className="text-[#FF69B4] hover:text-[#ff6984] hover:transition hover:duration-300">•</span>
+  <span className="hover:text-[#ff6984] hover:transition hover:duration-300">NORA EN PURE</span>
+  <span className="text-[#FF69B4] hover:text-[#ff6984] hover:transition hover:duration-300">•</span>
+  <span className="hover:text-[#ff6984] hover:transition hover:duration-300">PROSPA</span>
+  <span className="text-[#FF69B4] hover:text-[#ff6984] hover:transition hover:duration-300">•</span>
+  <span className="hover:text-[#ff6984] hover:transition hover:duration-300">SUNSET BROS</span>
+</div>
+<div className="flex flex-wrap items-center gap-0 text-xl font-bold leading-none">
+  <span className="hover:text-[#ff6984] hover:transition hover:duration-300">TAGLO</span>
+  <span className="text-[#FF69B4] hover:text-[#ff6984] hover:transition hover:duration-300">•</span>
+  <span className="hover:text-[#ff6984] hover:transition hover:duration-300">TYSON BRIEN</span>
+</div>
             <section className="container mx-auto px-4 py-16">
   <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
     <div className="border-r border-dotted border-white/20">
@@ -441,9 +455,80 @@ export default function Page() {
       </main>
 
    {/* Bottom left signup button */}
-<button className="fixed right-4 bottom-10 bg-[#FFFF00] text-black font-bold font-extrabold font-weight-800 px-6 py-2 rounded-full z-50">
-  SIGNUP <span className="ml-1">➜</span>
-</button>
+   <button
+        onClick={togglePopup}
+        className="fixed right-4 bottom-10 bg-yellow-400 text-black font-bold px-6 py-2 rounded-full z-50"
+      >
+        SIGNUP <span className="ml-1">➜</span>
+      </button>
+
+      {isOpen && (
+       <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+  <div className="bg-white p-8 rounded-lg shadow-lg">
+    <h2 className="text-xl font-bold mb-4">Sign Up</h2>
+    <form>
+      <div className="mb-4">
+        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="username">
+          Username
+        </label>
+        <input
+          className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          id="username"
+          type="text"
+          placeholder="Username"
+        />
+      </div>
+      <div className="mb-4">
+        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
+          Email
+        </label>
+        <input
+          className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          id="email"
+          type="email"
+          placeholder="Email"
+        />
+      </div>
+      <div className="mb-4">
+        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="password">
+          Password
+        </label>
+        <input
+          className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          id="password"
+          type="password"
+          placeholder="Password"
+        />
+      </div>
+      <div className="mb-4">
+        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="confirmPassword">
+          Confirm Password
+        </label>
+        <input
+          className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          id="confirmPassword"
+          type="password"
+          placeholder="Confirm Password"
+        />
+      </div>
+      <div className="flex items-center justify-between">
+        <button
+          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          type="button"
+        >
+          Sign Up
+        </button>
+      </div>
+    </form>
+    <button
+      onClick={togglePopup}
+      className="mt-4 bg-red-500 text-white px-4 py-2 rounded"
+    >
+      Close
+    </button>
+  </div>
+</div>
+      )}
 
       {/* Cookie preferences */}
       <button className="fixed left-4 bottom-4 bg-yellow-400 text-black font-bold text-sm px-4 py-2 rounded-full z-50">
