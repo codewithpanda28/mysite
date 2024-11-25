@@ -17,7 +17,7 @@ export default function Home() {
   }
 
   return (
-<div className="bg-[#5B43F5] mt-5 relative lg:h-screen lg:w-screen md:h-[800px] sm:h-[500px] overflow-hidden font-sans h-[50vh] w-full">
+<div className="bg-[#001B37] mt-5 relative lg:h-screen lg:w-screen md:h-[800px] sm:h-[500px] overflow-hidden font-sans h-[50vh] w-full">
       <video
         ref={videoRef}
         className="absolute top-0 left-0 h-full w-full object-cover"

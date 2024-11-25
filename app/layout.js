@@ -1,4 +1,5 @@
 import localFont from "next/font/local";
+
 import "./globals.css";
 
 const geistSans = localFont({
@@ -20,13 +21,23 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-            <head>
+      <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
           href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Bowlby+One&family=Modak&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Notable&family=Nova+Script&family=Seymour+One&display=swap"
           rel="stylesheet"
         />
+
+        <link
+          href="https://blogfonts.com/css/aWQ9MjA5NDE5JnN1Yj00MTkmYz1pJnR0Zj1Gb250c3ByaW5nLURFTU8taW50ZWdyYWxjZi1leHRyYWJvbGQub3RmJm49Zm9udHNwcmluZy1kZW1vLWludGVncmFsLWNmLWV4dHJhLWJvbGQtNQ/FONTSPRING DEMO - Integral CF Extra Bold.otf"
+          rel="stylesheet"
+          type="text/css"
+        />
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"/>
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}

@@ -68,6 +68,7 @@ body {
   }
   body {
     @apply bg-background text-foreground;
+    
   }
 }
 
@@ -121,6 +122,15 @@ body {
   font-style: normal;
 }
 
+.news-date{
+
+    font-family: "Anonymous Pro", monospace;
+    font-weight: 600;
+    font-size: 15px;
+    font-style: normal;
+  
+}
+
 .video-heading{
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
@@ -139,8 +149,8 @@ body {
 }
 
 .news-heading{
-  font-family: "Seymour One", sans-serif;
-  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
   font-style: normal;
 }
 
@@ -158,8 +168,19 @@ body {
 }
 
 .footer-font{
-  font-family: "Seymour One", sans-serif;
-  font-weight: 500;
+  font-family: 'fontspring-demo-integral-cf-extra-bold-5', sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+.news-h2{
+  font-family: 'fontspring-demo-integral-cf-extra-bold-5', sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.news-date {
+  font-family: "Anonymous Pro", monospace;
+  font-weight: 400;
   font-style: normal;
 }
 
