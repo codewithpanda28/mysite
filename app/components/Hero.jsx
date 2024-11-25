@@ -56,7 +56,7 @@ export default function Page() {
   return (
     <div className="min-h-screen bg-[#001B37] relative overflow-hidden font-sans z-50">
       {/* Fixed header */}
-      <header className="fixed top-0 left-0 right-0 z-50 flex items-center p-4 min-h-[100px] min-w-full sm:justify-between lg:pl-24 lg:pt-5 lg:left-20">
+      <header className="fixed top-0 left-0 right-0 z-50 flex items-center p-4 min-h-[100px] min-w-full sm:justify-between  lg:pl-24 lg:pt-5 lg:left-20">
         <div className="text-white text-3xl font-bold ml-10 z-10">
           <Image
             src="/logo.svg"
@@ -75,7 +75,7 @@ export default function Page() {
         {/* Left side image */}
         <div className="left-0 top-0 bottom-0 w-[30%] h-[100%] hidden lg:block absolute z-[-1]">
           <Image
-            src="/leftbackground.svg"
+            src="/leftbackground.png"
             alt="Left decoration"
             width={1000}
             height={800}
@@ -201,7 +201,7 @@ export default function Page() {
         {/* Right side decoration */}
         <div className="absolute bottom-24 right-0 h-100vh  hidden lg:block">
           <Image
-            src="/rightbackground.svg"
+            src="/rightbackground.png"
             width={520}
             height={320}
             alt="Image"
@@ -216,93 +216,7 @@ export default function Page() {
         </div>
       </main>
 
-      {/* Bottom left signup button */}
-      <button
-        onClick={togglePopup}
-        className="fixed right-4 bottom-10 bg-yellow-400 text-black font-bold px-6 py-2 rounded-full z-50"
-      >
-        SIGNUP <span className="ml-1">➜</span>
-      </button>
 
-      {isOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
-          <div className="bg-white p-8 rounded-lg shadow-lg">
-            <h2 className="text-xl font-bold mb-4">Sign Up</h2>
-            <form>
-              <div className="mb-4">
-                <label
-                  className="block text-gray-700 text-sm font-bold mb-2"
-                  htmlFor="username"
-                >
-                  Username
-                </label>
-                <input
-                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                  id="username"
-                  type="text"
-                  placeholder="Username"
-                />
-              </div>
-              <div className="mb-4">
-                <label
-                  className="block text-gray-700 text-sm font-bold mb-2"
-                  htmlFor="email"
-                >
-                  Email
-                </label>
-                <input
-                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                  id="email"
-                  type="email"
-                  placeholder="Email"
-                />
-              </div>
-              <div className="mb-4">
-                <label
-                  className="block text-gray-700 text-sm font-bold mb-2"
-                  htmlFor="password"
-                >
-                  Password
-                </label>
-                <input
-                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                  id="password"
-                  type="password"
-                  placeholder="Password"
-                />
-              </div>
-              <div className="mb-4">
-                <label
-                  className="block text-gray-700 text-sm font-bold mb-2"
-                  htmlFor="confirmPassword"
-                >
-                  Confirm Password
-                </label>
-                <input
-                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                  id="confirmPassword"
-                  type="password"
-                  placeholder="Confirm Password"
-                />
-              </div>
-              <div className="flex items-center justify-between">
-                <button
-                  className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-                  type="button"
-                >
-                  Sign Up
-                </button>
-              </div>
-            </form>
-            <button
-              onClick={togglePopup}
-              className="mt-4 bg-red-500 text-white px-4 py-2 rounded"
-            >
-              Close
-            </button>
-          </div>
-        </div>
-      )}
 
       {/* Cookie preferences */}
       <button className="fixed left-4 bottom-4 bg-yellow-400 text-black font-bold text-sm px-4 py-2 rounded-full z-50">

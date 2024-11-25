@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { XCircle, Menu } from 'lucide-react'
 
 function Navbar() {
   const [activeMenu, setActiveMenu] = useState(null)
@@ -30,7 +31,7 @@ function Navbar() {
     },
     {
       title: 'ARTIST',
-      bgColor: 'bg-yellow-400',
+      bgColor: 'bg-yellow-500',
       subItems: [
       
         { text: 'Contact', link: '/contact' },
@@ -54,14 +55,19 @@ function Navbar() {
   }, [isMenuOpen])
 
   return (
-    <nav className="relative z-50 w-[42%] text-white md:absolute lg:right-0 sm:right-[-25%] md:right-0">
-  <button
-    className="block md:hidden p-2 text-white text-2xl close-icon"
-    onClick={() => setIsMenuOpen(!isMenuOpen)}
-  >
-    {isMenuOpen ? '✖' : '☰'}
-  </button>
-      <div className={`menu-container flex flex-col ml-auto absolute md:flex-row ${isMenuOpen ? 'block' : 'hidden'} md:flex`}>
+    <nav className="relative z-50 w-[42%] text-white md:absolute lg:right-0 sm:right-[25%] md:right-0">
+<button
+  className="block md:hidden p-2 rounded-sm text-white text-2xl close-icon ml-[90%] bg-orange-500"
+  onClick={() => setIsMenuOpen(!isMenuOpen)}
+  style={{
+    color: isMenuOpen ? 'white' : undefined,
+    transition: 'transform 0.3s',
+    transform: isMenuOpen ? 'rotateY(180deg)' : 'rotateY(0deg)'
+  }}
+>
+  {isMenuOpen ? <XCircle /> : <Menu />}
+</button>
+      <div className={`menu-container flex flex-col ml-auto absolute md:flex-row ${isMenuOpen ? 'block' : 'hidden'} md:flex `}>
         {(() => {
           const items = [];
           for (let index = 0; index < menuItems.length; index++) {
@@ -69,7 +75,7 @@ function Navbar() {
             items.push(
               <div
                 key={index}
-                className="relative md:mx-3"
+                className="relative md:mx-3 "
                 onMouseEnter={() => setActiveMenu(index)}
                 onMouseLeave={() => setActiveMenu(null)}
               >
@@ -109,44 +115,44 @@ function Navbar() {
           return items;
         })()}
       </div>
-      {isMenuOpen && (
-        <div className="fixed inset-0 bg-white/100 z-99 flex flex-col items-start justify-start h-screen p-4 w-3/5 md:hidden z-50">
-      
-          {(() => {
-            const items = [];
-            for (let index = 0; index < menuItems.length; index++) {
-              const item = menuItems[index];
-              items.push(
-                <div key={index} className="w-full">
+   {isMenuOpen && (
+  <div className="fixed inset-0 bg-gradient-to-r from-blue-800 to-purple-600 z-99 flex flex-col items-start justify-start h-screen p-4 w-3/5 md:hidden z-50">
+  
+    {(() => {
+      const items = [];
+      for (let index = 0; index < menuItems.length; index++) {
+        const item = menuItems[index];
+        items.push(
+          <div key={index} className="w-full">
+            <a
+              href="#"
+              className={`block w-full px-2 py-2 text-white ${isMenuOpen ? item.bgColor : ''} hover:bg-purple-700/80 text-left md:hidden transition-transform transform hover:scale-110 hover:shadow-xl`}
+            >
+              {item.title}
+            </a>
+            {(() => {
+              const subItems = [];
+              for (let subIndex = 0; subIndex < item.subItems.length; subIndex++) {
+                const subItem = item.subItems[subIndex];
+                subItems.push(
                   <a
-                    href="#"
-                    className={`block w-full px-2 py-2 text-black ${isMenuOpen ? item.bgColor : ''} hover:opacity-100 text-left md:hidden transition-transform transform hover:scale-105 hover:shadow-lg`}
+                    key={subIndex}
+                    href={subItem.link}
+                    className="menu-nav block w-full px-4 py-2 text-white hover:bg-purple-700/80 text-left transition-transform transform hover:scale-110 hover:shadow-xl"
                   >
-                    {item.title}
+                    {subItem.text}
                   </a>
-                  {(() => {
-                    const subItems = [];
-                    for (let subIndex = 0; subIndex < item.subItems.length; subIndex++) {
-                      const subItem = item.subItems[subIndex];
-                      subItems.push(
-                        <a
-                          key={subIndex}
-                          href={subItem.link}
-                          className="menu-nav block w-full px-4 py-2 text-black hover:bg-black/30 text-left transition-transform transform hover:scale-105 hover:shadow-lg"
-                        >
-                          {subItem.text}
-                        </a>
-                      );
-                    }
-                    return subItems;
-                  })()}
-                </div>
-              );
-            }
-            return items;
-          })()}
-        </div>
-      )}
+                );
+              }
+              return subItems;
+            })()}
+          </div>
+        );
+      }
+      return items;
+    })()}
+  </div>
+)}
     </nav>
   )
 }
