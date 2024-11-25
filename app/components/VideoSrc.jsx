@@ -17,22 +17,24 @@ export default function Home() {
   }
 
   return (
-<div className="relative h-screen w-screen md:h-[800px] sm:h-[500px] overflow-hidden font-sans">
+<div className="bg-[#5B43F5] mt-5 relative lg:h-screen lg:w-screen md:h-[800px] sm:h-[500px] overflow-hidden font-sans h-[50vh] w-full">
       <video
         ref={videoRef}
         className="absolute top-0 left-0 h-full w-full object-cover"
         loop
         muted
+        autoPlay
         playsInline
       >
-        <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4" />
+        <source src="video.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 {/* //summer sarted here */}
 
-<div className="relative z-1 flex h-full flex-col items-center justify-center text-center text-white">
-  <h1 className="mb-4 text-6xl font-bold tracking-tight md:text-7xl lg:text-8xl">
-    summer <br/>  sarted  <br/>  here
+<div className="relative z-1  flex h-full flex-col items-center justify-center text-center text-white">
+  <h1 className="mb-4 text-4xl font-bold tracking-tight md:text-7xl lg:text-8xl">
+  India first global <br/> music conference and  <br/>  showcase
+  festival
   </h1>
 </div>
 
