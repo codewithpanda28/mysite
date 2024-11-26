@@ -70,24 +70,24 @@
 }
 
 
-.buy-ticket{
+/* .buy-ticket{
   font-size: 22px;
   font-weight: 900;
-}
+} */
 
-.main-heading{
+/* .main-heading{
 
     font-family: "Notable", serif;
     font-weight: 400;
     font-style: normal; 
-}
+} */
 
-.main-2025{
+/* .main-2025{
 
     font-family: "Modak", system-ui;
     font-weight: 400;
     font-style: normal;
-}
+} */
 
 .main-desc{
   font-family: "myfont", sans-serif;
@@ -112,11 +112,11 @@
   margin: 0 auto;
 }
 
-.main-btn{
+/* .main-btn{
     font-family: "Bowlby One", sans-serif;
     font-weight: 400;
     font-style: normal;
-}
+} */
 
 .main-bottom-h3{
   font-family: "Anonymous Pro", monospace;
@@ -179,12 +179,14 @@
   font-weight: 700;
   font-style: normal;
 }
-.news-h2{
+
+/* .news-h2{
   font-family: 'fontspring-demo-integral-cf-extra-bold-5', sans-serif;
   font-weight: 800;
   font-style: normal;
-}
+} */
 
+/* news section date */
 .news-date {
   font-family: "Anonymous Pro", monospace;
   font-weight: 400;
@@ -196,18 +198,18 @@
   top: 80px;
 } */
 
-.navbar-subnav{
+/* .navbar-subnav{
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: 600;
   font-style: normal;
-}
+} */
 
-.menu-nav{
+/* .menu-nav{
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
-}
+} */
 
 
