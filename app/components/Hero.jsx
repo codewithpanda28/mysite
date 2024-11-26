@@ -224,10 +224,13 @@ export default function Page() {
 
 
 
-      {/* Cookie preferences */}
-      <button className="fixed left-4 bottom-4 bg-yellow-400 text-black font-bold text-sm px-4 py-2 rounded-full z-50">
-        COOKIE PREFERENCES
-      </button>
+  {/* Cookie preferences */}
+<button 
+  className="fixed left-4 bottom-4 bg-yellow-400 text-black font-bold text-sm px-4 py-2 rounded-full z-50"
+  onClick={() => window.location.href = '/cookies-permission'}
+>
+  COOKIE PREFERENCES
+</button>
       <div className="pr-0  w-full lg:pl-20">
         <VideoSrc />
         <NewsSection />
