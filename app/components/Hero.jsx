@@ -22,7 +22,7 @@ const menuItems = [
 
 export default function Page() {
   const calculateTimeLeft = () => {
-    const difference = +new Date(`2025-01-01`) - +new Date();
+    const difference = +new Date(`2025-02-04`) - +new Date();
     let timeLeft = {};
 
     if (difference > 0) {
@@ -73,15 +73,15 @@ export default function Page() {
       {/* Main content */}
       <main className="lg:pt-32 sm:pt-24 px-4 relative ">
         {/* Left side image */}
-        <div className="left-0 top-0 bottom-0 w-[30%] h-[100%] hidden lg:block absolute z-[-1]">
-          <Image
-            src="/leftbackground.png"
-            alt="Left decoration"
-            width={1000}
-            height={800}
-            className="bg-[#001B37] w-[1164px]"
-          />
-        </div>
+<div className="left-[-30%] top-[-15%] w-[60%] h-[100%] block fixed z-[-1]">
+  <Image
+    src="/leftbackground.svg"
+    alt="Left decoration"
+    width={1864}
+    height={800}
+    className="bg-[#001B37] w-full object-cover"
+  />
+</div>
 
         {/* Center content */}
         <div className="max-w-4xl mx-auto relative z-1 ">
@@ -121,29 +121,36 @@ export default function Page() {
               </div>
 
               {/* counter */}
-           <div className="main-count flex justify-center gap-4 mb-8 mr-[36%] sm:mt-12 sm:w-[50%] lg:justify-start lg:mt-5 lg:mr-[50%] md:mr-[50%]">
+   <div className="main-count flex justify-center gap-4 mb-8 mr-[36%] sm:mt-12 sm:w-[50%] sm:text-lg lg:justify-start lg:mt-5 lg:mr-[50%] md:mr-[50%] md:text-lg" style={{ zIndex: 1000 }}>
   {Object.entries(timeLeft).map(([unit, value]) => (
     <div
       key={unit}
-      className="bg-white text-[#56AEFF] rounded-lg w-[100px] lg:p-8 sm:p-5 text-center transition-transform duration-300 hover:scale-105"
+      className="bg-white text-[#56AEFF] rounded-lg w-[100px] lg:p-8 p-5 text-center transition-transform duration-300 hover:scale-105"
+      style={{ zIndex: 10 }}
     >
-      <div className="lg:text-4xl sm:text-4xl sm:font-bold lg:font-bold hover:text-[#1E90FF]">
-        {value}
-      </div>
-      <div className="lg:text-sm sm:text-xs hover:text-[#1E90FF]">{unit}</div>
-    </div>
+    <div className="lg:text-4xl text-3xl sm:font-bold lg:font-bold hover:text-[#1E90FF] hover:scale-110 transition duration-300 ease-in-out flex justify-center items-center">
+  {value}
+</div>
+  <div className="lg:text-lg text-sm hover:text-[#1E90FF] hover:scale-110 transition duration-300 ease-in-out flex justify-center items-center">{unit}</div>
+</div>
   ))}
 </div>
 
-              {/* button */}
-              <button className="main-btn mt-8 sm:mb-5 bg-[#FE6F00] text-[#FFFFFF] px-8 py-3 rounded-full font-semibold text-xl mr-[47%] md:justify-center lg:justify-start transition duration-300 ease-in-out transform hover:bg-[#FFFFFF] hover:text-[#FE6F00] hover:scale-105 hover:shadow-lg hover:cursor-pointer hover:z-20 z-99 w-full sm:w-auto">
-                BECOME SPONSOR
-              </button>
+<div className="flex flex-row justify-start items-center gap-5">
+{/* button */}
+<button className="main-btn mt-2 mb-5 bg-[#FE6F00] text-[#FFFFFF] px-8 py-3 rounded-full font-semibold text-xl transition duration-300 ease-in-out transform hover:bg-[#FFFFFF] hover:text-[#FE6F00] hover:scale-105 hover:shadow-lg hover:cursor-pointer  fixed bottom-0 left-0 right-0 w-full sm:w-auto sm:relative sm:mb-0 z-[9999]">
+  BUY A TICKET
+</button>
+
+  <button className="main-btn mt-8 sm:mb-5 bg-[#FE6F00] text-[#FFFFFF] px-8 py-3 rounded-full font-semibold text-xl transition duration-300 ease-in-out transform hover:bg-[#FFFFFF] hover:text-[#FE6F00] hover:scale-105 hover:shadow-lg hover:cursor-pointer hover:z-20 z-99 w-full sm:w-auto">
+    BECOME SPONSOR
+  </button>
+</div>
 
               <section className="container mx-auto px-4 lg:py-16 ">
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
                   <div className="hidden sm:block border-r border-dotted border-white/20">
-                    <div className="text-[#56AEFF] text-2xl font-bold ">
+                    <div className="text-[#56AEFF] text-2xl font-bold mb-2 ">
                       WED 05 FEB
                     </div>
 
@@ -198,22 +205,21 @@ export default function Page() {
           </div>
         </div>
 
-        {/* Right side decoration */}
-        <div className="absolute bottom-24 right-0 h-100vh  hidden lg:block">
-          <Image
-            src="/rightbackground.png"
-            width={520}
-            height={320}
-            alt="Image"
-            className=" opacity-100 hover:opacity-100 transition-opacity duration-300"
-            style={{
-              background: " bg-[#6046FF]",
-              // boxShadow: "0 4px 6px rgba(0,0,0,0.1)",
-              borderRadius: "8px",
-              height: "100%",
-            }}
-          />
-        </div>
+{/* Right side decoration */}
+<div className="absolute bottom-24 right-[-35%] h-100vh hidden lg:block">
+  <Image
+    src="/rightbackground.svg"
+    width={1020}
+    height={520}
+    alt="Image"
+    className="opacity-100 hover:opacity-100 transition-opacity duration-300"
+    style={{
+      background: "bg-[#6046FF]",
+      borderRadius: "8px",
+      height: "100%",
+    }}
+  />
+</div>
       </main>
 
 

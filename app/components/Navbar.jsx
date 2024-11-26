@@ -96,13 +96,16 @@ function Navbar() {
                       for (let subIndex = 0; subIndex < item.subItems.length; subIndex++) {
                         const subItem = item.subItems[subIndex];
                         subItems.push(
-                          <a
-                            key={subIndex}
-                            href={subItem.link}
-                            className="navbar-subnav block px-4 py-3 text-white hover:bg-black/10 transition-colors"
-                          >
-                            {subItem.text}
-                          </a>
+                    <a
+  key={subIndex}
+  href={subItem.link}
+  className="navbar-subnav block px-4 py-3 text-white hover:bg-black/10 transition-colors"
+  style={{ transition: 'transform 0.3s', transformStyle: 'preserve-3d' }}
+  onMouseEnter={e => e.currentTarget.style.transform = 'translateZ(50px)'}
+  onMouseLeave={e => e.currentTarget.style.transform = 'translateZ(100px)'}
+>
+  {subItem.text}
+</a>
                         );
                       }
                       return subItems;
@@ -116,7 +119,7 @@ function Navbar() {
         })()}
       </div>
    {isMenuOpen && (
-  <div className="fixed inset-0 bg-gradient-to-r from-blue-800 to-purple-600 z-99 flex flex-col items-start justify-start h-screen p-4 w-3/5 md:hidden z-50">
+  <div className="fixed inset-0 bg-gradient-to-r from-blue-800 to-purple-600 z-[1002] flex flex-col items-start justify-start h-screen p-4 w-3/5 md:hidden ">
   
     {(() => {
       const items = [];
@@ -138,7 +141,7 @@ function Navbar() {
                   <a
                     key={subIndex}
                     href={subItem.link}
-                    className="menu-nav block w-full px-4 py-2 text-white hover:bg-purple-700/80 text-left transition-transform transform hover:scale-110 hover:shadow-xl"
+                    className="font-myfont block w-full px-4 py-2 text-white hover:bg-purple-700/80 text-left transition-transform transform hover:scale-110 hover:shadow-xl"
                   >
                     {subItem.text}
                   </a>

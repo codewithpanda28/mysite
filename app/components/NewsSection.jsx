@@ -1,14 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { ArrowLeft, ArrowRight } from 'lucide-react';
+
 
 const mockData = [
   {
     id: 1,
     description: "Beautiful Landscape",
     created_at: "2023-10-01T12:00:00Z",
-    urls: { small: "/news.jpg" },
+    urls: { small: "/news1.svg" },
     alt_description: "A beautiful landscape",
     links: { html: "https://example.com/photo1" },
   },
@@ -16,15 +16,15 @@ const mockData = [
     id: 2,
     description: "City Skyline",
     created_at: "2023-10-02T12:00:00Z",
-    urls: { small: "https://example.com/image2.jpg" },
+    urls: { small: "/news2.svg" },
     alt_description: "A city skyline",
     links: { html: "https://example.com/photo2" },
   },
   {
     id: 3,
-    description: " View",
+    description: " View City Skyline City Skyline City Skyline City Skyline City Skylin",
     created_at: "2023-10-03T12:00:00Z",
-    urls: { small: "/news.jpg" },
+    urls: { small: "/news3.svg" },
     alt_description: "A mountain view",
     links: { html: "https://example.com/photo3" },
   },
@@ -32,7 +32,7 @@ const mockData = [
     id: 4,
     description: "Ocean ",
     created_at: "2023-10-04T12:00:00Z",
-    urls: { small: "/news.jpg" },
+    urls: { small: "/news1.svg" },
     alt_description: "An ocean sunset",
     links: { html: "https://example.com/photo4" },
   },
@@ -40,21 +40,21 @@ const mockData = [
     id: 1,
     description: "Beautiful Landscape ",
     created_at: "2023-10-01T12:00:00Z",
-    urls: { small: "https://example.com/image1.jpg" },
+    urls: { small: "/news2.svg" },
     alt_description: "A beautiful landscape",
     links: { html: "https://example.com/photo1" },
   },
   {
     id: 2,
-    description: "City Skyline",
+    description: " City Skyline City Skyline City Skyline City Skyline City Skyline",
     created_at: "2023-10-02T12:00:00Z",
-    urls: { small: "https://example.com/image2.jpg" },
+    urls: { small: "/news3.svg" },
     alt_description: "A city skyline",
     links: { html: "https://example.com/photo2" },
   },
   {
     id: 3,
-    description: " View",
+    description: " View ",
     created_at: "2023-10-03T12:00:00Z",
     urls: { small: "/news.jpg" },
     alt_description: "A mountain view",
@@ -70,9 +70,9 @@ const mockData = [
   },
   {
     id: 1,
-    description: "Beautiful Landscape",
+    description: "Beautiful Landscape City Skyline City Skyline City Skyline City Skyline City Skylin",
     created_at: "2023-10-01T12:00:00Z",
-    urls: { small: "https://example.com/image1.jpg" },
+    urls: { small: "/news2.svg" },
     alt_description: "A beautiful landscape",
     links: { html: "https://example.com/photo1" },
   },
@@ -81,12 +81,17 @@ const mockData = [
 export default function NewsSection() {
   const [articles, setArticles] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [showPreviousIcon, setShowPreviousIcon] = useState(false);
 
-  useEffect(() => {
-    const formattedArticles = mockData.map((photo, index) => ({
+ useEffect(() => {
+  const monthNames = ["JANUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE", "JULY", "AUGUST", "SEPTEMBER", "OCTOBER", "NOVEMBER", "DECEMBER"];
+  const formattedArticles = mockData.map((photo, index) => {
+    const date = new Date(photo.created_at);
+    const formattedDate = ` ${monthNames[date.getMonth()]}  ${date.getDate()}, ${date.getFullYear()}`;
+    return {
       id: index + 1,
       title: photo.description || "Untitled",
-      date: new Date(photo.created_at).toLocaleDateString(),
+      date: formattedDate,
       image: {
         src: photo.urls.small,
         alt: photo.alt_description || "Image",
@@ -94,62 +99,67 @@ export default function NewsSection() {
         height: 600,
       },
       link: photo.links.html,
-    }));
-    setArticles(formattedArticles);
-  }, []);
+    };
+  });
+  setArticles(formattedArticles);
+}, []);
 
   const handleNext = () => {
     if (articles.length > 0) {
       setCurrentIndex((prevIndex) => (prevIndex + 4) % articles.length);
+      setShowPreviousIcon(true);
     }
   };
 
   const handlePrevious = () => {
     if (articles.length > 0) {
       setCurrentIndex((prevIndex) => (prevIndex - 4 + articles.length) % articles.length);
+      setShowPreviousIcon(currentIndex !== 0);
     }
   };
 
   return (
-<div className="relative min-h-3 bg-white px-[50px] py-5 md:px-14 lg:pl-16 lg:pr-24 sm:px-10 w-full">
-  <h1 className="footer-font text-6xl lg:text-8xl font-black mb-8 tracking-tighter md:pl-16">NEWS</h1>
+<div className="relative lg:min-h-screen bg-white px-[50px] py-5 md:px-14 lg:pl-16 lg:pr-0 sm:px-10 w-full" style={{ zIndex: 2 }}>
+  <h1 className="footer-font text-8xl lg:text-9xl font-black mb-14 tracking-tighter md:pl-16">NEWS</h1>
 
-  <div className="relative md:pl-">
+<div className="relative w-full md:w-auto sm:w-full">
     <div className="flex gap-8 w-full overflow-x-auto custom-scrollbar transition-transform duration-500 ease-in-out">
       {articles.map((article, index) => (
         <Link
           key={article.id}
           href={article.link}
-          className={`group flex-shrink-0 ${index >= currentIndex && index < currentIndex + 4 ? 'block' : 'hidden'}`}
-          style={{ zIndex: index >= currentIndex && index < currentIndex + 4 ? 1 : 0 }}
+          className={`group flex-shrink-0 ${index >= currentIndex && index < currentIndex + 3 ? 'block' : 'hidden'}`}
+          style={{ zIndex: index >= currentIndex && index < currentIndex + 3 ? 1 : 0 }}
         >
           <div className="space-y-4">
             <div className="aspect-[4/3] relative overflow">
               <Image
                 src={article.image.src}
                 alt={article.image.alt || "Image description not available"}
-                width={article.image.width}
-                height={article.image.height}
+                width={1200}
+                height={900}
                 className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
                 style={{ transform: 'translateZ(0)', transition: 'transform 0.5s, filter 0.5s' }}
               />
             </div>
-            <h2 className="news-font text-2xl font-black tracking-tight line-clamp-2">{article.title}</h2>
-            <div className="news-date text-sm">{article.date}</div>
+            <h2 className="footer-fontleft text-3xl font-black tracking-tight line-clamp-2">{article.title}</h2>
+            <div className="news-date text-lg">{article.date}</div>
           </div>
         </Link>
       ))}
     </div>
   </div>
 
-  <div className="flex justify-center mt-8">
-    <button onClick={handlePrevious} className="px-2 py-2 bg-gray-300 rounded-full border-black mr-4 absolute top-[50%] left-[1%] hover:scale-110 transition-transform duration-300">
-      <ArrowLeft className="inline-block" />
-    </button>
-    <button onClick={handleNext} className="px-2 py-2 bg-gray-300 rounded-full absolute right-[1%] top-[50%] hover:scale-110 transition-transform duration-300">
-      <ArrowRight className="inline-block" />
-    </button>
-  </div>
+<div className="flex justify-center mt-8">
+  {showPreviousIcon && (
+<button onClick={handlePrevious} className="px-4 py-2 bg-[#FFFFFF99] rounded-full border-black mr-4 absolute top-[50%] left-[5%] hover:scale-110 transition-transform duration-300" style={{ zIndex: 3 }}>
+  <img src="/leftarrow.svg" alt="Previous" className="inline-block rotate-180" />
+</button>
+)}
+<button onClick={handleNext} className="px-4 py-2 bg-[#FFFFFF99] rounded-full absolute right-[1%] top-[50%] hover:scale-110 transition-transform duration-300" style={{ zIndex: 3 }}>
+  <img src="/leftarrow.svg" alt="Next" className="inline-block" />
+</button>
+</div>
 
   <style jsx>{`
     @media (min-width: 1024px) {
@@ -157,7 +167,7 @@ export default function NewsSection() {
         flex-wrap: nowrap;
       }
       .flex > :global(a) {
-        width: 24%;
+        width: 33.33%;
       }
     }
     @media (min-width: 768px) and (max-width: 1023px) {

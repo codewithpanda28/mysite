@@ -2,9 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
 
 @layer base {
   :root {
@@ -168,8 +165,13 @@ body {
 }
 
 .footer-font{
-  font-family: 'fontspring-demo-integral-cf-extra-bold-5', sans-serif;
-  font-weight: 800;
+  font-family: "myfont", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+.footer-fontleft{
+  font-family: "myfontleft", sans-serif;
+  font-weight: 700;
   font-style: normal;
 }
 .news-h2{
@@ -202,4 +204,5 @@ body {
   font-weight: 500;
   font-style: normal;
 }
+
 
