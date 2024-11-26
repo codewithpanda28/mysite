@@ -32,7 +32,7 @@ export default function Home() {
 {/* //summer sarted here */}
 
 <div className="relative z-1  flex h-full flex-col items-center justify-center text-center text-white">
-  <h1 className="mb-4 text-4xl font-bold tracking-tight md:text-7xl lg:text-8xl">
+  <h1 className="mb-4 text-3xl main-subtitle font-semibold tracking-tight md:text-7xl lg:text-[80px]">
   India first global <br/> music conference and  <br/>  showcase
   festival
   </h1>
@@ -40,7 +40,7 @@ export default function Home() {
 
    <button
   onClick={togglePlayPause}
-  className="absolute bottom-4 right-4 z-20 rounded-full bg-white p-2 text-black transition-colors hover:bg-gray-200"
+  className="absolute bottom-4 right-4 z-20 rounded-full bg-[#FFFFFF99] p-2 text-black transition-colors hover:bg-gray-200"
   aria-label={isPlaying ? 'Pause' : 'Play'}
 >
   {isPlaying ? <Pause size={24} /> : <Play size={24} />}

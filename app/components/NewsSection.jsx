@@ -119,7 +119,10 @@ export default function NewsSection() {
   };
 
   return (
-<div className="relative lg:min-h-screen bg-white px-[50px] py-5 md:px-14 lg:pl-16 lg:pr-0 sm:px-10 w-full" style={{ zIndex: 2 }}>
+    // news section start
+<div className="relative lg:min-h-screen bg-white  py-5 md:px-14 lg:pl-16 lg:pr-0 px-[2%] w-full" style={{ zIndex: 2 }}>
+
+  {/* news heading section */}
   <h1 className="footer-font text-8xl lg:text-9xl font-black mb-14 tracking-tighter md:pl-16">NEWS</h1>
 
 <div className="relative w-full md:w-auto sm:w-full">
@@ -142,7 +145,7 @@ export default function NewsSection() {
                 style={{ transform: 'translateZ(0)', transition: 'transform 0.5s, filter 0.5s' }}
               />
             </div>
-            <h2 className="footer-fontleft text-3xl font-black tracking-tight line-clamp-2">{article.title}</h2>
+            <h2 className="footer-fontleft text-2xl font-black tracking-tight line-clamp-2">{article.title}</h2>
             <div className="news-date text-lg">{article.date}</div>
           </div>
         </Link>
@@ -152,11 +155,11 @@ export default function NewsSection() {
 
 <div className="flex justify-center mt-8">
   {showPreviousIcon && (
-<button onClick={handlePrevious} className="px-4 py-2 bg-[#FFFFFF99] rounded-full border-black mr-4 absolute top-[50%] left-[5%] hover:scale-110 transition-transform duration-300" style={{ zIndex: 3 }}>
+<button onClick={handlePrevious} className="px-4 py-2 bg-[#FFFFFF99] rounded-full border-black mr-4 absolute top-[50%] left-[6%] hover:scale-110 transition-transform duration-300" style={{ zIndex: 3 }}>
   <img src="/leftarrow.svg" alt="Previous" className="inline-block rotate-180" />
 </button>
 )}
-<button onClick={handleNext} className="px-4 py-2 bg-[#FFFFFF99] rounded-full absolute right-[1%] top-[50%] hover:scale-110 transition-transform duration-300" style={{ zIndex: 3 }}>
+<button onClick={handleNext} className="px-4 py-2 bg-[#FFFFFF99] rounded-full absolute right-[2%] top-[50%] hover:scale-110 transition-transform duration-300" style={{ zIndex: 3 }}>
   <img src="/leftarrow.svg" alt="Next" className="inline-block" />
 </button>
 </div>

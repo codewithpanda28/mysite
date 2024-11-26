@@ -111,7 +111,7 @@ export default function Footer() {
         {/* Image sections */}
         <div className="flex flex-col md:flex-row mt-32">
           {/* Left image section with 4 images */}
-          <div className="flex flex-col justify-center md:w-1/2 gap-8 ">
+          <div className="flex flex-col justify-center md:w-1/2 gap-8  ">
      
             <Image
               src="/footer2.svg"
