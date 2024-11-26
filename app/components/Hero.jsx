@@ -168,15 +168,15 @@ export default function Page() {
                     </div>
 
                     <div className="text-white/80 font-mono hover:text-yellow-400 transition duration-300">
-                      <span className="text-[#FF7A05]">&#8226;</span>
+                      <span className="text-[#FF7A05]">&#8226; </span>
                       Pro Sessions
                     </div>
                     <div className="text-white/80 font-mono hover:text-yellow-400 transition duration-300">
-                      <span className="text-[#FF7A05]">&#8226;</span>
+                      <span className="text-[#FF7A05]">&#8226; </span>
                       Networking Events
                     </div>
                     <div className="text-white/80 font-mono hover:text-yellow-400 transition duration-300">
-                      <span className="text-[#FF7A05]">&#8226;</span>
+                      <span className="text-[#FF7A05]">&#8226; </span>
                       Evening Showcases
                     </div>
                   </div>
@@ -187,15 +187,15 @@ export default function Page() {
                     </div>
 
                     <div className="text-white/80 font-mono hover:text-yellow-400 transition duration-300">
-                      <span className="text-[#FF7A05]">&#8226;</span>
+                      <span className="text-[#FF7A05]">&#8226; </span>
                       Pro Sessions
                     </div>
                     <div className="text-white/80 font-mono hover:text-yellow-400 transition duration-300">
-                      <span className="text-[#FF7A05]">&#8226;</span>
+                      <span className="text-[#FF7A05]">&#8226; </span>
                       Networking Events
                     </div>
                     <div className="text-white/80 font-mono hover:text-yellow-400 transition duration-300">
-                      <span className="text-[#FF7A05]">&#8226;</span>
+                      <span className="text-[#FF7A05]">&#8226; </span>
                       Evening Showcases
                     </div>
                   </div>
