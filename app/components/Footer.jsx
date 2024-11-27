@@ -11,6 +11,7 @@ import {
 import Image from "next/image";
 
 export default function Footer() {
+  
   return (
     <div className="  lg:min-h-screen  z-2  relative overflow-hidden font-sans w-[100%] lg:px-20">
       {/* Abstract shapes decoration */}
