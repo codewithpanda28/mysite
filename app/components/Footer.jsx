@@ -11,7 +11,7 @@ import {
 import Image from "next/image";
 
 export default function Footer() {
-  
+
   return (
     <div className="  lg:min-h-screen  z-2  relative overflow-hidden font-sans w-[100%] lg:px-20">
       {/* Abstract shapes decoration */}
@@ -134,11 +134,11 @@ export default function Footer() {
           {/* Right image section with 1 image */}
           <div className="flex justify-center md:w-1/2 ">
             <Image
-              src="/footerbackground.png"
+              src="/rightbackground.svg"
               alt="Image 5"
-              width={800}
+              width={1200}
               height={300}
-              className=" absolute right-0 bottom-0"
+              className=" absolute right-[-40%] bottom-[-28%]"
             />
           </div>
         </div>
