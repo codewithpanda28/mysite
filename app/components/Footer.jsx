@@ -18,6 +18,7 @@ export default function Footer() {
         {/* Replace this with your actual SVG or component for the abstract shapes */}
         <div className="w-full bg-[url('/abstract-shapes.svg')] bg-no-repeat bg-contain"></div>
       </div>
+      
 
       {/* Main content */}
       <div className="container mx-auto lg:w-[100%] sm:w-[70%] px-4 py-16 flex flex-col">
