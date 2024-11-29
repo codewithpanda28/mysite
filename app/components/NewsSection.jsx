@@ -120,37 +120,37 @@ export default function NewsSection() {
 
   return (
     // news section start
-<div className="relative lg:min-h-screen bg-white  py-5 md:px-14 lg:pl-16 lg:pr-0 px-[2%] w-full" style={{ zIndex: 2 }}>
+<div className="relative lg:min-h-[100vh] bg-white py-[80px] md:px-14  lg:pl-[60px] px-[2%] w-full" style={{ zIndex: 2,  }}>
 
   {/* news heading section */}
-  <h1 className="news-heading sm:ml-[-5%] text-8xl lg:text-9xl font-black mb-14 tracking-tighter md:pl-16">NEWS</h1>
+  <h1 className="news-heading sm:ml-[-5%]   text-8xl lg:text-9xl font-black mb-[72px] tracking-tighter md:pl-[60px]">NEWS</h1>
 
 <div className="relative w-full md:w-auto sm:w-full">
-    <div className="flex gap-8 w-full overflow-x-auto custom-scrollbar transition-transform duration-500 ease-in-out">
-      {articles.map((article, index) => (
-        <Link
-          key={article.id}
-          href={article.link}
-          className={`group flex-shrink-0 ${index >= currentIndex && index < currentIndex + 3 ? 'block' : 'hidden'}`}
-          style={{ zIndex: index >= currentIndex && index < currentIndex + 3 ? 1 : 0 }}
-        >
-          <div className="space-y-4">
-            <div className="aspect-[4/3] relative overflow">
-              <Image
-                src={article.image.src}
-                alt={article.image.alt || "Image description not available"}
-                width={1200}
-                height={900}
-                className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
-                style={{ transform: 'translateZ(0)', transition: 'transform 0.5s, filter 0.5s' }}
-              />
-            </div>
-            <h2 className="news-heading text-2xl font-black tracking-tight uppercase line-clamp-2">{article.title}</h2>
-            <div className="news-date text-lg">{article.date}</div>
+  <div className="flex gap-10 w-full overflow-x-auto custom-scrollbar transition-transform duration-500 ease-in-out" style={{gap: '40px'}}>
+    {articles.map((article, index) => (
+      <Link
+        key={article.id}
+        href={article.link}
+        className={`group flex-shrink-0 ${index >= currentIndex && index < currentIndex + 3 ? 'block' : 'hidden'}`}
+        style={{ zIndex: index >= currentIndex && index < currentIndex + 3 ? 1 : 0 }}
+      >
+        <div className="space-y-4">
+          <div className="w-[416px] h-[276px] mb-[24px] relative overflow">
+            <Image
+              src={article.image.src}
+              alt={article.image.alt || "Image description not available"}
+              width={400}
+              height={276}
+              className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
+              style={{ transform: 'translateZ(0)', transition: 'transform 0.5s, filter 0.5s' }}
+            />
           </div>
-        </Link>
-      ))}
-    </div>
+          <h2 className="news-heading text-[20px] font-black tracking-tight upp line-clamp-2">{article.title}</h2>
+          <div className="news-date text-[20px] ">{article.date}</div>
+        </div>
+      </Link>
+    ))}
+  </div>
   </div>
 
 <div className="flex justify-center mt-8">
@@ -159,7 +159,7 @@ export default function NewsSection() {
   <img src="/leftarrow.svg" alt="Previous" className="inline-block rotate-180" />
 </button>
 )}
-<button onClick={handleNext} className="px-4 py-2 bg-[#FFFFFF99] rounded-full absolute lg:right-[2%] right-[7%] md:right-[9%] top-[50%]  hover:scale-110 transition-transform duration-300" style={{ zIndex: 3 }}>
+<button onClick={handleNext} className="px-4 py-2 bg-[#FFFFFF99] rounded-full absolute lg:right-[75px] right-[7%] md:right-[9%] top-[50%]  hover:scale-110 transition-transform duration-300" style={{ zIndex: 3 }}>
   <img src="/leftarrow.svg" alt="Next" className="inline-block" />
 </button>
 </div>

@@ -17,7 +17,7 @@ export default function Home() {
   }
 
   return (
-<div className="bg-[#001B37] mt-5 relative lg:h-screen lg:w-screen md:h-[800px] sm:h-[500px] overflow-hidden font-sans h-[50vh] w-full">
+<div className="bg-[#001B37] lg:mt-[70px] mt-[-35%] md:mt-[-40%] relative lg:h-screen lg:w-screen md:h-[800px] sm:h-[500px] overflow-hidden font-sans h-[50vh] w-full">
       <video
         ref={videoRef}
         className="absolute top-0 left-0 h-full w-full object-cover"
@@ -31,12 +31,8 @@ export default function Home() {
       </video>
 {/* //summer sarted here */}
 
-<div className="relative z-1  flex h-full flex-col items-center justify-center text-center text-white">
-  {/* <h1 className="mb-4 text-3xl main-subtitle font-semibold tracking-tight md:text-7xl lg:text-[80px]">
-  India first global <br/> music conference and  <br/>  showcase
-  festival
-  </h1> */}
-  
+<div className="relative z-1 flex h-full flex-col items-center justify-center">
+<img src="logo.svg" alt="Music Conference" className="w-[246px] h-auto max-w-full opacity-60" />
 </div>
 
    <button

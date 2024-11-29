@@ -54,10 +54,10 @@ export default function Page() {
   };
 
   return (
-    <div className="min-h-screen bg-[#001B37] relative overflow-hidden font-sans z-50">
+    <div className=" bg-[#001B37] relative overflow-hidden font-sans z-50">
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 flex items-center p-4 min-h-[100px] min-w-full sm:justify-between  lg:pl-24 lg:pt-5 lg:left-20">
-        <div className="text-white text-3xl font-bold ml-8 mt-5 z-10">
+        <div className="text-white text-3xl font-bold ml-8 mt-4 z-10">
           <Image
             src="/logo.svg"
             alt="Description of the image"
@@ -71,7 +71,7 @@ export default function Page() {
       </header>
 
       {/* Main content */}
-      <main className="lg:pt-32 sm:pt-24 px-4 relative ">
+      <main className="lg:pt-[132px] sm:pt-24 px-4 relative ">
         {/* Left side image */}
         <div className="left-[-30%] top-[-15%] w-[60%] h-[100%] block fixed z-[-1]">
           <Image
@@ -84,7 +84,7 @@ export default function Page() {
         </div>
 
         {/* Center content */}
-        <div className="max-w-[1060px] mx-auto relative z-1 ">
+        <div className="max-w-5xl mx-auto relative z-1 ">
           {/* LINEUP text */}
           <div className="z-0 absolute inset-0 flex justify-center items-center  transition-transform duration-300 hover:scale-105 w-[120%]">
             {/* LINEUP */}
@@ -93,12 +93,12 @@ export default function Page() {
               alt="Image Description"
               width={1000}
               height={500}
-              className="mt-[-25%] ml-[-10%] z-10 w-[100%] opacity-40  transition-opacity duration-300 hover:opacity-80"
+              className="lg:mt-[-25%] mt-[-100%] ml-[-10%] z-10 w-[100%] opacity-40  transition-opacity duration-300 hover:opacity-80"
             />
           </div>
 
           {/* Artist lineup */}
-          <div className="container lg:mt-[5%] mt-[40%]">
+      <div className="container h-[100vh] lg:mt-[5%]  mt-[157px]">
             <img
               src="/centeriimw.svg"
               loading="lazy"
@@ -110,13 +110,15 @@ export default function Page() {
               height={300}
               className="hero_logo mt-4"
             />
-            <div className="text-white ">
-              <div className="text-xl mb-8 mt-10 md:text-3xl sm:text-xl font-extrabold ">
-                <p className="main-subtitle lg:text-[32px] md:text-3xl text-[24px]">
-              India first{" "}
-<span className="text-[#FE6F00] ">global music</span>{" "}
-conference and <span> showcase</span>{" "}
-festival.
+
+
+            <div className="text-white  ">
+              <div className="text-xl mb-5 mt-10 md:text-3xl sm:text-xl font-extrabold ">
+                <p className="main-subtitle lg:text-[25px] md:text-3xl mt-[44px] mb-[72px] sm:text-2xl">
+                  INDIA FIRST{" "}
+                  <span className="text-[#FE6F00] ">GLOBAL MUSIC</span>{" "}
+                  CONFERENCE AND <span> SHOWCASE</span>{" "}
+                  <span className="lg:mr-[48%] lg:text-left">FESTIVAL.</span>
                 </p>
               </div>
 
@@ -141,33 +143,33 @@ festival.
                 ))}
               </div>
 
-           {/* 2nd sub heading */}
-            
+           
+{/*             
               <div className="text-xl mb-5 mt-10 md:text-3xl sm:text-xl font-extrabold ">
-              <p className="main-subtitle lg:text-[32px] md:text-3xl text-[24px]">
-              India first{" "}
-<span className="text-[#FE6F00] ">global music</span>{" "}
-conference and <span> showcase</span>{" "}
-festival.
+                <p className="main-subtitle lg:text-[25px] md:text-3xl sm:text-2xl">
+                  INDIA FIRST{" "}
+                  <span className="text-[#FE6F00] ">GLOBAL MUSIC</span>{" "}
+                  CONFERENCE AND <span> SHOWCASE</span>{" "}
+                  <span className="lg:mr-[48%] lg:text-left">FESTIVAL.</span>
                 </p>
-                </div>
+                </div> */}
             
            
 
-              <div className="flex flex-row justify-start items-center gap-5">
+              <div className="flex flex-row mt-12 justify-start items-center gap-5">
                 {/* button */}
-                <button className="buy-ticket main-btn mt-2 mb-5 bg-[#FE6F00] text-[#FFFFFF] px-6 py-4 rounded-full font-semibold text-xl transition duration-300 ease-in-out transform hover:bg-[#FFFFFF] hover:text-[#FE6F00] hover:scale-105 hover:shadow-lg hover:cursor-pointer  fixed bottom-0 left-0 right-0 w-full sm:w-auto sm:relative sm:mb-0 z-[9999]">
+                <button className="main-count1 item-[24px] main-btn mt-2 mb-5 bg-[#FE6F00] text-[#FFFFFF] px-8 py-4 rounded-full font-semibold text-xl transition duration-300 ease-in-out transform hover:bg-[#FFFFFF] hover:text-[#FE6F00] hover:scale-105 hover:shadow-lg hover:cursor-pointer  fixed bottom-0 left-0 right-0 w-full sm:w-auto sm:relative sm:mb-0 z-[9999]">
                   BUY TICKETS
                 </button>
 
-                <button className="buy-ticket main-btn mt-8 sm:mb-5 bg-[#FFFFFF] text-[#FE6F00] px-6 py-4 rounded-full font-semibold text-xl transition duration-300 ease-in-out transform hover:bg-[#FFFFFF] hover:text-[#FE6F00] hover:scale-105 hover:shadow-lg hover:cursor-pointer hover:z-20 z-99 w-full sm:w-auto">
+                <button className="main-count1 item-[24px] main-btn mt-8 sm:mb-5 bg-[#FE6F00] text-[#FFFFFF] px-8 py-4 rounded-full font-semibold text-xl transition duration-300 ease-in-out transform hover:bg-[#FFFFFF] hover:text-[#FE6F00] hover:scale-105 hover:shadow-lg hover:cursor-pointer hover:z-20 z-99 w-full sm:w-auto">
                   BECOME SPONSOR
                 </button>
               </div>
 
               {/* card section */}
 
-              <section className="news-title   container mx-auto px-4 lg:py-16 ">
+              <section className="news-title mt-6  container mx-auto px-4 lg:py-16 ">
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
                   {/* 1st card */}
                   <div className="hidden sm:block border-r border-dotted border-white/20">

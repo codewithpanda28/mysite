@@ -26,7 +26,7 @@ function Navbar() {
 
   return (
     // navbar start
-    <nav className="relative z-50 w-[42%] text-white md:absolute lg:right-0 sm:right-[25%] md:right-0">
+    <nav className="relative z-50 w-[40%] text-white md:absolute lg:right-0 sm:right-[25%] md:right-0">
       <button
         className="block md:hidden lg:mt-0 mt-[17%] p-2 rounded-sm text-white text-2xl close-icon ml-[90%] bg-orange-500"
         onClick={() => setIsMenuOpen(!isMenuOpen)}

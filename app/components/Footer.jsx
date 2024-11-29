@@ -11,23 +11,23 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <div className="  lg:min-h-screen  z-2  relative overflow-hidden font-sans w-[100%]  lg:px-20">
+    <div className="  lg:min-h-screen  z-2  relative overflow-hidden font-sans w-[100%]  lg:px-[5%]">
       {/* Abstract shapes decoration */}
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] pointer-events-none">
+      {/* <div className="absolute top-0 right-0 w-[600px] h-[600px] pointer-events-none"> */}
         {/* Replace this with your actual SVG or component for the abstract shapes */}
-        <div className="w-full bg-[url('/abstract-shapes.svg')] bg-no-repeat bg-contain"></div>
-      </div>
+        {/* <div className="w-full bg-[url('/abstract-shapes.svg')] bg-no-repeat bg-contain"></div> */}
+      {/* </div> */}
 
       {/* Main content */}
-      <div className="container mx-auto lg:w-[100%] sm:w-[70%] px-4 py-16 flex flex-col ">
+      <div className="container  mx-auto lg:w-[100%]  lg:px-0 px-[4%] lg:py-16 py-0 flex flex-col ">
         <div className="flex flex-row justify-between flex-grow">
           {/* Left navigation */}
-          <nav className="max-w-[748px] mt-[58px] space-y-5 z-50 text-white text-[30px] md:text-[50px] font-extrabold leading-none">
-            <h2 className="lg:text-2xl text-xl  mb-[39px] footer-font">
+          <nav className="max-w-[748px] mt-[80px]  space-y-5 z-50 text-white text-[30px] md:text-[50px] font-extrabold leading-none">
+            <h2 className="lg:text-2xl text-xl  mb-[56px] footer-font">
               Whether you’re an Artist, Industry Professional, or Music
               Enthusiast - There’s something for everyone!
             </h2>
-            <h3 className="lg:text-3xl text-xl mb-[24px] footer-font">
+            <h3 className="lg:text-3xl mt-[20px] text-xl mb-[24px] footer-font">
               Let’s shape the{" "}
               <span className="text-[#FE6F00]"> Global Music </span> scene
               together.
@@ -36,12 +36,12 @@ export default function Footer() {
           </nav>
 
           {/* Right navigation */}
-          <nav className="space-y-2 z-50 text-white text-[20px] md:text-[38px] font-bold leading-none">
-            <ul className="lg:space-y-[-5] space-y-2 lg:mt-[19%] mt-[50%] lg:mr-12">
+          <nav className="space-y-2 z-10  text-white text-[20px] md:text-[38px] font-bold leading-none">
+            <ul className="lg:space-y-[-5] space-y-2 lg:mt-[80px] mt-[90%] lg:mr-[190px] ">
               <li>
                 <Link
                   href="#link1"
-                  className="footer-fontleft cursor-pointer text-white sm:text-2xl md:text-3xl lg:text-2xl font-bold  hover:text-blue-500 transition-colors duration-300 transform hover:scale-110 hover:-translate-y-1"
+                  className="footer-fontleft cursor-pointer text-white text-[16px] md:text-3xl lg:text-[20px] font-bold  hover:text-blue-500 transition-colors duration-300 transform hover:scale-110 hover:-translate-y-1"
                 >
                   PARTNERS
                 </Link>
@@ -50,7 +50,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="#link3"
-                  className="footer-fontleft cursor-pointer text-white sm:text-2xl md:text-3xl lg:text-2xl font-bold  hover:text-blue-500 transition-colors duration-300 transform hover:scale-110 hover:-translate-y-1"
+                  className="footer-fontleft cursor-pointer text-white text-[16px] md:text-3xl lg:text-[20px]  font-bold  hover:text-blue-500 transition-colors duration-300 transform hover:scale-110 hover:-translate-y-1"
                 >
                   CONTACT
                 </Link>
@@ -58,7 +58,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="#link4"
-                  className="footer-fontleft cursor-pointer text-white sm:text-2xl md:text-3xl lg:text-2xl font-bold  hover:text-blue-500 transition-colors duration-300 transform hover:scale-110 hover:-translate-y-1"
+                  className="footer-fontleft cursor-pointer text-white text-[16px] md:text-3xl lg:text-[20px]  font-bold  hover:text-blue-500 transition-colors duration-300 transform hover:scale-110 hover:-translate-y-1"
                 >
                   SCHEDULE
                 </Link>
@@ -66,7 +66,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="#link4"
-                  className="footer-fontleft cursor-pointer text-white sm:text-2xl md:text-3xl lg:text-2xl font-bold  hover:text-blue-500 transition-colors duration-300 transform hover:scale-110 hover:-translate-y-1"
+                  className="footer-fontleft cursor-pointer text-white text-[16px] md:text-3xl lg:text-[20px]  font-bold  hover:text-blue-500 transition-colors duration-300 transform hover:scale-110 hover:-translate-y-1"
                 >
                   INFO
                 </Link>
@@ -74,7 +74,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="#link4"
-                  className="footer-fontleft cursor-pointer text-white sm:text-2xl md:text-3xl lg:text-2xl font-bold  hover:text-blue-500 transition-colors duration-300 transform hover:scale-110 hover:-translate-y-1"
+                  className="footer-fontleft cursor-pointer text-white text-[16px] md:text-3xl lg:text-[20px]  font-bold  hover:text-blue-500 transition-colors duration-300 transform hover:scale-110 hover:-translate-y-1"
                 >
                   COOKIES
                 </Link>
@@ -89,8 +89,8 @@ export default function Footer() {
           {/* Left image section with 4 images */}
             {/* Partners Section */}
       <div className="mt-24">
-  <h3 className="text-2xl font-bold mb-8 text-white footer-font">OUR PARTNERS</h3>
-  <div className="grid grid-cols-2 md:grid-cols-4 gap-16 items-center mb-16">
+  <h3 className="text-2xl sm:text-[15px] font-bold mb-8 text-white footer-font">OUR PARTNERS</h3>
+  <div className="grid grid-cols-2 md:grid-cols-4 gap-16 items-center mt-[40px] mb-[40px]">
 <div className="">
   <Image
     src="footer/image1.svg"
@@ -120,9 +120,9 @@ export default function Footer() {
 </div>
   </div>
 </div>
-<div className="mt-24 ml-48">
+<div className="mt-24 lg:ml-48 ml-24 ">
   <h3 className="text-2xl font-bold mb-8 text-white footer-font">FOLLOW US</h3>
-  <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center mb-16">
+  <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center mt-[40px] mb-16">
     <div className="">
       <Image
         src="footer/linkedin.svg"
