@@ -99,7 +99,7 @@ export default function Page() {
 
           {/* Artist lineup */}
       <div className="container h-[100vh] lg:mt-[5%]  mt-[157px]">
-            <img
+            <Image
               src="/centeriimw.svg"
               loading="lazy"
               sizes="centeriimw.svg

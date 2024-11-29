@@ -156,11 +156,11 @@ export default function NewsSection() {
 <div className="flex justify-center mt-8">
   {showPreviousIcon && (
 <button onClick={handlePrevious} className="px-4 py-2 bg-[#FFFFFF99] rounded-full border-black mr-4 absolute top-[50%] lg:left-[6%] md:left-[9%] left-[6%] hover:scale-110 transition-transform duration-300" style={{ zIndex: 3 }}>
-  <img src="/leftarrow.svg" alt="Previous" className="inline-block rotate-180" />
+  <Image src="/leftarrow.svg" alt="Previous" className="inline-block rotate-180" />
 </button>
 )}
 <button onClick={handleNext} className="px-4 py-2 bg-[#FFFFFF99] rounded-full absolute lg:right-[75px] right-[7%] md:right-[9%] top-[50%]  hover:scale-110 transition-transform duration-300" style={{ zIndex: 3 }}>
-  <img src="/leftarrow.svg" alt="Next" className="inline-block" />
+  <Image src="/leftarrow.svg" alt="Next" className="inline-block" />
 </button>
 </div>
 

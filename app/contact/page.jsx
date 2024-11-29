@@ -36,7 +36,7 @@ export default function ContactPage() {
         <div className="space-y-8 md:space-y-12">
           <div className="space-y-4">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
-              Let's discuss on something{' '}
+              Lets discuss on something{' '}
               <span className="text-[#E91E63]">cool</span>
               <br />
               together
@@ -89,7 +89,7 @@ export default function ContactPage() {
         <div className="bg-white rounded-3xl p-6 md:p-8 shadow-xl">
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="space-y-4">
-              <h2 className="text-lg font-medium text-gray-900">I'm interested in...</h2>
+              <h2 className="text-lg font-medium text-gray-900">I am interested in...</h2>
               <div className="flex flex-wrap gap-3">
                 <Button
                   type="button"

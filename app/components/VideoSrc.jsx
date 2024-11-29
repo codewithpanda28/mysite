@@ -2,6 +2,7 @@
 
 import { useState, useRef } from 'react'
 import { Play, Pause } from 'lucide-react'
+import Image from 'next/image'
 
 export default function Home() {
   const [isPlaying, setIsPlaying] = useState(false)
@@ -32,7 +33,7 @@ export default function Home() {
 {/* //summer sarted here */}
 
 <div className="relative z-1 flex h-full flex-col items-center justify-center">
-<img src="logo.svg" alt="Music Conference" className="w-[246px] h-auto max-w-full opacity-60" />
+<Image src="logo.svg" alt="Music Conference" className="w-[246px] h-auto max-w-full opacity-60" />
 </div>
 
    <button
