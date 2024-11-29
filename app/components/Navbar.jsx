@@ -133,7 +133,7 @@ function Navbar() {
           onMouseLeave={() => setActiveMenu(null)}
         >
           <a
-            href="#"
+            href="/info"
             className="main-desc block mx-[-30px] px-3 py-3 text-white text-xl transition-all duration-300 bg-yellow-500 hover:opacity-100 hover:transform hover:translate-x-[-30px] hover:scale-105 hover:shadow-lg hover:translate-y-1 hover:translate-x-1 whitespace-nowrap overflow-hidden text-ellipsis z-100 hidden md:block"
           >
             INFO
@@ -164,7 +164,7 @@ function Navbar() {
                 CONTACT
               </a>
               <a
-                href="/faq"
+                href="/schedule"
                 className="news-title  block px-5 py-3 text-white hover:bg-black/20 transition-colors"
                 style={{
                   transition: "transform 0.3s",
@@ -178,10 +178,10 @@ function Navbar() {
                   (e.currentTarget.style.transform = "translateZ(0)")
                 }
               >
-                FAQ
+                SCHEDULE
               </a>
               <a
-                href="/location"
+                href="/info"
                 className="news-title  block px-5 py-3 text-white hover:bg-black/20 transition-colors"
                 style={{
                   transition: "transform 0.3s",
@@ -195,7 +195,7 @@ function Navbar() {
                   (e.currentTarget.style.transform = "translateZ(0)")
                 }
               >
-                LOCATION
+                INFO
               </a>
             </div>
           </div>
@@ -239,7 +239,7 @@ function Navbar() {
           </div>
           <div className="w-full">
             <a
-              href="#"
+              href="/info"
               className={`block w-full px-2 py-2 text-white ${
                 isMenuOpen ? "bg-yellow-500" : ""
               } hover:bg-purple-700/80 text-left md:hidden transition-transform transform hover:scale-110 hover:shadow-xl`}

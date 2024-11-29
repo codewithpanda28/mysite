@@ -70,10 +70,11 @@
 }
 
 
-/* .buy-ticket{
-  font-size: 22px;
+.buy-ticket{
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
   font-weight: 900;
-} */
+}
 
 /* .main-heading{
 
@@ -90,26 +91,25 @@
 } */
 
 .main-desc{
-  font-family: "myfont", sans-serif;
+ font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: 900;
-  font-style: normal;
 }
 .main-subtitle{
-  font-family: "myfont", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: 900;
-  font-style: normal;
 }
 
 .main-count{
-  font-family: "myfont", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 900; 
+  font-weight: 900;
   font-style: normal;
   justify-content: center;
   align-items: center;
   margin: 0 auto;
+
 }
 
 /* .main-btn{
@@ -152,7 +152,7 @@
 
 .news-heading{
   font-family: "Montserrat", sans-serif;
-  font-weight: 800;
+  font-weight: 900;
   font-style: normal;
 }
 
@@ -170,14 +170,14 @@
 }
 
 .footer-font{
-  font-family: "myfont", sans-serif;
-  font-weight: 900;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
   font-style: normal;
 }
 .footer-fontleft{
-  font-family: "myfontleft", sans-serif;
-  font-weight: 700;
-  font-style: normal;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
 }
 
 /* .news-h2{

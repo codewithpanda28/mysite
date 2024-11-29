@@ -32,10 +32,11 @@ export default function Home() {
 {/* //summer sarted here */}
 
 <div className="relative z-1  flex h-full flex-col items-center justify-center text-center text-white">
-  <h1 className="mb-4 text-3xl main-subtitle font-semibold tracking-tight md:text-7xl lg:text-[80px]">
+  {/* <h1 className="mb-4 text-3xl main-subtitle font-semibold tracking-tight md:text-7xl lg:text-[80px]">
   India first global <br/> music conference and  <br/>  showcase
   festival
-  </h1>
+  </h1> */}
+  
 </div>
 
    <button

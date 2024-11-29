@@ -6,19 +6,19 @@ import { useEffect, useState } from "react";
 const mockData = [
   {
     id: 1,
-    description: "Beautiful Landscape",
-    created_at: "2023-10-01T12:00:00Z",
+    description: "India International Music Week to be held in Goa in 2025",
+    created_at: "2024-01-23T12:00:00Z",
     urls: { small: "/news1.svg" },
     alt_description: "A beautiful landscape",
-    links: { html: "https://example.com/photo1" },
+    links: { html: "https://www.heraldgoa.in/amp/story/cafe/india-international-music-week-to-be-held-in-goa-in-2025/216912" },
   },
   {
     id: 2,
-    description: "City Skyline",
-    created_at: "2023-10-02T12:00:00Z",
+    description: "India International Music Week 2025 Opens Applications for Artists",
+    created_at: "2024-09-06T12:00:00Z",
     urls: { small: "/news2.svg" },
     alt_description: "A city skyline",
-    links: { html: "https://example.com/photo2" },
+    links: { html: "https://rollingstoneindia.com/india-international-music-week-iimw-2025-apply-to-perform/amp/" },
   },
   {
     id: 3,
@@ -123,7 +123,7 @@ export default function NewsSection() {
 <div className="relative lg:min-h-screen bg-white  py-5 md:px-14 lg:pl-16 lg:pr-0 px-[2%] w-full" style={{ zIndex: 2 }}>
 
   {/* news heading section */}
-  <h1 className="footer-font text-8xl lg:text-9xl font-black mb-14 tracking-tighter md:pl-16">NEWS</h1>
+  <h1 className="news-heading sm:ml-[-5%] text-8xl lg:text-9xl font-black mb-14 tracking-tighter md:pl-16">NEWS</h1>
 
 <div className="relative w-full md:w-auto sm:w-full">
     <div className="flex gap-8 w-full overflow-x-auto custom-scrollbar transition-transform duration-500 ease-in-out">
@@ -145,7 +145,7 @@ export default function NewsSection() {
                 style={{ transform: 'translateZ(0)', transition: 'transform 0.5s, filter 0.5s' }}
               />
             </div>
-            <h2 className="footer-fontleft text-2xl font-black tracking-tight line-clamp-2">{article.title}</h2>
+            <h2 className="news-heading text-2xl font-black tracking-tight uppercase line-clamp-2">{article.title}</h2>
             <div className="news-date text-lg">{article.date}</div>
           </div>
         </Link>

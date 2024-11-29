@@ -5,16 +5,7 @@ import "./globals.css";
 
 
 
-const myfont = FontSpring({
-  src: "./fonts/Fontspring-DEMO-integralcf-bold.otf",
- display: "swap",
- weight: "900"
-})
-const myfontleft = FontSpring({
-  src: "./fonts/Fontspring-DEMO-integralcf-demibold.otf",
- display: "swap",
- weight: "900"
-})
+
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -43,6 +34,10 @@ export default function RootLayout({ children }) {
           href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Bowlby+One&family=Modak&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Notable&family=Nova+Script&family=Seymour+One&display=swap"
           rel="stylesheet"
         />
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
 {/* 
         <link
           href="https://db.onlinewebfonts.com/c/8d07476eb4c99c30e857758062f352ab?family=FSP+DEMO+-+ntgrl+CF+xtr+Bld"
@@ -63,7 +58,7 @@ export default function RootLayout({ children }) {
         /> */}
       </head>
       <body
-        className={myfont.className}
+       
       >
         {children}
       </body>
