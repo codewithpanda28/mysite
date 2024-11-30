@@ -10,11 +10,11 @@ export default function Footer() {
           {/* Left content */}
           <nav className="space-y-4 mt-[40px] max-w-full z-50 text-white">
             <h2 className="text-xl mb-6 footer-font">
-              Whether you're an Artist, Industry Professional, or Music
-              Enthusiast - There's something for everyone!
+              Whether you are an Artist, Industry Professional, or Music
+              Enthusiast - There something for everyone!
             </h2>
             <h3 className="text-xl mb-4 footer-font">
-              Let's shape the{" "}
+              Let s shape the{" "}
               <span className="text-[#FE6F00]">Global Music</span> scene
               together.
             </h3>
@@ -104,11 +104,11 @@ export default function Footer() {
           {/* Left content */}
           <nav className="space-y-5 mt-[80px] max-w-[748px] z-50 text-white">
             <h2 className="text-2xl mb-[56px] footer-font">
-              Whether you're an Artist, Industry Professional, or Music
-              Enthusiast - There's something for everyone!
+              Whether you are an Artist, Industry Professional, or Music
+              Enthusiast - There something for everyone!
             </h2>
             <h3 className="text-3xl mb-[24px] footer-font">
-              Let's shape the{" "}
+              Lets shape the{" "}
               <span className="text-[#FE6F00]">Global Music</span> scene
               together.
             </h3>
