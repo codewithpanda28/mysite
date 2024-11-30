@@ -172,7 +172,7 @@ export default function Footer() {
     ["linkedin.svg", "LinkedIn", "https://www.linkedin.com/showcase/iimw/?viewAsMember=true"],
     ["instagram.svg", "Instagram", "https://www.instagram.com/iimw.in?igsh=czFocGVuMjZydDJ5"],
   ].map(([src, alt, url]) => (
-    <a href={url} target="_blank" rel="noopener noreferrer" key={alt}>
+    <a href={url}  rel="noopener noreferrer" key={alt}>
       <div className="w-12 transform transition duration-300 hover:scale-110 hover:-translate-y-2 hover:shadow-lg z-20">
         <Image
           src={`footer/${src}`}
