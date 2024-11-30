@@ -180,23 +180,7 @@ function Navbar() {
               >
                 SCHEDULE
               </a>
-              <a
-                href="/info"
-                className="news-title  block px-5 py-3 text-white hover:bg-black/20 transition-colors"
-                style={{
-                  transition: "transform 0.3s",
-                  transform: "translateZ(0)",
-                  willChange: "transform",
-                }}
-                onMouseEnter={(e) =>
-                  (e.currentTarget.style.transform = "translateZ(10px)")
-                }
-                onMouseLeave={(e) =>
-                  (e.currentTarget.style.transform = "translateZ(0)")
-                }
-              >
-                INFO
-              </a>
+   
             </div>
           </div>
         </div>

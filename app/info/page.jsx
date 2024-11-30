@@ -5,7 +5,7 @@ export default function ProgramOverview() {
     <div className="min-h-screen bg-[#002147] p-4 md:p-8">
       {/* Header Section */}
       <div className="mb-8 md:mb-12 text-center">
-        <h1 className="mb-4 md:mb-8 text-2xl md:text-4xl lg:text-6xl font-bold text-[#FF6B00]">
+        <h1 className="mb-4 md:mb-8 text-2xl md:text-4xl lg:text-6xl font-bold text-[#FF6B00] footer-font">
           IIMW 2025 - PROGRAM OVERVIEW
         </h1>
         <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 text-white">

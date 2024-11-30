@@ -18,7 +18,7 @@ export default function Home() {
   }
 
   return (
-<div className="bg-[#001B37] lg:mt-[70px] mt-[-35%] md:mt-[-40%] relative lg:h-screen lg:w-screen md:h-[800px] sm:h-[500px] overflow-hidden font-sans h-[50vh] w-full">
+<div className="bg-[#001B37] lg:mt-[10%] mt-[-60%] md:mt-[-40%] relative lg:h-screen lg:w-screen md:h-[800px] sm:h-[500px] overflow-hidden font-sans h-[50vh] w-full">
       <video
         ref={videoRef}
         className="absolute top-0 left-0 h-full w-full object-cover"
@@ -33,7 +33,7 @@ export default function Home() {
 {/* //summer sarted here */}
 
 <div className="relative z-1 flex h-full flex-col items-center justify-center">
-<Image src="logo.svg" alt="Music Conference" className="w-[246px] h-auto max-w-full opacity-60" />
+<Image src="logo.svg" width={246} height={92} alt="Music Conference" className="w-[246px] h-auto max-w-full opacity-60"  />
 </div>
 
    <button

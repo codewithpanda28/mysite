@@ -120,12 +120,12 @@ export default function NewsSection() {
 
   return (
     // news section start
-<div className="relative lg:min-h-[100vh] bg-white py-[80px] md:px-14  lg:pl-[60px] px-[2%] w-full" style={{ zIndex: 2,  }}>
+<div className="relative lg:min-h-[100vh] lg:mb-0 mb-[60px] bg-white lg:py-[80px] py-[40px] md:px-14  lg:pl-[60px] px-[2%] w-full" style={{ zIndex: 2,  }}>
 
   {/* news heading section */}
-  <h1 className="news-heading sm:ml-[-5%]   text-8xl lg:text-9xl font-black mb-[72px] tracking-tighter md:pl-[60px]">NEWS</h1>
+  <h1 className="news-heading lg:ml-[-5%] ml-[16px] lg:mt-0 lg:mr-0  mr-[16px]    text-8xl lg:text-9xl font-black lg:mb-[72px] mb-[32px] tracking-tighter md:pl-[60px]">NEWS</h1>
 
-<div className="relative w-full md:w-auto sm:w-full">
+<div className="relative w-full md:w-auto sm:w-full lg:mt-0 ">
   <div className="flex gap-10 w-full overflow-x-auto custom-scrollbar transition-transform duration-500 ease-in-out" style={{gap: '40px'}}>
     {articles.map((article, index) => (
       <Link
@@ -156,11 +156,11 @@ export default function NewsSection() {
 <div className="flex justify-center mt-8">
   {showPreviousIcon && (
 <button onClick={handlePrevious} className="px-4 py-2 bg-[#FFFFFF99] rounded-full border-black mr-4 absolute top-[50%] lg:left-[6%] md:left-[9%] left-[6%] hover:scale-110 transition-transform duration-300" style={{ zIndex: 3 }}>
-  <Image src="/leftarrow.svg" alt="Previous" className="inline-block rotate-180" />
+  <Image src="/leftarrow.svg" width={15} height={15} alt="Previous" className="inline-block rotate-180" />
 </button>
 )}
 <button onClick={handleNext} className="px-4 py-2 bg-[#FFFFFF99] rounded-full absolute lg:right-[75px] right-[7%] md:right-[9%] top-[50%]  hover:scale-110 transition-transform duration-300" style={{ zIndex: 3 }}>
-  <Image src="/leftarrow.svg" alt="Next" className="inline-block" />
+  <Image src="/leftarrow.svg" width={15} height={15} alt="Next" className="inline-block" />
 </button>
 </div>
 

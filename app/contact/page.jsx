@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { Facebook, Instagram, Twitter, Mail, Phone, MapPin, Send } from 'lucide-react'
+import { Facebook, Instagram, Twitter, Mail, Phone, MapPin, Send, Linkedin } from 'lucide-react'
 
 export default function ContactPage() {
   const handleSubmit = async (e) => {
@@ -35,53 +35,48 @@ export default function ContactPage() {
         {/* Left Column */}
         <div className="space-y-8 md:space-y-12">
           <div className="space-y-4">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
-              Lets discuss on something{' '}
-              <span className="text-[#E91E63]">cool</span>
+            <h1 className="news-title text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
+              Get In Touch With Our Team {' '}
+              <span className="text-[#FE6F00]">Team</span>
               <br />
-              together
+             
             </h1>
           </div>
 
           <div className="space-y-6">
             <div className="flex items-center gap-4 text-white/90">
-              <Mail className="w-6 h-6 text-[#E91E63]" />
-              <a href="mailto:contact@iimw.in" className="hover:text-[#E91E63] transition-colors">
+              <Mail className="w-6 h-6 text-[#FE6F00]" />
+              <a href="mailto:contact@iimw.in" className="contact hover:text-[#FE6F00] transition-colors">
                 contact@iimw.in
               </a>
             </div>
             <div className="flex items-center gap-4 text-white/90">
-              <Phone className="w-6 h-6 text-[#E91E63]" />
-              <a href="tel:+919876543210" className="hover:text-[#E91E63] transition-colors">
+              <Phone className="w-6 h-6 text-[#FE6F00]" />
+              <a href="tel:+919876543210" className="contact hover:text-[#FE6F00] transition-colors">
                 +91 98765 43210
               </a>
             </div>
             <div className="flex items-center gap-4 text-white/90">
-              <MapPin className="w-6 h-6 text-[#E91E63]" />
-              <span>IIMW Office, Mumbai, India</span>
+              <MapPin className="w-6 h-6 text-[#FE6F00] " />
+              <span className="contact">IIMW Office, Mumbai, India</span>
             </div>
           </div>
 
           {/* Social Links */}
           <div className="flex gap-4 pt-8">
             <a
-              href="#"
-              className="w-12 h-12 rounded-full bg-[#E91E63] flex items-center justify-center hover:bg-[#E91E63]/80 transition-colors"
+              href="https://www.linkedin.com/showcase/iimw/?viewAsMember=true"
+              className="w-12 h-12 rounded-full bg-[#FE6F00] flex items-center justify-center hover:bg-[#FE6F00]/80 transition-colors"
             >
-              <Facebook className="w-6 h-6 text-white" />
+              <Linkedin className="w-6 h-6 text-white" />
             </a>
             <a
-              href="#"
-              className="w-12 h-12 rounded-full bg-[#E91E63] flex items-center justify-center hover:bg-[#E91E63]/80 transition-colors"
+              href="https://www.instagram.com/iimw.in?igsh=czFocGVuMjZydDJ5"
+              className="w-12 h-12 rounded-full bg-[#FE6F00] flex items-center justify-center hover:bg-[#FE6F00]/80 transition-colors"
             >
               <Instagram className="w-6 h-6 text-white" />
             </a>
-            <a
-              href="#"
-              className="w-12 h-12 rounded-full bg-[#E91E63] flex items-center justify-center hover:bg-[#E91E63]/80 transition-colors"
-            >
-              <Twitter className="w-6 h-6 text-white" />
-            </a>
+        
           </div>
         </div>
 
@@ -89,25 +84,25 @@ export default function ContactPage() {
         <div className="bg-white rounded-3xl p-6 md:p-8 shadow-xl">
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="space-y-4">
-              <h2 className="text-lg font-medium text-gray-900">I am interested in...</h2>
+              <h2 className="text-lg font-medium text-gray-900 footer-fontleft">I am interested in...</h2>
               <div className="flex flex-wrap gap-3">
                 <Button
                   type="button"
                   variant="secondary"
-                  className="bg-[#E91E63] text-white hover:bg-[#E91E63]/90"
+                  className="bg-[#FE6F00] text-white hover:bg-[#FE6F00]/90 contact"
                 >
                   Music Production
                 </Button>
-                <Button type="button" variant="outline" className="bg-white">
+                <Button type="button" variant="outline" className="bg-white contact">
                   Live Performance
                 </Button>
-                <Button type="button" variant="outline" className="bg-white">
+                <Button type="button" variant="outline" className="bg-white contact">
                   Artist Management
                 </Button>
-                <Button type="button" variant="outline" className="bg-white">
+                <Button type="button" variant="outline" className="bg-white contact">
                   Event Planning
                 </Button>
-                <Button type="button" variant="outline" className="bg-white">
+                <Button type="button" variant="outline" className="bg-white contact">
                   Other
                 </Button>
               </div>
@@ -118,7 +113,7 @@ export default function ContactPage() {
                 <Input
                   name="name"
                   placeholder="Your name"
-                  className="border-0 border-b border-gray-300 rounded-none px-0 focus-visible:ring-0 focus-visible:border-[#E91E63]"
+                  className="contact border-0 border-b border-gray-300 rounded-none px-0 focus-visible:ring-0 focus-visible:border-[#FE6F00]"
                 />
               </div>
               <div>
@@ -126,7 +121,7 @@ export default function ContactPage() {
                   name="email"
                   type="email"
                   placeholder="Your email"
-                  className="border-0 border-b border-gray-300 rounded-none px-0 focus-visible:ring-0 focus-visible:border-[#E91E63]"
+                  className="contact border-0 border-b border-gray-300 rounded-none px-0 focus-visible:ring-0 focus-visible:border-[#FE6F00]"
                 />
               </div>
               <div>
@@ -134,7 +129,7 @@ export default function ContactPage() {
                   name="mobile"
                   type="number"
                   placeholder="Your mobile number"
-                  className="border-0 border-b border-gray-300 rounded-none px-0 focus-visible:ring-0 focus-visible:border-[#E91E63]"
+                  className="contact border-0 border-b border-gray-300 rounded-none px-0 focus-visible:ring-0 focus-visible:border-[#FE6F00]"
                 />
               </div>
 
@@ -142,14 +137,14 @@ export default function ContactPage() {
                 <Textarea
                   name="message"
                   placeholder="Your message"
-                  className="min-h-[100px] border-0 border-b border-gray-300 rounded-none px-0 focus-visible:ring-0 focus-visible:border-[#E91E63]"
+                  className="min-h-[100px] contact border-0 border-b border-gray-300 rounded-none px-0 focus-visible:ring-0 focus-visible:border-[#FE6F00]"
                 />
               </div>
             </div>
 
             <Button
               type="submit"
-              className="w-full bg-[#E91E63] text-white hover:bg-[#E91E63]/90"
+              className="w-full bg-[#FE6F00] contact text-white hover:bg-[#FE6F00]/90"
             >
               <Send className="w-4 h-4 mr-2" /> Send Message
             </Button>

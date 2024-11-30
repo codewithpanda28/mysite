@@ -54,97 +54,96 @@ export default function Page() {
   };
 
   return (
-    <div className=" bg-[#001B37] relative overflow-hidden font-sans z-50">
+    <div className=" bg-[#001B37]  relative overflow-hidden font-sans z-50">
       {/* Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 flex items-center p-4 min-h-[100px] min-w-full sm:justify-between  lg:pl-24 lg:pt-5 lg:left-20">
-        <div className="text-white text-3xl font-bold ml-8 mt-4 z-10">
-          <Image
-            src="/logo.svg"
-            alt="Description of the image"
-            width={144}
-            height={100}
-          />
-        </div>
-
-        {/* navbar */}
-        <Navbar />
-      </header>
-
-      {/* Main content */}
-      <main className="lg:pt-[132px] sm:pt-24 px-4 relative ">
-        {/* Left side image */}
-        <div className="left-[-30%] top-[-15%] w-[60%] h-[100%] block fixed z-[-1]">
-          <Image
-            src="/leftbackground.svg"
-            alt="Left decoration"
-            width={1864}
-            height={800}
-            className="bg-[#001B37] w-full object-cover"
-          />
-        </div>
-
-        {/* Center content */}
-        <div className="max-w-5xl mx-auto relative z-1 ">
-          {/* LINEUP text */}
-          <div className="z-0 absolute inset-0 flex justify-center items-center  transition-transform duration-300 hover:scale-105 w-[120%]">
-            {/* LINEUP */}
+      <div className="lg:pl-0 lg:pb-0 lg:pr-0 lg:pt-0  pt-[120px] pl-[16px]  pr-[16px]">
+        <header className="fixed top-0 left-[-8px] right-2 z-50 flex items-center p-4 min-h-[100px] min-w-full sm:justify-between  lg:pl-24 lg:pt-5 lg:left-20 ">
+          <div className="text-white text-3xl font-bold ml-8 mt-4 z-10">
             <Image
-              src="/mainbackground.svg"
-              alt="Image Description"
-              width={1000}
-              height={500}
-              className="lg:mt-[-25%] mt-[-100%] ml-[-10%] z-10 w-[100%] opacity-40  transition-opacity duration-300 hover:opacity-80"
+              src="/logo.svg"
+              alt="Description of the image"
+              width={144}
+              height={100}
             />
           </div>
 
-          {/* Artist lineup */}
-      <div className="container h-[100vh] lg:mt-[5%]  mt-[157px]">
+          {/* navbar */}
+          <Navbar />
+        </header>
+
+        {/* Main content */}
+        <main className="lg:pt-[132px] sm:pt-24 px-4 relative ">
+          {/* Left side image */}
+          <div className="left-[-30%] top-[-15%] w-[60%] h-[100%] block fixed z-[-1]">
             <Image
-              src="/centeriimw.svg"
-              loading="lazy"
-              sizes="centeriimw.svg
-  (max-width: 479px) 200px, (max-width: 767px) 300px, (max-width: 991px) 400px, 500px"
-              srcSet=""
-              alt="IIMW GOA 2025"
-              width={500}
-              height={300}
-              className="hero_logo mt-4"
+              src="/leftbackground.svg"
+              alt="Left decoration"
+              width={1864}
+              height={800}
+              className="bg-[#001B37] w-full object-cover"
             />
+          </div>
 
+          {/* Center content */}
+          <div className="max-w-5xl mx-auto relative z-1 ">
+            {/* LINEUP text */}
+            <div className="z-0 absolute inset-0 flex justify-center items-center  transition-transform duration-300 hover:scale-105 w-[120%]">
+              {/* LINEUP */}
+              <Image
+                src="/mainbackground.svg"
+                alt="Image Description"
+                width={1000}
+                height={500}
+                className="hidden lg:block lg:mt-[-25%] mt-[-100%] ml-[-10%] z-10 w-[100%] opacity-40  transition-opacity duration-300 hover:opacity-80"
+              />
+            </div>
 
-            <div className="text-white  ">
-              <div className="text-xl mb-5 mt-10 md:text-3xl sm:text-xl font-extrabold ">
-                <p className="main-subtitle lg:text-[25px] md:text-3xl mt-[44px] mb-[72px] sm:text-2xl">
-                  INDIA FIRST{" "}
-                  <span className="text-[#FE6F00] ">GLOBAL MUSIC</span>{" "}
-                  CONFERENCE AND <span> SHOWCASE</span>{" "}
-                  <span className="lg:mr-[48%] lg:text-left">FESTIVAL.</span>
-                </p>
-              </div>
+            {/* Artist lineup */}
+            <div className="container h-[100vh] lg:mt-[5%]  mt-[17px]">
+              <Image
+                src="/centeriimw.svg"
+                loading="lazy"
+                sizes="centeriimw.svg
+  (max-width: 479px) 200px, (max-width: 767px) 300px, (max-width: 991px) 400px, 500px"
+                srcSet=""
+                alt="IIMW GOA 2025"
+                width={500}
+                height={300}
+                className="hero_logo mt-4"
+              />
 
-              {/* counter */}
-              <div
-                className="main-count flex justify-center gap-4 mb-8 mr-[36%] sm:mt-12 sm:w-[60%] sm:text-lg lg:justify-start lg:mt-5 lg:mr-[50%] md:mr-[50%] md:text-lg"
-                style={{ zIndex: 1000 }}
-              >
-                {Object.entries(timeLeft).map(([unit, value]) => (
-                  <div
-                    key={unit}
-                    className="bg-white text-[#56AEFF] rounded-lg w-[100px] lg:p-8 p-5 text-center transition-transform duration-300 hover:scale-105"
-                    style={{ zIndex: 10 }}
-                  >
-                    <div className="lg:text-4xl news-title text-3xl sm:font-bold lg:font-black hover:text-[#1E90FF] hover:scale-110 transition duration-300 ease-in-out flex justify-center items-center">
-                      {value.toString().padStart(2, "0")}
+              <div className="text-white  ">
+                <div className="text-xl mb-5 mt-10 md:text-3xl sm:text-xl font-extrabold ">
+                  <p className="main-subtitle lg:text-[25px] md:text-3xl mt-[44px] mb-[72px] sm:text-2xl">
+                    INDIA FIRST{" "}
+                    <span className="text-[#FE6F00] ">GLOBAL MUSIC</span>{" "}
+                    CONFERENCE AND <span> SHOWCASE</span>{" "}
+                    <span className="lg:mr-[48%] lg:text-left">FESTIVAL.</span>
+                  </p>
+                </div>
+
+                {/* counter */}
+                <div
+                  className="main-count flex justify-center gap-4 mb-8 mr-[36%] sm:mt-[48px] sm:w-[60%] lg:pl-0 pl-[16px] pr-[20px] lg:pr-0 sm:text-lg lg:justify-start lg:mt-5 lg:mr-[50%] md:mr-[50%] md:text-lg w-[100%]"
+                  style={{ zIndex: 1000 }}
+                >
+                  {Object.entries(timeLeft).map(([unit, value]) => (
+                    <div
+                      key={unit}
+                      className="bg-white text-[#56AEFF] rounded-lg lg:w-[100px] lg:h-[130px] w-[70px] h-[100px]  lg:p-8 p-5 text-center transition-transform duration-300 hover:scale-105"
+                      style={{ zIndex: 10 }}
+                    >
+                      <div className="lg:text-[40px] news-title text-3xl sm:font-bold lg:font-black hover:text-[#1E90FF] hover:scale-110 transition duration-300 ease-in-out flex justify-center items-center mb-[12px]">
+                        {value.toString().padStart(2, "0")}
+                      </div>
+                      <div className="lg:text-[24px] text-sm hover:text-[#1E90FF] hover:scale-110 transition duration-300 ease-in-out flex justify-center items-center">
+                        {unit}
+                      </div>
                     </div>
-                    <div className="lg:text-lg text-sm hover:text-[#1E90FF] hover:scale-110 transition duration-300 ease-in-out flex justify-center items-center">
-                      {unit}
-                    </div>
-                  </div>
-                ))}
-              </div>
+                  ))}
+                </div>
 
-           
-{/*             
+                {/*             
               <div className="text-xl mb-5 mt-10 md:text-3xl sm:text-xl font-extrabold ">
                 <p className="main-subtitle lg:text-[25px] md:text-3xl sm:text-2xl">
                   INDIA FIRST{" "}
@@ -153,99 +152,111 @@ export default function Page() {
                   <span className="lg:mr-[48%] lg:text-left">FESTIVAL.</span>
                 </p>
                 </div> */}
-            
-           
 
-              <div className="flex flex-row mt-12 justify-start items-center gap-5">
-                {/* button */}
-                <button className="main-count1 item-[24px] main-btn mt-2 mb-5 bg-[#FE6F00] text-[#FFFFFF] px-8 py-4 rounded-full font-semibold text-xl transition duration-300 ease-in-out transform hover:bg-[#FFFFFF] hover:text-[#FE6F00] hover:scale-105 hover:shadow-lg hover:cursor-pointer  fixed bottom-0 left-0 right-0 w-full sm:w-auto sm:relative sm:mb-0 z-[9999]">
-                  BUY TICKETS
-                </button>
+                <div className="flex flex-row mt-12 justify-start items-center gap-5 lg:bg-hidden">
+                  {/* button for large devices */}
+                  <div className="hidden lg:block">
+                    <button className="main-count1 item-[24px] main-btn mt-2 mb-2 bg-[#FE6F00] text-[#FFFFFF] px-10 py-4 rounded-full font-semibold text-xl transition duration-300 ease-in-out transform hover:bg-[#FFFFFF] hover:text-[#FE6F00] hover:scale-105 hover:shadow-lg hover:cursor-pointer mr-[32px]">
+                      BUY TICKETS
+                    </button>
 
-                <button className="main-count1 item-[24px] main-btn mt-8 sm:mb-5 bg-[#FE6F00] text-[#FFFFFF] px-8 py-4 rounded-full font-semibold text-xl transition duration-300 ease-in-out transform hover:bg-[#FFFFFF] hover:text-[#FE6F00] hover:scale-105 hover:shadow-lg hover:cursor-pointer hover:z-20 z-99 w-full sm:w-auto">
-                  BECOME SPONSOR
-                </button>
-              </div>
-
-              {/* card section */}
-
-              <section className="news-title mt-6  container mx-auto px-4 lg:py-16 ">
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
-                  {/* 1st card */}
-                  <div className="hidden sm:block border-r border-dotted border-white/20">
-                    <div className="text-[#56AEFF] text-2xl font-black mb-2 ">
-                      WED 04 FEB
-                    </div>
-
-                    <div className="text-white/80 font-mono hover:text-yellow-400 transition duration-300">
-                      <span className="text-[#FF7A05]"> &#8226; </span>
-                      Opening Night Performance
-                    </div>
+                    <button className="main-count1 item-[24px] main-btn mt-2 mb-20 bg-[#FFFFFF] text-[#FE6F00] px-8 py-4 rounded-full font-semibold text-xl transition duration-300 ease-in-out transform hover:bg-[#FE6F00] hover:text-[#FFFFFF] hover:scale-105 hover:shadow-lg hover:cursor-pointer">
+                      BECOME SPONSOR
+                    </button>
                   </div>
 
-                  {/* 2nd */}
+                  {/* button for small devices */}
+                  <div className="lg:hidden sm:backdrop-blur-md bg-white/20 fixed top-[74%] bottom-[-79px] left-0 w-full z-[9999] backdrop-filter backdrop-blur-xl rounded-md">
+                    <button className="main-count1 item-[24px] main-btn ml-[5%] mr-[5%] mt-5 mb-2 mx-auto bg-[#FE6F00] text-[#FFFFFF] px-10 py-4 rounded-full font-semibold text-xl transition duration-300 ease-in-out transform hover:bg-[#FFFFFF] hover:text-[#FE6F00] hover:scale-105 hover:shadow-lg hover:cursor-pointer w-[90%]">
+                      BUY TICKETS
+                    </button>
 
-                  <div className="hidden sm:block border-r border-dotted border-white/20 items-start">
-                    <div className="text-[#56AEFF] text-2xl font-black mb-2">
-                      THU 05 FEB
-                    </div>
-
-                    <div className="text-white/80 font-mono hover:text-yellow-400 transition duration-300">
-                      <span className="text-[#FF7A05]">&#8226; </span>
-                      Pro Sessions
-                    </div>
-                    <div className="text-white/80 font-mono hover:text-yellow-400 transition duration-300">
-                      <span className="text-[#FF7A05]">&#8226; </span>
-                      Networking Events
-                    </div>
-                    <div className="text-white/80 font-mono hover:text-yellow-400 transition duration-300">
-                      <span className="text-[#FF7A05]">&#8226; </span>
-                      Evening Showcases
-                    </div>
-                  </div>
-
-                  {/* 3rd card */}
-
-                  <div className="hidden sm:block items-start">
-                    <div className="text-[#56AEFF] text-2xl font-black mb-2">
-                      FRI 06 FEB
-                    </div>
-
-                    <div className="text-white/80 font-mono hover:text-yellow-400 transition duration-300">
-                      <span className="text-[#FF7A05]">&#8226; </span>
-                      Pro Sessions
-                    </div>
-                    <div className="text-white/80 font-mono hover:text-yellow-400 transition duration-300">
-                      <span className="text-[#FF7A05]">&#8226; </span>
-                      Networking Events
-                    </div>
-                    <div className="text-white/80 font-mono hover:text-yellow-400 transition duration-300">
-                      <span className="text-[#FF7A05]">&#8226; </span>
-                      Evening Showcases
-                    </div>
+                    <button className="main-count1 item-[24px] main-btn ml-[5%] mr-[5%] mt-2 mb-20 mx-auto bg-[#FFFFFF] text-[#FE6F00] px-8 py-4 rounded-full font-semibold text-xl transition duration-300 ease-in-out transform hover:bg-[#FE6F00] hover:text-[#FFFFFF] hover:scale-105 hover:shadow-lg hover:cursor-pointer w-[90%]">
+                      BECOME SPONSOR
+                    </button>
                   </div>
                 </div>
-              </section>
+
+                {/* card section */}
+
+                <section className="news-title mt-6  container mx-auto px-4 lg:py-16 ">
+                  <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
+                    {/* 1st card */}
+                    <div className="hidden sm:block">
+                      <div className="text-[#56AEFF] text-2xl font-black mb-2 ">
+                        WED 04 FEB
+                      </div>
+
+                      <div className="text-white/80 section-card hover:text-yellow-400 transition duration-300">
+                        <span className="text-[#FF7A05] "> &#8226; </span>
+                        Opening Night Performance
+                      </div>
+                    </div>
+
+                    {/* 2nd */}
+
+                    <div className="hidden sm:block  items-start">
+                      <div className="text-[#56AEFF] text-2xl font-black mb-2">
+                        THU 05 FEB
+                      </div>
+
+                      <div className="text-white/80 section-card hover:text-yellow-400 transition duration-300">
+                        <span className="text-[#FF7A05]">&#8226; </span>
+                        Pro Sessions
+                      </div>
+                      <div className="text-white/80 section-card hover:text-yellow-400 transition duration-300">
+                        <span className="text-[#FF7A05]">&#8226; </span>
+                        Networking Events
+                      </div>
+                      <div className="text-white/80 section-card hover:text-yellow-400 transition duration-300">
+                        <span className="text-[#FF7A05]">&#8226; </span>
+                        Evening Showcases
+                      </div>
+                    </div>
+
+                    {/* 3rd card */}
+
+                    <div className="hidden sm:block items-start">
+                      <div className="text-[#56AEFF] text-2xl font-black mb-2">
+                        FRI 06 FEB
+                      </div>
+
+                      <div className="text-white/80 section-card hover:text-yellow-400 transition duration-300">
+                        <span className="text-[#FF7A05]">&#8226; </span>
+                        Pro Sessions
+                      </div>
+                      <div className="text-white/80 section-card hover:text-yellow-400 transition duration-300">
+                        <span className="text-[#FF7A05]">&#8226; </span>
+                        Networking Events
+                      </div>
+                      <div className="text-white/80 section-card hover:text-yellow-400 transition duration-300">
+                        <span className="text-[#FF7A05]">&#8226; </span>
+                        Evening Showcases
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
             </div>
           </div>
-        </div>
 
-        {/* Right side decoration */}
-        <div className="absolute bottom-24 right-[-35%] h-100vh hidden lg:block">
-          <Image
-            src="/rightbackground.svg"
-            width={1020}
-            height={520}
-            alt="Image"
-            className="opacity-100 hover:opacity-100 transition-opacity duration-300"
-            style={{
-              background: "bg-[#6046FF]",
-              borderRadius: "8px",
-              height: "100%",
-            }}
-          />
-        </div>
-      </main>
+          {/* Right side decoration */}
+          <div className="absolute bottom-24 right-[-35%] h-100vh hidden lg:block">
+            <Image
+              src="/rightbackground.svg"
+              width={1020}
+              height={520}
+              alt="Image"
+              className="opacity-100 hover:opacity-100 transition-opacity duration-300"
+              style={{
+                background: "bg-[#6046FF]",
+                borderRadius: "8px",
+                height: "100%",
+              }}
+            />
+          </div>
+        </main>
+      </div>
 
       {/* Cookie preferences */}
       {/* <button 

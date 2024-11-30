@@ -181,6 +181,13 @@
   font-weight: 700;
   font-style: normal;
 }
+
+.contact{
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
 .footer-fontleft{
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
@@ -195,6 +202,11 @@
 
 /* news section date */
 .news-date {
+  font-family: "Anonymous Pro", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+.section-card {
   font-family: "Anonymous Pro", monospace;
   font-weight: 400;
   font-style: normal;
