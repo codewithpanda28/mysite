@@ -11,7 +11,7 @@ function Navbar() {
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (
-        !event.target.closest(".menu-container") &&
+        !event.target.closest("") &&
         !event.target.closest(".close-icon") &&
         isMenuOpen
       ) {
@@ -26,7 +26,6 @@ function Navbar() {
   }, [isMenuOpen]);
 
   return (
-    // navbar start
     <nav className="relative z-50 w-[40%] text-white md:absolute lg:right-0 sm:right-[25%] md:right-0">
       <button
         className="block md:hidden lg:mt-0 mt-[17%] p-2 rounded-sm text-white text-2xl close-icon ml-[90%] bg-orange-500"
@@ -40,7 +39,6 @@ function Navbar() {
         {isMenuOpen ? <XCircle /> : <Menu />}
       </button>
 
-      {/* festival section start */}
       <div
         className={`menu-container flex flex-col ml-auto absolute md:flex-row ${
           isMenuOpen ? "block" : "hidden"
@@ -84,7 +82,6 @@ function Navbar() {
           </div>
         </div>
 
-        {/* conference section start  */}
         <div
           className="relative md:mx-3 "
           onMouseEnter={() => setActiveMenu(1)}
@@ -123,7 +120,6 @@ function Navbar() {
           </div>
         </div>
 
-        {/* info section start */}
         <div
           className="relative md:mx-3 "
           onMouseEnter={() => setActiveMenu(2)}
@@ -180,66 +176,65 @@ function Navbar() {
         </div>
       </div>
 
-      {/* mobile menu start */}
-    {isMenuOpen && (
-     <div className="fixed inset-0 bg-gradient-to-r from-blue-800 to-purple-600 z-99 flex flex-col items-start justify-start h-screen p-4 w-3/5 md:hidden z-50">
-  <div className="w-full">
-    <Link
-      href="#"
-      className={`block w-full px-2 py-2 text-white ${
-        isMenuOpen ? "bg-[#56AEFF]" : ""
-      } hover:bg-purple-700/80 text-left md:hidden transition-transform transform hover:scale-110 hover:shadow-xl`}
-      onClick={(e) => e.preventDefault()}
-    >
-      FESTIVAL
-    </Link>
-    <Link
-      href="/artists"
-      className="menu-nav block w-full px-4 py-2 text-white hover:bg-purple-700/80 text-left transition-transform transform hover:scale-110 hover:shadow-xl"
-    >
-      ARTISTS
-    </Link>
-  </div>
-  <div className="w-full">
-    <Link
-      href="#"
-      className={`block w-full px-2 py-2 text-white ${
-        isMenuOpen ? "bg-[#fe6f00]" : ""
-      } hover:bg-purple-700/80 text-left md:hidden transition-transform transform hover:scale-110 hover:shadow-xl`}
-      onClick={(e) => e.preventDefault()}
-    >
-      CONFERENCE
-    </Link>
-    <Link
-      href="/conference-timetable"
-      className="menu-nav block w-full px-4 py-2 text-white hover:bg-purple-700/80 text-left transition-transform transform hover:scale-110 hover:shadow-xl"
-    >
-      SPEAKER
-    </Link>
-  </div>
-  <div className="w-full">
-    <Link
-      href="#"
-      className={`block w-full px-2 py-2 text-white ${
-        isMenuOpen ? "bg-yellow-500" : ""
-      } hover:bg-purple-700/80 text-left md:hidden transition-transform transform hover:scale-110 hover:shadow-xl`}
-    >
-      INFO
-    </Link>
-    <Link
-      href="/contact"
-      className="menu-nav block w-full px-4 py-2 text-white hover:bg-purple-700/80 text-left transition-transform transform hover:scale-110 hover:shadow-xl"
-    >
-      CONTACT
-    </Link>
-    <Link
-      href="/info"
-      className="menu-nav block w-full px-4 py-2 text-white hover:bg-purple-700/80 text-left transition-transform transform hover:scale-110 hover:shadow-xl"
-    >
-      SCHEDULE
-    </Link>
-  </div>
-</div>
+      {isMenuOpen && (
+        <div className="fixed inset-0 bg-gradient-to-r from-blue-800 to-purple-600 z-99 flex flex-col items-start justify-start h-screen p-4 w-3/5 md:hidden z-50">
+          <div className="w-full">
+            <Link
+              href="#"
+              className={`block w-full px-2 py-2 text-white ${
+                isMenuOpen ? "bg-[#56AEFF]" : ""
+              } hover:bg-purple-700/80 text-left md:hidden transition-transform transform hover:scale-110 hover:shadow-xl`}
+              onClick={(e) => e.preventDefault()}
+            >
+              FESTIVAL
+            </Link>
+            <Link
+              href="/artists"
+              className="menu-nav block w-full px-4 py-2 text-white hover:bg-purple-700/80 text-left transition-transform transform hover:scale-110 hover:shadow-xl"
+            >
+              ARTISTS
+            </Link>
+          </div>
+          <div className="w-full">
+            <Link
+              href="#"
+              className={`block w-full px-2 py-2 text-white ${
+                isMenuOpen ? "bg-[#fe6f00]" : ""
+              } hover:bg-purple-700/80 text-left md:hidden transition-transform transform hover:scale-110 hover:shadow-xl`}
+              onClick={(e) => e.preventDefault()}
+            >
+              CONFERENCE
+            </Link>
+            <Link
+              href="/conference-timetable"
+              className="menu-nav block w-full px-4 py-2 text-white hover:bg-purple-700/80 text-left transition-transform transform hover:scale-110 hover:shadow-xl"
+            >
+              SPEAKER
+            </Link>
+          </div>
+          <div className="w-full">
+            <Link
+              href="#"
+              className={`block w-full px-2 py-2 text-white ${
+                isMenuOpen ? "bg-yellow-500" : ""
+              } hover:bg-purple-700/80 text-left md:hidden transition-transform transform hover:scale-110 hover:shadow-xl`}
+            >
+              INFO
+            </Link>
+            <Link
+              href="/contact"
+              className="menu-nav block w-full px-4 py-2 text-white hover:bg-purple-700/80 text-left transition-transform transform hover:scale-110 hover:shadow-xl"
+            >
+              CONTACT
+            </Link>
+            <Link
+              href="/info"
+              className="menu-nav block w-full px-4 py-2 text-white hover:bg-purple-700/80 text-left transition-transform transform hover:scale-110 hover:shadow-xl"
+            >
+              SCHEDULE
+            </Link>
+          </div>
+        </div>
       )}
     </nav>
   );

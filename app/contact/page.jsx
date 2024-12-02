@@ -25,20 +25,24 @@ export default function ContactPage() {
       email: e.target.elements.email.value.toUpperCase(),
       mobile: e.target.elements.mobile.value.toUpperCase(),
       message: e.target.elements.message.value.toUpperCase(),
+      interest: Array.from(e.target.querySelectorAll('.interest-button[style*="background-color: rgb(254, 111, 0)"]'))
+                      .map(button => button.textContent.trim()),
     };
 
-    // Using fetch to send data
-    await fetch("https://api.emailservice.com/send", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        to: "codewithpanda28@gmail.com",
-        subject: "New Contact Form Submission",
-        body: `Name: ${formData.name}\nEmail: ${formData.email}\nMobile: ${formData.mobile}\nMessage: ${formData.message}`,
-      }),
-    });
+    if (formData.name && formData.email && formData.mobile && formData.message && formData.interest.length > 0) {
+      // Using fetch to send data
+      await fetch("https://api.emailservice.com/send", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          to: "codewithpanda28@gmail.com",
+          subject: "New Contact Form Submission",
+          body: `Name: ${formData.name}\nEmail: ${formData.email}\nMobile: ${formData.mobile}\nMessage: ${formData.message}\nInterest: ${formData.interest.join(", ")}`,
+        }),
+      });
+    }
   };
 
   return (
@@ -122,48 +126,93 @@ export default function ContactPage() {
         {/* Right Column - Form */}
         <div className="bg-white rounded-3xl p-6 md:p-8 shadow-xl">
           <form onSubmit={handleSubmit} className="space-y-6">
-            <div className="space-y-4">
-              <h2 className="text-lg font-medium text-gray-900 footer-fontleft">
-                I am interested in...
-              </h2>
-              <div className="flex flex-wrap gap-3">
-                <Button
-                  type="button"
-                  variant="secondary"
-                  className="bg-[#FE6F00] text-white hover:bg-[#FE6F00]/90 contact"
-                >
-                  Music Production
-                </Button>
-                <Button
-                  type="button"
-                  variant="outline"
-                  className="bg-white contact"
-                >
-                  Live Performance
-                </Button>
-                <Button
-                  type="button"
-                  variant="outline"
-                  className="bg-white contact"
-                >
-                  Artist Management
-                </Button>
-                <Button
-                  type="button"
-                  variant="outline"
-                  className="bg-white contact"
-                >
-                  Event Planning
-                </Button>
-                <Button
-                  type="button"
-                  variant="outline"
-                  className="bg-white contact"
-                >
-                  Other
-                </Button>
-              </div>
-            </div>
+     <div className="space-y-4">
+  <h2 className="text-lg font-medium text-gray-900 footer-fontleft">
+    I am interested in...
+  </h2>
+  <div className="flex flex-wrap gap-3">
+    <Button
+      type="button"
+      variant="outline"
+      className="bg-white contact interest-button"
+      onClick={(e) => {
+        if (e.currentTarget.style.backgroundColor === 'rgb(254, 111, 0)') { // Using RGB value for color comparison
+          e.currentTarget.style.backgroundColor = 'white';
+          e.currentTarget.style.color = 'black';
+        } else {
+          e.currentTarget.style.backgroundColor = '#FE6F00';
+          e.currentTarget.style.color = 'white';
+        }
+      }}
+    >
+      Music Production
+    </Button>
+    <Button
+      type="button"
+      variant="outline"
+      className="bg-white contact interest-button"
+      onClick={(e) => {
+        if (e.currentTarget.style.backgroundColor === 'rgb(254, 111, 0)') {
+          e.currentTarget.style.backgroundColor = 'white';
+          e.currentTarget.style.color = 'black';
+        } else {
+          e.currentTarget.style.backgroundColor = '#FE6F00';
+          e.currentTarget.style.color = 'white';
+        }
+      }}
+    >
+      Live Performance
+    </Button>
+    <Button
+      type="button"
+      variant="outline"
+      className="bg-white contact interest-button"
+      onClick={(e) => {
+        if (e.currentTarget.style.backgroundColor === 'rgb(254, 111, 0)') {
+          e.currentTarget.style.backgroundColor = 'white';
+          e.currentTarget.style.color = 'black';
+        } else {
+          e.currentTarget.style.backgroundColor = '#FE6F00';
+          e.currentTarget.style.color = 'white';
+        }
+      }}
+    >
+      Artist Management
+    </Button>
+    <Button
+      type="button"
+      variant="outline"
+      className="bg-white contact interest-button"
+      onClick={(e) => {
+        if (e.currentTarget.style.backgroundColor === 'rgb(254, 111, 0)') {
+          e.currentTarget.style.backgroundColor = 'white';
+          e.currentTarget.style.color = 'black';
+        } else {
+          e.currentTarget.style.backgroundColor = '#FE6F00';
+          e.currentTarget.style.color = 'white';
+        }
+      }}
+    >
+      Event Planning
+    </Button>
+    <Button
+      type="button"
+      variant="outline"
+      className="bg-white contact interest-button"
+      onClick={(e) => {
+        if (e.currentTarget.style.backgroundColor === 'rgb(254, 111, 0)') {
+          e.currentTarget.style.backgroundColor = 'white';
+          e.currentTarget.style.color = 'black';
+        } else {
+          e.currentTarget.style.backgroundColor = '#FE6F00';
+          e.currentTarget.style.color = 'white';
+        }
+      }}
+    >
+      Other
+    </Button>
+  </div>
+</div>
 
             <div className="space-y-4">
               <div>

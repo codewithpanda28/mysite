@@ -162,15 +162,15 @@ export default function Page() {
                   </div>
 
                   {/* button for small devices */}
-                  <div className="lg:hidden sm:backdrop-blur-md bg-white/20 fixed top-[74%] bottom-[0] left-0 w-full z-[9999] backdrop-filter backdrop-blur-xl rounded-md">
-                    <button className="main-count1 item-[24px] main-btn ml-[5%] mr-[5%] mt-5 mb-2 mx-auto bg-[#FE6F00] text-[#FFFFFF] px-10 py-4 rounded-full font-semibold text-xl transition duration-300 ease-in-out transform hover:bg-[#FFFFFF] hover:text-[#FE6F00] hover:scale-105 hover:shadow-lg hover:cursor-pointer w-[90%]">
-                      BUY TICKETS
-                    </button>
+                <div className="fixed inset-x-0 bottom-0 lg:hidden sm:backdrop-blur-md bg-white/20 z-[9999] backdrop-filter backdrop-blur-xl rounded-md">
+  <button className="main-count1 item-[24px] main-btn mx-auto bg-[#FE6F00] text-[#FFFFFF] px-10 py-4 rounded-full font-semibold text-xl transition duration-300 ease-in-out transform hover:bg-[#FFFFFF] hover:text-[#FE6F00] hover:scale-105 hover:shadow-lg hover:cursor-pointer w-[90%] ml-[5%] my-5">
+    BUY TICKETS
+  </button>
 
-                    <button className="main-count1 item-[24px] main-btn ml-[5%] mr-[5%] mt-2 mb-20 mx-auto bg-[#FFFFFF] text-[#FE6F00] px-8 py-4 rounded-full font-semibold text-xl transition duration-300 ease-in-out transform hover:bg-[#FE6F00] hover:text-[#FFFFFF] hover:scale-105 hover:shadow-lg hover:cursor-pointer w-[90%]">
-                      BECOME SPONSOR
-                    </button>
-                  </div>
+  <button className="main-count1 item-[24px] main-btn mx-auto bg-[#FFFFFF] text-[#FE6F00] px-8 py-4 rounded-full font-semibold text-xl transition duration-300 ease-in-out transform hover:bg-[#FE6F00] hover:text-[#FFFFFF] hover:scale-105 hover:shadow-lg hover:cursor-pointer w-[90%] ml-[5%] mb-5">
+    BECOME SPONSOR
+  </button>
+</div>
                 </div>
 
                 {/* card section */}
