@@ -58,9 +58,7 @@ function Navbar() {
           </a>
           <div
             className={`absolute left-[-120%]  w- overflow-hidden transition-all duration-300 ease-in-out transform hover:scale-105 hover:translate-z-10 ${
-              activeMenu === 0
-                ? "max-h-64 opacity-100"
-                : "max-h-0 opacity-0"
+              activeMenu === 0 ? "max-h-64 opacity-100" : "max-h-0 opacity-0"
             }`}
           >
             <div className="bg-[#56AEFF]">
@@ -99,9 +97,7 @@ function Navbar() {
           </a>
           <div
             className={`absolute left-[-120%]  w- overflow-hidden transition-all duration-300 ease-in-out transform hover:scale-105 hover:translate-z-10 ${
-              activeMenu === 1
-                ? "max-h-64 opacity-100"
-                : "max-h-0 opacity-0"
+              activeMenu === 1 ? "max-h-64 opacity-100" : "max-h-0 opacity-0"
             }`}
           >
             <div className="bg-[#fe6f00] ml-12 ">
@@ -134,15 +130,13 @@ function Navbar() {
         >
           <a
             href="/info"
-            className="main-desc block mx-[-30px] px-3 py-3 text-white text-xl transition-all duration-300 bg-yellow-500 hover:opacity-100 hover:transform hover:translate-x-[-30px] hover:scale-105 hover:shadow-lg hover:translate-y-1 hover:translate-x-1 whitespace-nowrap overflow-hidden text-ellipsis z-100 hidden md:block"
+            className="main-desc block mx-[-30px] px-3 py-3 text-white text-xl transition-all duration-300 bg-yellow-500 hover:opacity-100 hover:transform hover:translate-x-[-30px] hover:scale-105 hover:shadow-lg hover:translate-y-1 hover:translate-x-1 whitespace-nowrap overflow-hidden text-ellipsis z-100  md:block"
           >
             INFO
           </a>
           <div
             className={`absolute left-[-800%]  w- overflow-hidden transition-all duration-300 ease-in-out transform hover:scale-105 hover:translate-z-10 ${
-              activeMenu === 2
-                ? "max-h-64 opacity-100"
-                : "max-h-0 opacity-0"
+              activeMenu === 2 ? "max-h-64 opacity-100" : "max-h-0 opacity-0"
             }`}
           >
             <div className="bg-yellow-500">
@@ -164,7 +158,7 @@ function Navbar() {
                 CONTACT
               </a>
               <a
-                href="/schedule"
+                href="/info"
                 className="news-title  block px-5 py-3 text-white hover:bg-black/20 transition-colors"
                 style={{
                   transition: "transform 0.3s",
@@ -180,76 +174,71 @@ function Navbar() {
               >
                 SCHEDULE
               </a>
-   
             </div>
           </div>
         </div>
       </div>
 
       {/* mobile menu start */}
-      {isMenuOpen && (
-        <div className="fixed inset-0 bg-gradient-to-r from-blue-800 to-purple-600 z-99 flex flex-col items-start justify-start h-screen p-4 w-3/5 md:hidden z-50">
-          <div className="w-full">
-            <a
-              href="#"
-              className={`block w-full px-2 py-2 text-white ${
-                isMenuOpen ? "bg-[#56AEFF]" : ""
-              } hover:bg-purple-700/80 text-left md:hidden transition-transform transform hover:scale-110 hover:shadow-xl`}
-            >
-              FESTIVAL
-            </a>
-            <a
-              href="/artists"
-              className="menu-nav block w-full px-4 py-2 text-white hover:bg-purple-700/80 text-left transition-transform transform hover:scale-110 hover:shadow-xl"
-            >
-              ARTISTS
-            </a>
-          </div>
-          <div className="w-full">
-            <a
-              href="#"
-              className={`block w-full px-2 py-2 text-white ${
-                isMenuOpen ? "bg-[#fe6f00]" : ""
-              } hover:bg-purple-700/80 text-left md:hidden transition-transform transform hover:scale-110 hover:shadow-xl`}
-            >
-              CONFERENCE
-            </a>
-            <a
-              href="/conference-timetable"
-              className="menu-nav block w-full px-4 py-2 text-white hover:bg-purple-700/80 text-left transition-transform transform hover:scale-110 hover:shadow-xl"
-            >
-              SPEAKER
-            </a>
-          </div>
-          <div className="w-full">
-            <a
-              href="/info"
-              className={`block w-full px-2 py-2 text-white ${
-                isMenuOpen ? "bg-yellow-500" : ""
-              } hover:bg-purple-700/80 text-left md:hidden transition-transform transform hover:scale-110 hover:shadow-xl`}
-            >
-              INFO
-            </a>
-            <a
-              href="/contact"
-              className="menu-nav block w-full px-4 py-2 text-white hover:bg-purple-700/80 text-left transition-transform transform hover:scale-110 hover:shadow-xl"
-            >
-              CONTACT
-            </a>
-            <a
-              href="/faq"
-              className="menu-nav block w-full px-4 py-2 text-white hover:bg-purple-700/80 text-left transition-transform transform hover:scale-110 hover:shadow-xl"
-            >
-              FAQ
-            </a>
-            <a
-              href="/location"
-              className="menu-nav block w-full px-4 py-2 text-white hover:bg-purple-700/80 text-left transition-transform transform hover:scale-110 hover:shadow-xl"
-            >
-              LOCATION
-            </a>
-          </div>
-        </div>
+    {isMenuOpen && (
+     <div className="fixed inset-0 bg-gradient-to-r from-blue-800 to-purple-600 z-99 flex flex-col items-start justify-start h-screen p-4 w-3/5 md:hidden z-50">
+  <div className="w-full">
+    <a
+      href="#"
+      className={`block w-full px-2 py-2 text-white ${
+        isMenuOpen ? "bg-[#56AEFF]" : ""
+      } hover:bg-purple-700/80 text-left md:hidden transition-transform transform hover:scale-110 hover:shadow-xl`}
+      onClick={(e) => e.preventDefault()}
+    >
+      FESTIVAL
+    </a>
+    <a
+      href="/artists"
+      className="menu-nav block w-full px-4 py-2 text-white hover:bg-purple-700/80 text-left transition-transform transform hover:scale-110 hover:shadow-xl"
+    >
+      ARTISTS
+    </a>
+  </div>
+  <div className="w-full">
+    <a
+      href="#"
+      className={`block w-full px-2 py-2 text-white ${
+        isMenuOpen ? "bg-[#fe6f00]" : ""
+      } hover:bg-purple-700/80 text-left md:hidden transition-transform transform hover:scale-110 hover:shadow-xl`}
+      onClick={(e) => e.preventDefault()}
+    >
+      CONFERENCE
+    </a>
+    <a
+      href="/conference-timetable"
+      className="menu-nav block w-full px-4 py-2 text-white hover:bg-purple-700/80 text-left transition-transform transform hover:scale-110 hover:shadow-xl"
+    >
+      SPEAKER
+    </a>
+  </div>
+  <div className="w-full">
+    <a
+      href="#"
+      className={`block w-full px-2 py-2 text-white ${
+        isMenuOpen ? "bg-yellow-500" : ""
+      } hover:bg-purple-700/80 text-left md:hidden transition-transform transform hover:scale-110 hover:shadow-xl`}
+    >
+      INFO
+    </a>
+    <a
+      href="/contact"
+      className="menu-nav block w-full px-4 py-2 text-white hover:bg-purple-700/80 text-left transition-transform transform hover:scale-110 hover:shadow-xl"
+    >
+      CONTACT
+    </a>
+    <a
+      href="/info"
+      className="menu-nav block w-full px-4 py-2 text-white hover:bg-purple-700/80 text-left transition-transform transform hover:scale-110 hover:shadow-xl"
+    >
+      SCHEDULE
+    </a>
+  </div>
+</div>
       )}
     </nav>
   );

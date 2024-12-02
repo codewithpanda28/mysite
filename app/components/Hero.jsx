@@ -57,18 +57,25 @@ export default function Page() {
     <div className=" bg-[#001B37]  relative overflow-hidden font-sans z-50">
       {/* Header */}
       <div className="lg:pl-0 lg:pb-0 lg:pr-0 lg:pt-0  pt-[120px] pl-[16px]  pr-[16px]">
-        <header className="fixed top-0 left-[-8px] right-2 z-50 flex items-center p-4 min-h-[100px] min-w-full sm:justify-between  lg:pl-24 lg:pt-5 lg:left-20 ">
+        <header className="fixed top-0 left-[-8px] right-2 z-50 flex items-center p-2 min-h-[100px] min-w-full sm:justify-between  lg:pl-24 lg:pt-0 lg:left-20 ">
           <div className="text-white text-3xl font-bold ml-8 mt-4 z-10">
-            <Image
-              src="/logo.svg"
-              alt="Description of the image"
-              width={144}
-              height={100}
-            />
+        <a href="/">
+    <img
+        src="/logo.svg"
+        alt="Description of the image"
+        width="144"
+        height="100"
+    />
+</a>
           </div>
 
           {/* navbar */}
           <Navbar />
+
+          {/* image for large devices */}
+          <div className="hidden lg:block mr-[10%] mt-[4%]">
+            <Image src="/Tittle.svg" alt="SIde Logo" width={64} height={64} />
+          </div>
         </header>
 
         {/* Main content */}
@@ -87,76 +94,64 @@ export default function Page() {
           {/* Center content */}
           <div className="max-w-5xl mx-auto relative z-1 ">
             {/* LINEUP text */}
-            <div className="z-0 absolute inset-0 flex justify-center items-center  transition-transform duration-300 hover:scale-105 w-[120%]">
+            <div className="z-0 absolute inset-0 flex justify-center items-center   w-[100%]">
               {/* LINEUP */}
               <Image
                 src="/mainbackground.svg"
                 alt="Image Description"
                 width={1000}
                 height={500}
-                className="hidden lg:block lg:mt-[-25%] mt-[-100%] ml-[-10%] z-10 w-[100%] opacity-40  transition-opacity duration-300 hover:opacity-80"
+                className="hidden lg:block lg:mt-[-18%] mt-[-100%] ml-[-10%] z-10 w-[100%] "
               />
             </div>
 
             {/* Artist lineup */}
-            <div className="container h-[100vh] lg:mt-[5%]  mt-[17px]">
+            <div className="container h-[100vh] mt-[2%] lg:mx-auto">
               <Image
                 src="/centeriimw.svg"
                 loading="lazy"
-                sizes="centeriimw.svg
-  (max-width: 479px) 200px, (max-width: 767px) 300px, (max-width: 991px) 400px, 500px"
+                sizes="(max-width: 479px) 100px, (max-width: 767px) 300px, (max-width: 991px) 400px, 500px"
                 srcSet=""
                 alt="IIMW GOA 2025"
-                width={500}
-                height={300}
-                className="hero_logo mt-4"
+                width={400}
+                height={100}
+                className="hero_logo lg:w-[400px] w-[80%] mx-auto lg:mx-auto"
               />
 
-              <div className="text-white  ">
-                <div className="text-xl mb-5 mt-10 md:text-3xl sm:text-xl font-extrabold ">
-                  <p className="main-subtitle lg:text-[25px] md:text-3xl mt-[44px] mb-[72px] sm:text-2xl">
+              <div className="text-white  lg:mx-auto">
+                <div className="text-xl  mt-5  md:text-3xl  font-extrabold ">
+                  <p className="main-subtitle lg:text-[25px] md:text-3xl  lg:mb-[55px] mb-[35px] text-[18px] text-center ">
                     INDIA FIRST{" "}
                     <span className="text-[#FE6F00] ">GLOBAL MUSIC</span>{" "}
-                    CONFERENCE AND <span> SHOWCASE</span>{" "}
-                    <span className="lg:mr-[48%] lg:text-left">FESTIVAL.</span>
+                    CONFERENCE AND <span> SHOWCASE</span> <span>FESTIVAL.</span>
                   </p>
                 </div>
 
                 {/* counter */}
                 <div
-                  className="main-count flex justify-center gap-4 mb-8 mr-[36%] sm:mt-[48px] sm:w-[60%] lg:pl-0 pl-[16px] pr-[20px] lg:pr-0 sm:text-lg lg:justify-start lg:mt-5 lg:mr-[50%] md:mr-[50%] md:text-lg w-[100%]"
+                  className="main-count flex justify-center gap-4 mb-8 mr-[36%] sm:mt-[48px] sm:w-[60%] lg:w-3/4 lg:mx-auto pl-[16px] pr-[20px] sm:text-lg lg:justify-center lg:mt-5 md:mr-[50%] md:text-lg w-[100%]"
                   style={{ zIndex: 1000 }}
                 >
                   {Object.entries(timeLeft).map(([unit, value]) => (
                     <div
                       key={unit}
-                      className="bg-white text-[#56AEFF] rounded-lg lg:w-[100px] lg:h-[130px] w-[70px] h-[100px]  lg:p-8 p-5 text-center transition-transform duration-300 hover:scale-105"
+                      className="bg-white text-[#56AEFF] rounded-lg lg:w-[83px] lg:h-[103px] w-[70px] h-[100px]  lg:p-5 p-5 text-center transition-transform duration-300 hover:scale-105"
                       style={{ zIndex: 10 }}
                     >
-                      <div className="lg:text-[40px] news-title text-3xl sm:font-bold lg:font-black hover:text-[#1E90FF] hover:scale-110 transition duration-300 ease-in-out flex justify-center items-center mb-[12px]">
+                      <div className="lg:text-[32px] news-title  text-3xl sm:font-bold lg:font-black hover:text-[#1E90FF] hover:scale-110 transition duration-300 ease-in-out flex justify-center items-center lg:mb-[4px]">
                         {value.toString().padStart(2, "0")}
                       </div>
-                      <div className="lg:text-[24px] text-sm hover:text-[#1E90FF] hover:scale-110 transition duration-300 ease-in-out flex justify-center items-center">
+                      <div className="lg:text-[20px] text-[18px] hover:text-[#1E90FF] hover:scale-110 transition duration-300 ease-in-out flex justify-center items-center">
                         {unit}
                       </div>
                     </div>
                   ))}
                 </div>
 
-                {/*             
-              <div className="text-xl mb-5 mt-10 md:text-3xl sm:text-xl font-extrabold ">
-                <p className="main-subtitle lg:text-[25px] md:text-3xl sm:text-2xl">
-                  INDIA FIRST{" "}
-                  <span className="text-[#FE6F00] ">GLOBAL MUSIC</span>{" "}
-                  CONFERENCE AND <span> SHOWCASE</span>{" "}
-                  <span className="lg:mr-[48%] lg:text-left">FESTIVAL.</span>
-                </p>
-                </div> */}
-
-                <div className="flex flex-row mt-12 justify-start items-center gap-5 lg:bg-hidden">
+                <div className="flex flex-row mt-12 justify-center items-center gap-5 lg:bg-hidden">
                   {/* button for large devices */}
-                  <div className="hidden lg:block">
-                    <button className="main-count1 item-[24px] main-btn mt-2 mb-2 bg-[#FE6F00] text-[#FFFFFF] px-10 py-4 rounded-full font-semibold text-xl transition duration-300 ease-in-out transform hover:bg-[#FFFFFF] hover:text-[#FE6F00] hover:scale-105 hover:shadow-lg hover:cursor-pointer mr-[32px]">
+                  <div className="hidden lg:flex lg:justify-center lg:w-full">
+                    <button className="main-count1 item-[24px] main-btn mt-2 mb-20 bg-[#FE6F00] text-[#FFFFFF] px-8 py-4 rounded-full font-semibold text-xl transition duration-300 ease-in-out transform hover:bg-[#FFFFFF] hover:text-[#FE6F00] hover:scale-105 hover:shadow-lg hover:cursor-pointer mr-10">
                       BUY TICKETS
                     </button>
 
@@ -166,7 +161,7 @@ export default function Page() {
                   </div>
 
                   {/* button for small devices */}
-                  <div className="lg:hidden sm:backdrop-blur-md bg-white/20 fixed top-[74%] bottom-[-79px] left-0 w-full z-[9999] backdrop-filter backdrop-blur-xl rounded-md">
+                  <div className="lg:hidden sm:backdrop-blur-md bg-white/20 fixed top-[74%] bottom-[0] left-0 w-full z-[9999] backdrop-filter backdrop-blur-xl rounded-md">
                     <button className="main-count1 item-[24px] main-btn ml-[5%] mr-[5%] mt-5 mb-2 mx-auto bg-[#FE6F00] text-[#FFFFFF] px-10 py-4 rounded-full font-semibold text-xl transition duration-300 ease-in-out transform hover:bg-[#FFFFFF] hover:text-[#FE6F00] hover:scale-105 hover:shadow-lg hover:cursor-pointer w-[90%]">
                       BUY TICKETS
                     </button>
@@ -178,9 +173,8 @@ export default function Page() {
                 </div>
 
                 {/* card section */}
-
-                <section className="news-title mt-6  container mx-auto px-4 lg:py-16 ">
-                  <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
+                <section className="news-title mt-[-1%] container mx-auto px-4 lg:py-10 lg:w-[100%] lg:mx-auto">
+                  <div className="grid grid-cols-2 md:grid-cols-3 gap-8 ml-[10%]">
                     {/* 1st card */}
                     <div className="hidden sm:block">
                       <div className="text-[#56AEFF] text-2xl font-black mb-2 ">
@@ -194,7 +188,6 @@ export default function Page() {
                     </div>
 
                     {/* 2nd */}
-
                     <div className="hidden sm:block  items-start">
                       <div className="text-[#56AEFF] text-2xl font-black mb-2">
                         THU 05 FEB
@@ -215,7 +208,6 @@ export default function Page() {
                     </div>
 
                     {/* 3rd card */}
-
                     <div className="hidden sm:block items-start">
                       <div className="text-[#56AEFF] text-2xl font-black mb-2">
                         FRI 06 FEB
