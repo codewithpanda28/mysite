@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { XCircle, Menu } from "lucide-react";
+import Link from "next/link";
 
 function Navbar() {
   const [activeMenu, setActiveMenu] = useState(null);

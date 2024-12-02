@@ -8,6 +8,7 @@ import Footer from "./Footer";
 import { useState, useEffect } from "react";
 
 import Navbar from "./Navbar";
+import Link from "next/link";
 
 const menuItems = [
   { title: "BUY TICKETS", href: "#" },
@@ -59,14 +60,14 @@ export default function Page() {
       <div className="lg:pl-0 lg:pb-0 lg:pr-0 lg:pt-0  pt-[120px] pl-[16px]  pr-[16px]">
         <header className="fixed top-0 left-[-8px] right-2 z-50 flex items-center p-2 min-h-[100px] min-w-full sm:justify-between  lg:pl-24 lg:pt-0 lg:left-20 ">
           <div className="text-white text-3xl font-bold ml-8 mt-4 z-10">
-        <a href="/">
+        <Link href="/">
     <img
         src="/logo.svg"
         alt="Description of the image"
         width="144"
         height="100"
     />
-</a>
+</Link>
           </div>
 
           {/* navbar */}
