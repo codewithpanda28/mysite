@@ -9,14 +9,14 @@ export default function info() {
       <div className="h-32">
         <header className="fixed top-0 left-[-8px] right-2 z-50 flex items-center p-2 min-h-[100px] min-w-full sm:justify-between  lg:pl-24 lg:pt-0 lg:left-20 ">
           <div className="text-white text-3xl font-bold ml-8 mt-4 z-10">
-          <a href="/">
+          <Link href="/">
   <Image
     src="/logo.svg"
     alt="Description of the image"
     width={144}
     height={100}
   />
-</a>
+</Link>
           </div>
 
           {/* navbar */}

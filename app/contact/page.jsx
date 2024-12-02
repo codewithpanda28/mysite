@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 import Navbar from "../components/Navbar";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function ContactPage() {
   const handleSubmit = async (e) => {
@@ -45,14 +46,14 @@ export default function ContactPage() {
       <div className="h-28">
         <header className="fixed top-0 left-[-8px] right-2 z-50 flex items-center p-2 min-h-[100px] min-w-full sm:justify-between  lg:pl-24 lg:pt-0 lg:left-20 ">
           <div className="text-white text-3xl font-bold ml-8 mt-4 z-10">
-       <a href="/">
+       <Link href="/">
   <Image
     src="/logo.svg"
     alt="Description of the image"
     width={144}
     height={100}
   />
-</a>
+</Link>
           </div>
 
           {/* navbar */}
@@ -79,21 +80,21 @@ export default function ContactPage() {
           <div className="space-y-6">
             <div className="flex items-center gap-4 text-white/90">
               <Mail className="w-6 h-6 text-[#FE6F00]" />
-              <a
+              <Link
                 href="mailto:contact@iimw.in"
                 className="contact hover:text-[#FE6F00] transition-colors"
               >
                 contact@iimw.in
-              </a>
+              </Link>
             </div>
             <div className="flex items-center gap-4 text-white/90">
               <Phone className="w-6 h-6 text-[#FE6F00]" />
-              <a
+              <Link
                 href="tel:+919876543210"
                 className="contact hover:text-[#FE6F00] transition-colors"
               >
                 +91 98765 43210
-              </a>
+              </Link>
             </div>
             <div className="flex items-center gap-4 text-white/90">
               <MapPin className="w-6 h-6 text-[#FE6F00] " />
@@ -103,18 +104,18 @@ export default function ContactPage() {
 
           {/* Social Links */}
           <div className="flex gap-4 pt-8">
-            <a
+            <Link
               href="https://www.linkedin.com/showcase/iimw/?viewAsMember=true"
               className="w-12 h-12 rounded-full bg-[#FE6F00] flex items-center justify-center hover:bg-[#FE6F00]/80 transition-colors"
             >
               <Linkedin className="w-6 h-6 text-white" />
-            </a>
-            <a
+            </Link>
+            <Link
               href="https://www.instagram.com/iimw.in?igsh=czFocGVuMjZydDJ5"
               className="w-12 h-12 rounded-full bg-[#FE6F00] flex items-center justify-center hover:bg-[#FE6F00]/80 transition-colors"
             >
               <Instagram className="w-6 h-6 text-white" />
-            </a>
+            </Link>
           </div>
         </div>
 

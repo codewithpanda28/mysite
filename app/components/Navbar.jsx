@@ -50,19 +50,19 @@ function Navbar() {
           onMouseEnter={() => setActiveMenu(0)}
           onMouseLeave={() => setActiveMenu(null)}
         >
-          <a
+          <Link
             href="#"
             className="main-desc block mx-[-30px] px-3 py-3 text-white text-xl transition-all duration-300 bg-[#56AEFF] hover:opacity-100 hover:transform hover:translate-x-[-30px] hover:scale-105 hover:shadow-lg hover:translate-y-1 hover:translate-x-1 whitespace-nowrap overflow-hidden text-ellipsis z-100 hidden md:block"
           >
             FESTIVAL
-          </a>
+          </Link>
           <div
             className={`absolute left-[-120%]  w- overflow-hidden transition-all duration-300 ease-in-out transform hover:scale-105 hover:translate-z-10 ${
               activeMenu === 0 ? "max-h-64 opacity-100" : "max-h-0 opacity-0"
             }`}
           >
             <div className="bg-[#56AEFF]">
-              <a
+              <Link
                 href="/artists"
                 className="news-title  block px-5 py-4 mt- text-white hover:bg-black/20 transition-colors"
                 style={{
@@ -78,7 +78,7 @@ function Navbar() {
                 }
               >
                 ARTISTS
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -89,19 +89,19 @@ function Navbar() {
           onMouseEnter={() => setActiveMenu(1)}
           onMouseLeave={() => setActiveMenu(null)}
         >
-          <a
+          <Link
             href="#"
             className="main-desc block mx-[-30px] px-3 py-3 text-white text-xl transition-all duration-300 bg-[#fe6f00] hover:opacity-100 hover:transform hover:translate-x-[-30px] hover:scale-105 hover:shadow-lg hover:translate-y-1 hover:translate-x-1 whitespace-nowrap overflow-hidden text-ellipsis z-100 hidden md:block"
           >
             CONFERENCE
-          </a>
+          </Link>
           <div
             className={`absolute left-[-120%]  w- overflow-hidden transition-all duration-300 ease-in-out transform hover:scale-105 hover:translate-z-10 ${
               activeMenu === 1 ? "max-h-64 opacity-100" : "max-h-0 opacity-0"
             }`}
           >
             <div className="bg-[#fe6f00] ml-12 ">
-              <a
+              <Link
                 href="/conference-timetable"
                 className="news-title  block px-5 py-3 text-white hover:bg-black/20 transition-colors"
                 style={{
@@ -117,7 +117,7 @@ function Navbar() {
                 }
               >
                 SPEAKER
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -128,19 +128,19 @@ function Navbar() {
           onMouseEnter={() => setActiveMenu(2)}
           onMouseLeave={() => setActiveMenu(null)}
         >
-          <a
+          <Link
             href="/info"
             className="main-desc block mx-[-30px] px-3 py-3 text-white text-xl transition-all duration-300 bg-yellow-500 hover:opacity-100 hover:transform hover:translate-x-[-30px] hover:scale-105 hover:shadow-lg hover:translate-y-1 hover:translate-x-1 whitespace-nowrap overflow-hidden text-ellipsis z-100  md:block"
           >
             INFO
-          </a>
+          </Link>
           <div
             className={`absolute left-[-800%]  w- overflow-hidden transition-all duration-300 ease-in-out transform hover:scale-105 hover:translate-z-10 ${
               activeMenu === 2 ? "max-h-64 opacity-100" : "max-h-0 opacity-0"
             }`}
           >
             <div className="bg-yellow-500">
-              <a
+              <Link
                 href="/contact"
                 className="news-title  block px-5 py-3 text-white hover:bg-black/20 transition-colors"
                 style={{
@@ -156,8 +156,8 @@ function Navbar() {
                 }
               >
                 CONTACT
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/info"
                 className="news-title  block px-5 py-3 text-white hover:bg-black/20 transition-colors"
                 style={{
@@ -173,7 +173,7 @@ function Navbar() {
                 }
               >
                 SCHEDULE
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -183,7 +183,7 @@ function Navbar() {
     {isMenuOpen && (
      <div className="fixed inset-0 bg-gradient-to-r from-blue-800 to-purple-600 z-99 flex flex-col items-start justify-start h-screen p-4 w-3/5 md:hidden z-50">
   <div className="w-full">
-    <a
+    <Link
       href="#"
       className={`block w-full px-2 py-2 text-white ${
         isMenuOpen ? "bg-[#56AEFF]" : ""
@@ -191,16 +191,16 @@ function Navbar() {
       onClick={(e) => e.preventDefault()}
     >
       FESTIVAL
-    </a>
-    <a
+    </Link>
+    <Link
       href="/artists"
       className="menu-nav block w-full px-4 py-2 text-white hover:bg-purple-700/80 text-left transition-transform transform hover:scale-110 hover:shadow-xl"
     >
       ARTISTS
-    </a>
+    </Link>
   </div>
   <div className="w-full">
-    <a
+    <Link
       href="#"
       className={`block w-full px-2 py-2 text-white ${
         isMenuOpen ? "bg-[#fe6f00]" : ""
@@ -208,35 +208,35 @@ function Navbar() {
       onClick={(e) => e.preventDefault()}
     >
       CONFERENCE
-    </a>
-    <a
+    </Link>
+    <Link
       href="/conference-timetable"
       className="menu-nav block w-full px-4 py-2 text-white hover:bg-purple-700/80 text-left transition-transform transform hover:scale-110 hover:shadow-xl"
     >
       SPEAKER
-    </a>
+    </Link>
   </div>
   <div className="w-full">
-    <a
+    <Link
       href="#"
       className={`block w-full px-2 py-2 text-white ${
         isMenuOpen ? "bg-yellow-500" : ""
       } hover:bg-purple-700/80 text-left md:hidden transition-transform transform hover:scale-110 hover:shadow-xl`}
     >
       INFO
-    </a>
-    <a
+    </Link>
+    <Link
       href="/contact"
       className="menu-nav block w-full px-4 py-2 text-white hover:bg-purple-700/80 text-left transition-transform transform hover:scale-110 hover:shadow-xl"
     >
       CONTACT
-    </a>
-    <a
+    </Link>
+    <Link
       href="/info"
       className="menu-nav block w-full px-4 py-2 text-white hover:bg-purple-700/80 text-left transition-transform transform hover:scale-110 hover:shadow-xl"
     >
       SCHEDULE
-    </a>
+    </Link>
   </div>
 </div>
       )}
