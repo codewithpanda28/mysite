@@ -24,6 +24,17 @@ const mockData = [
       html: "https://rollingstoneindia.com/india-international-music-week-iimw-2025-apply-to-perform/amp/",
     },
   },
+  {
+    id: 2,
+    description:
+      "India International Music Week 2025 Opens Applications for Artists",
+    created_at: "2024-09-06T12:00:00Z",
+    urls: { small: "/news2.svg" },
+    alt_description: "A city skyline",
+    links: {
+      html: "https://rollingstoneindia.com/india-international-music-week-iimw-2025-apply-to-perform/amp/",
+    },
+  },
 
 ];
 

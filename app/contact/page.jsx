@@ -65,8 +65,10 @@ export default function ContactPage() {
 
           {/* image for large devices */}
           <div className="hidden lg:block mr-[10%] mt-[4%]">
-            <Image src="/Tittle.svg" alt="SIde Logo" width={64} height={64} />
-          </div>
+  <Link href="/">
+    <Image src="/Tittle.svg" alt="SIde Logo" width={64} height={64} />
+  </Link>
+</div>
         </header>
       </div>
 
