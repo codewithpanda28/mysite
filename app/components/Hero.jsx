@@ -124,7 +124,7 @@ export default function Page() {
               <div className="text-white  lg:mx-auto">
                 <div className="text-xl  mt-0  md:text-3xl  font-extrabold ">
                   <p className="main-subtitle lg:text-[25px] md:text-3xl  lg:mb-[55px] mb-[35px] text-[18px] text-center ">
-                    INDIA FIRST{" "}
+                    INDIA&apos;S FIRST{" "}
                     <span className="text-[#FE6F00] ">GLOBAL MUSIC</span>{" "}
                     CONFERENCE AND <span> SHOWCASE</span> <span>FESTIVAL.</span>
                   </p>

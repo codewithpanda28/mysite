@@ -75,7 +75,7 @@ Interest: ${formData.interest.join(", ")}`,
         <div className="space-y-8 md:space-y-12">
           <div className="space-y-4">
             <h1 className="news-title text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
-              Get In Touch With Our Team{" "}
+              Get In Touch With Our{" "}
               <span className="text-[#FE6F00]">Team</span>
               <br />
             </h1>
@@ -107,7 +107,7 @@ Interest: ${formData.interest.join(", ")}`,
           </div>
 
           {/* Social Links */}
-          <div className="flex space-x-[45px] items-center">
+          <div className="flex lg:space-x-[45px] space-x-[25px] items-center">
               {[
                 [
                   "linkedin.svg",
