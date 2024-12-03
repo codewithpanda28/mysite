@@ -33,19 +33,19 @@ export default function Footer() {
               <h3 className="text-xl font-bold mb-6 text-white footer-font">
                 OUR PARTNERS
               </h3>
-              <div className="flex flex-row w-[60%] justify-between items-center space-x-4">
-                {[1, 2, 3].map((num) => (
-                  <div key={num} className="w-full">
-                    <Image
-                      src={`footer/image${num}.svg`}
-                      alt={`Partner ${num}`}
-                      width={40}
-                      height={52}
-                      className="w-[40px] max-w-[40px] h-auto"
-                    />
-                  </div>
-                ))}
-              </div>
+        <div className="grid grid-cols-3 gap-4 justify-between items-center">
+  {[1, 2, 3, 4, 5, 6].map((num) => (
+    <div key={num} className="w-1/3 mb-3">
+      <Image
+        src={`footer/image${num}.svg`}
+        alt={`Partner ${num}`}
+        width={40}
+        height={52}
+        className="w-[40px] max-w-[40px] h-auto"
+      />
+    </div>
+  ))}
+</div>
             </div>
 
             {/* Social Media Section */}
@@ -91,11 +91,10 @@ export default function Footer() {
           <nav className="z-10 text-white">
             <ul className="flex flex-col space-y-4">
               {[
-                ["PARTNERS", "#link1"],
-                ["CONTACT", "#link3"],
-                ["SCHEDULE", "#link4"],
-                ["INFO", "#link4"],
-                ["COOKIES", "#link4"],
+                 ["ARTIST", "#link1"],
+                 ["SPEAKER", "#link3"],
+                 ["SCHEDULE", "/info"],
+                 ["CONATCT", "/contact"],
               ].map(([text, href]) => (
                 <li key={text}>
                   <Link
@@ -134,11 +133,11 @@ export default function Footer() {
           <nav className="mt-[75px] mr-[190px] text-white z-20">
             <ul className="flex flex-col space-y-2">
               {[
-                ["PARTNERS", "#link1"],
-                ["CONTACT", "#link3"],
-                ["SCHEDULE", "#link4"],
-                ["INFO", "#link4"],
-                ["COOKIES", "#link4"],
+                ["ARTIST", "#link1"],
+                ["SPEAKER", "#link3"],
+                ["SCHEDULE", "/info"],
+                ["CONATCT", "/contact"],
+               
               ].map(([text, href]) => (
                 <li key={text}>
                   <Link
@@ -160,8 +159,8 @@ export default function Footer() {
             <h3 className="text-2xl font-bold mb-[40px] text-white footer-font">
               OUR PARTNERS
             </h3>
-            <div className="grid grid-cols-4 gap-16 mb-[40px] items-center">
-              {[1, 2, 3].map((num) => (
+            <div className="grid grid-cols-3 gap-16 mb-[40px] items-center">
+              {[1, 2, 3, 4, 5, 6].map((num) => (
                 <div
                   key={num}
                   className="w-full transform transition duration-300 hover:scale-110"

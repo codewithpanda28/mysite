@@ -11,7 +11,7 @@ import Navbar from "./Navbar";
 import Link from "next/link";
 
 const menuItems = [
-  { title: "BUY TICKETS", href: "#" },
+  { title: "BUY TICKETS", href: "/ticket" },
   { title: "LINEUP", href: "#" },
   { title: "EVENT INFO", href: "#" },
   { title: "PARTNERS", href: "#" },
@@ -97,7 +97,7 @@ export default function Page() {
           {/* Center content */}
           <div className="max-w-5xl mx-auto relative z-1 ">
             {/* LINEUP text */}
-            <div className="z-0 absolute inset-0 flex justify-center items-center   w-[100%]">
+            <div className="z-[-1] absolute inset-0 flex justify-center items-center   w-[100%]">
               {/* LINEUP */}
               <Image
                 src="/mainbackground.svg"
@@ -122,7 +122,7 @@ export default function Page() {
               />
 
               <div className="text-white  lg:mx-auto">
-                <div className="text-xl  mt-5  md:text-3xl  font-extrabold ">
+                <div className="text-xl  mt-0  md:text-3xl  font-extrabold ">
                   <p className="main-subtitle lg:text-[25px] md:text-3xl  lg:mb-[55px] mb-[35px] text-[18px] text-center ">
                     INDIA FIRST{" "}
                     <span className="text-[#FE6F00] ">GLOBAL MUSIC</span>{" "}
@@ -157,7 +157,9 @@ export default function Page() {
   {/* button for large devices */}
   <div className="hidden lg:flex lg:justify-center lg:w-full">
     <button className="main-count1 item-[24px] main-btn mt-2 mb-20 bg-[#FE6F00] text-[#FFFFFF] px-8 py-4 rounded-full font-semibold text-xl transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 hover:shadow-2xl hover:cursor-pointer mr-10">
+      <Link href="/ticket">
       BUY TICKETS
+      </Link>
     </button>
 
     <button className="main-count1 item-[24px] main-btn mt-2 mb-20 bg-[#FFFFFF] text-[#FE6F00] px-8 py-4 rounded-full font-semibold text-xl transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 hover:shadow-2xl hover:cursor-pointer">
@@ -169,7 +171,9 @@ export default function Page() {
                   {/* button for small devices */}
                 <div className="fixed inset-x-0 bottom-0 lg:hidden sm:backdrop-blur-md bg-white/20 z-[9999] backdrop-filter backdrop-blur-xl rounded-md">
   <button className="main-count1 item-[24px] main-btn mx-auto bg-[#FE6F00] text-[#FFFFFF] px-10 py-4 rounded-full font-semibold text-xl transition duration-300 ease-in-out transform hover:bg-[#FFFFFF] hover:text-[#FE6F00] hover:scale-105 hover:shadow-lg hover:cursor-pointer w-[90%] ml-[5%] my-5">
-    BUY TICKETS
+  <Link href="/ticket">
+      BUY TICKETS
+      </Link>
   </button>
 
   <button className="main-count1 item-[24px] main-btn mx-auto bg-[#FFFFFF] text-[#FE6F00] px-8 py-4 rounded-full font-semibold text-xl transition duration-300 ease-in-out transform hover:bg-[#FE6F00] hover:text-[#FFFFFF] hover:scale-105 hover:shadow-lg hover:cursor-pointer w-[90%] ml-[5%] mb-5">
@@ -239,7 +243,7 @@ export default function Page() {
           </div>
 
           {/* Right side decoration */}
-          <div className="absolute bottom-24 right-[-35%] h-100vh hidden lg:block">
+          <div className="absolute bottom-2 right-[-34%] h-100vh hidden lg:block">
             <Image
               src="/rightbackground.svg"
               width={1020}

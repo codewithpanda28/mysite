@@ -3,45 +3,43 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import {
-  Facebook,
-  Instagram,
-  Twitter,
-  Mail,
-  Phone,
-  MapPin,
-  Send,
-  Linkedin,
-} from "lucide-react";
+import { Facebook, Instagram, Twitter, Mail, Phone, MapPin, Send, Linkedin } from 'lucide-react';
 import Navbar from "../components/Navbar";
 import Image from "next/image";
 import Link from "next/link";
+import emailjs from '@emailjs/browser';
 
 export default function ContactPage() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const formData = {
-      name: e.target.elements.name.value.toUpperCase(),
+      name: e.target.elements.senderemail.value.toUpperCase(),
       email: e.target.elements.email.value.toUpperCase(),
-      mobile: e.target.elements.mobile.value.toUpperCase(),
+      mobile: e.target.elements.mobileno.value.toUpperCase(),
       message: e.target.elements.message.value.toUpperCase(),
       interest: Array.from(e.target.querySelectorAll('.interest-button[style*="background-color: rgb(254, 111, 0)"]'))
-                      .map(button => button.textContent.trim()),
+                    .map(button => button.textContent.trim()),
     };
 
     if (formData.name && formData.email && formData.mobile && formData.message && formData.interest.length > 0) {
-      // Using fetch to send data
-      await fetch("https://api.emailservice.com/send", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          to: "codewithpanda28@gmail.com",
-          subject: "New Contact Form Submission",
-          body: `Name: ${formData.name}\nEmail: ${formData.email}\nMobile: ${formData.mobile}\nMessage: ${formData.message}\nInterest: ${formData.interest.join(", ")}`,
-        }),
+      // Using emailjs to send data to your Gmail
+      emailjs.send("service_k09wrnl", "template_6y635xg", {
+        to_name: "YOUR_GMAIL_ADDRESS",
+        from_name: formData.name,
+        reply_to: formData.email,
+        message: `Name: ${formData.name}
+Email: ${formData.email}
+Mobile: ${formData.mobile}
+Message: ${formData.message}
+Interest: ${formData.interest.join(", ")}`,
+      }, "9V4RhGDUCUauho_oJ")
+      .then((response) => {
+        alert('Your message has been sent successfully!');
+      }, (error) => {
+        alert('There was an error sending your message. Please try again.');
       });
+    } else {
+      alert('Please fill in all fields and select at least one interest.');
     }
   };
 
@@ -112,15 +110,15 @@ export default function ContactPage() {
           <div className="flex gap-4 pt-8">
             <Link
               href="https://www.linkedin.com/showcase/iimw/?viewAsMember=true"
-              className="w-12 h-12 rounded-full bg-[#FE6F00] flex items-center justify-center hover:bg-[#FE6F00]/80 transition-colors"
+              className="w-12 h-12 rounded-full  flex items-center justify-center hover:bg-[#FE6F00]/80 transition-colors"
             >
-              <Linkedin className="w-6 h-6 text-white" />
+              <img src="footer/linkedin.svg" alt="LinkedIn" className="w-14 h-14" />
             </Link>
             <Link
               href="https://www.instagram.com/iimw.in?igsh=czFocGVuMjZydDJ5"
-              className="w-12 h-12 rounded-full bg-[#FE6F00] flex items-center justify-center hover:bg-[#FE6F00]/80 transition-colors"
+              className="w-12 h-12 rounded-full flex items-center justify-center hover:bg-[#FE6F00]/80 transition-colors"
             >
-              <Instagram className="w-6 h-6 text-white" />
+              <img src="footer/instagram.svg" alt="Instagram" className="w-14 h-14" />
             </Link>
           </div>
         </div>
@@ -219,7 +217,7 @@ export default function ContactPage() {
             <div className="space-y-4">
               <div>
                 <Input
-                  name="name"
+                  name="senderemail"
                   placeholder="Your name"
                   className="contact border-0 border-b border-gray-300 rounded-none px-0 focus-visible:ring-0 focus-visible:border-[#FE6F00]"
                 />
@@ -234,7 +232,7 @@ export default function ContactPage() {
               </div>
               <div>
                 <Input
-                  name="mobile"
+                  name="mobileno"
                   type="number"
                   placeholder="Your mobile number"
                   className="contact border-0 border-b border-gray-300 rounded-none px-0 focus-visible:ring-0 focus-visible:border-[#FE6F00]"
@@ -262,3 +260,4 @@ export default function ContactPage() {
     </div>
   );
 }
+

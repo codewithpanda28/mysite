@@ -24,17 +24,7 @@ const mockData = [
       html: "https://rollingstoneindia.com/india-international-music-week-iimw-2025-apply-to-perform/amp/",
     },
   },
-  {
-    id: 2,
-    description:
-      "India International Music Week 2025 Opens Applications for Artists",
-    created_at: "2024-09-06T12:00:00Z",
-    urls: { small: "/news2.svg" },
-    alt_description: "A city skyline",
-    links: {
-      html: "https://rollingstoneindia.com/india-international-music-week-iimw-2025-apply-to-perform/amp/",
-    },
-  },
+ 
 
 ];
 
@@ -81,17 +71,18 @@ export default function NewsSection() {
 
   const handleNext = () => {
     if (articles.length > 0) {
-      setCurrentIndex((prevIndex) => (prevIndex + 4) % articles.length);
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % articles.length);
       setShowPreviousIcon(true);
     }
   };
 
   const handlePrevious = () => {
     if (articles.length > 0) {
-      setCurrentIndex(
-        (prevIndex) => (prevIndex - 4 + articles.length) % articles.length
-      );
-      setShowPreviousIcon(currentIndex !== 0);
+      setCurrentIndex((prevIndex) => {
+        const newIndex = (prevIndex - 1 + articles.length) % articles.length;
+        setShowPreviousIcon(newIndex !== 0);
+        return newIndex;
+      });
     }
   };
 
@@ -106,47 +97,44 @@ export default function NewsSection() {
         NEWS
       </h1>
 
-      <div className="relative w-full md:w-auto sm:w-full lg:mt-0 ">
-        <div
-          className="flex gap-10 w-full overflow-x-auto custom-scrollbar transition-transform duration-500 ease-in-out"
-          style={{ gap: "40px" }}
-        >
-          {articles.map((article, index) => (
-            <Link
-              key={article.id}
-              href={article.link}
-              className={`group flex-shrink-0 ${
-                index >= currentIndex && index < currentIndex + 3
-                  ? "block"
-                  : "hidden"
-              }`}
-              style={{
-                zIndex:
-                  index >= currentIndex && index < currentIndex + 3 ? 1 : 0,
-              }}
-            >
-              <div className="space-y-4">
-                <div className="w-[416px] h-[276px] mb-[24px] relative overflow">
-                  <Image
-                    src={article.image.src}
-                    alt={article.image.alt || "Image description not available"}
-                    width={400}
-                    height={276}
-                    className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
-                    style={{
-                      transform: "translateZ(0)",
-                      transition: "transform 0.5s, filter 0.5s",
-                    }}
-                  />
-                </div>
-                <h2 className="news-heading text-[20px] font-black tracking-tight upp line-clamp-2">
-                  {article.title}
-                </h2>
-                <div className="news-date text-[20px] ">{article.date}</div>
-              </div>
-            </Link>
-          ))}
+      <div className="relative lg:w-full md:w-auto w-full lg:mt-0 ">
+      <div
+  className="flex gap-10 w-full overflow-x-auto custom-scrollbar transition-transform duration-500 ease-in-out"
+  style={{ gap: "40px" }}
+>
+  {articles.map((article, index) => (
+    <Link
+      key={article.id}
+      href={article.link}
+      className={`group flex-shrink-0 ${
+        index >= currentIndex && index < currentIndex + 3 ? "block" : "hidden"
+      }`}
+      style={{
+        zIndex: index === currentIndex ? 1 : 0,
+      }}
+    >
+      <div className="space-y-4">
+        <div className="w-[416px] h-[276px] mb-[24px] relative overflow">
+          <Image
+            src={article.image.src}
+            alt={article.image.alt || "Image description not available"}
+            width={400}
+            height={276}
+            className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
+            style={{
+              transform: "translateZ(0)",
+              transition: "transform 0.5s, filter 0.5s",
+            }}
+          />
         </div>
+        <h2 className="news-heading text-[20px] font-black tracking-tight upp line-clamp-2">
+          {article.title}
+        </h2>
+        <div className="news-date text-[20px] ">{article.date}</div>
+      </div>
+    </Link>
+  ))}
+</div>
       </div>
 
       <div className="flex justify-center mt-8">
@@ -200,12 +188,10 @@ export default function NewsSection() {
         @media (max-width: 767px) {
           .flex {
             flex-wrap: nowrap;
-            overflow-x: auto;
-            scroll-snap-type: x mandatory;
+            overflow-x: hidden;
           }
           .flex > :global(a) {
             width: 100%;
-            scroll-snap-align: start;
           }
         }
         .custom-scrollbar {
@@ -225,3 +211,4 @@ export default function NewsSection() {
     </div>
   );
 }
+
