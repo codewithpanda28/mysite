@@ -120,7 +120,7 @@ export default function Footer() {
               Enthusiast - There something for everyone!
             </h2>
             <h3 className="text-3xl mb-[24px] footer-font">
-              Lets shape the{" "}
+              Let&apos;s shape the{" "}
               <span className="text-[#FE6F00]">Global Music</span> scene
               together.
             </h3>

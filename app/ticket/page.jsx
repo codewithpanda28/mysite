@@ -79,7 +79,7 @@ export default function Page() {
             {/* Artist lineup */}
             <div className="container h-[100vh] mt-[2%] lg:mx-auto">
             <div className="text-xl  mt-[20%]  md:text-3xl  font-extrabold ">
-                  <p className="main-subtitle lg:text-[42px] md:text-3xl  lg:mt-0 mt-[50%]  lg:mb-[55px] mb-[35px] text-[24px] text-center text-white">
+                  <p className="main-subtitle lg:text-[42px] md:text-3xl  lg:mt-0 mt-[50%]  lg:mb-[55px] mb-[50%]  text-[24px] text-center text-white">
                   &quot;Get ready-tickets go{" "}
                     <span className="text-[#FE6F00] ">live soon!</span>&quot;
                    
