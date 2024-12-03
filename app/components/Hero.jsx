@@ -60,25 +60,25 @@ export default function Page() {
       <div className="lg:pl-0 lg:pb-0 lg:pr-0 lg:pt-0  pt-[120px] pl-[16px]  pr-[16px]">
         <header className="fixed top-0 left-[-8px] right-2 z-50 flex items-center p-2 min-h-[100px] min-w-full sm:justify-between  lg:pl-24 lg:pt-0 lg:left-20 ">
           <div className="text-white text-3xl font-bold ml-8 mt-4 z-10">
-        <Link href="/">
-    <img
-        src="/logo.svg"
-        alt="Description of the image"
-        width="144"
-        height="100"
-    />
-</Link>
+            <Link href="/">
+              <img
+                src="/logo.svg"
+                alt="Description of the image"
+                width="144"
+                height="100"
+              />
+            </Link>
           </div>
 
           {/* navbar */}
           <Navbar />
 
           {/* image for large devices */}
-        <div className="hidden lg:block mr-[10%] mt-[4%]">
-  <Link href="/">
-    <Image src="/Tittle.svg" alt="SIde Logo" width={64} height={64} />
-  </Link>
-</div>
+          <div className="hidden lg:block mr-[10%] mt-[4%]">
+            <Link href="/">
+              <Image src="/Tittle.svg" alt="SIde Logo" width={64} height={64} />
+            </Link>
+          </div>
         </header>
 
         {/* Main content */}
@@ -153,34 +153,30 @@ export default function Page() {
 
                 <div className="flex flex-row mt-12 justify-center items-center gap-5 lg:bg-hidden">
                   {/* button for large devices */}
-                <div className="flex flex-row  justify-center items-center gap-5 lg:bg-hidden">
-  {/* button for large devices */}
-  <div className="hidden lg:flex lg:justify-center lg:w-full">
-    <button className="main-count1 item-[24px] main-btn mt-2 mb-20 bg-[#FE6F00] text-[#FFFFFF] px-8 py-4 rounded-full font-semibold text-xl transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 hover:shadow-2xl hover:cursor-pointer mr-10">
-      <Link href="/ticket">
-      BUY TICKETS
-      </Link>
-    </button>
+                  <div className="flex flex-row  justify-center items-center gap-5 lg:bg-hidden">
+                    {/* button for large devices */}
+                    <div className="hidden lg:flex lg:justify-center lg:w-full">
+                      <button className="main-count1 item-[24px] main-btn mt-2 mb-20 bg-[#FE6F00] text-[#FFFFFF] px-8 py-4 rounded-full font-semibold text-xl transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 hover:shadow-2xl hover:cursor-pointer mr-10">
+                        <Link href="/ticket">BUY TICKETS</Link>
+                      </button>
 
-    <button className="main-count1 item-[24px] main-btn mt-2 mb-20 bg-[#FFFFFF] text-[#FE6F00] px-8 py-4 rounded-full font-semibold text-xl transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 hover:shadow-2xl hover:cursor-pointer">
-      BECOME SPONSOR
-    </button>
-  </div>
-</div>
+                      <button className="main-count1 item-[24px] main-btn mt-2 mb-20 bg-[#FFFFFF] text-[#FE6F00] px-8 py-4 rounded-full font-semibold text-xl transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 hover:shadow-2xl hover:cursor-pointer">
+                        BECOME SPONSOR
+                      </button>
+                    </div>
+                  </div>
 
-                  {/* button for small devices */}
-                <div className="fixed inset-x-0 bottom-0 lg:hidden sm:backdrop-blur-md bg-white/20 z-[9999] backdrop-filter backdrop-blur-xl rounded-md">
-  <button className="main-count1 item-[24px] main-btn mx-auto bg-[#FE6F00] text-[#FFFFFF] px-10 py-4 rounded-full font-semibold text-xl transition duration-300 ease-in-out transform hover:bg-[#FFFFFF] hover:text-[#FE6F00] hover:scale-105 hover:shadow-lg hover:cursor-pointer w-[90%] ml-[5%] my-5">
-  <Link href="/ticket">
-      BUY TICKETS
-      </Link>
+             {/* button for small devices */}
+<div className="fixed inset-x-0 bottom-0 lg:hidden sm:backdrop-blur-md bg-white/20 z-[9999] backdrop-filter backdrop-blur-xl rounded-md">
+  <button className="main-count1 item-[24px] main-btn mx-auto bg-[#FE6F00] text-[#FFFFFF] px-10 py-4 rounded-full font-semibold text-xl transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg hover:cursor-pointer w-[90%] ml-[5%] my-5">
+    <Link href="/ticket">BUY TICKETS</Link>
   </button>
 
-  <button className="main-count1 item-[24px] main-btn mx-auto bg-[#FFFFFF] text-[#FE6F00] px-8 py-4 rounded-full font-semibold text-xl transition duration-300 ease-in-out transform hover:bg-[#FE6F00] hover:text-[#FFFFFF] hover:scale-105 hover:shadow-lg hover:cursor-pointer w-[90%] ml-[5%] mb-5">
+  <button className="main-count1 item-[24px] main-btn mx-auto bg-[#FFFFFF] text-[#FE6F00] px-8 py-4 rounded-full font-semibold text-xl transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg hover:cursor-pointer w-[90%] ml-[5%] mb-5">
     BECOME SPONSOR
   </button>
 </div>
-                </div>
+</div>
 
                 {/* card section */}
                 <section className="news-title mt-[-1%] container mx-auto px-4 lg:py-10 lg:w-[100%] lg:mx-auto">
