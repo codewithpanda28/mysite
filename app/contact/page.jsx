@@ -107,20 +107,32 @@ Interest: ${formData.interest.join(", ")}`,
           </div>
 
           {/* Social Links */}
-          <div className="flex gap-4 pt-8">
-            <Link
-              href="https://www.linkedin.com/showcase/iimw/?viewAsMember=true"
-              className="w-12 h-12 rounded-full  flex items-center justify-center hover:bg-[#FE6F00]/80 transition-colors"
-            >
-              <img src="footer/linkedin.svg" alt="LinkedIn" className="w-14 h-14" />
-            </Link>
-            <Link
-              href="https://www.instagram.com/iimw.in?igsh=czFocGVuMjZydDJ5"
-              className="w-12 h-12 rounded-full flex items-center justify-center hover:bg-[#FE6F00]/80 transition-colors"
-            >
-              <img src="footer/instagram.svg" alt="Instagram" className="w-14 h-14" />
-            </Link>
-          </div>
+          <div className="flex space-x-[45px] items-center">
+              {[
+                [
+                  "linkedin.svg",
+                  "LinkedIn",
+                  "https://www.linkedin.com/showcase/iimw/?viewAsMember=true",
+                ],
+                [
+                  "instagram.svg",
+                  "Instagram",
+                  "https://www.instagram.com/iimw.in?igsh=czFocGVuMjZydDJ5",
+                ],
+              ].map(([src, alt, url]) => (
+                <a href={url} rel="noopener noreferrer" key={alt}>
+                  <div className="w-12 transform transition duration-300 hover:scale-110 hover:-translate-y-2 hover:shadow-lg z-20">
+                    <Image
+                      src={`footer/${src}`}
+                      alt={alt}
+                      width={150}
+                      height={60}
+                      className="w-full h-auto"
+                    />
+                  </div>
+                </a>
+              ))}
+            </div>
         </div>
 
         {/* Right Column - Form */}
