@@ -9,16 +9,16 @@ export default function Footer() {
         <div className="flex flex-col justify-between">
           {/* Left content */}
           <nav className="space-y-4 mt-[40px] max-w-full z-10 text-white">
-            <h2 className="text-xl mb-6 footer-font">
+            <h2 className="text-xl mb-6 main-subtitle">
               Whether you are an Artist, Industry Professional, or Music
               Enthusiast - There something for everyone!
             </h2>
-            <h3 className="text-xl mb-4 footer-font">
+            <h3 className="text-xl mb-4 main-subtitle">
               Let s shape the{" "}
               <span className="text-[#FE6F00]">Global Music</span> scene
               together.
             </h3>
-            <h3 className="text-[13px] footer-font">
+            <h3 className="text-[13px] main-subtitle">
               February 4-6, 2025 | W Goa, India
             </h3>
           </nav>
@@ -30,7 +30,7 @@ export default function Footer() {
           <div className="flex flex-col">
             {/* Partners Section */}
             <div>
-              <h3 className="text-xl font-bold mb-6 text-white footer-font">
+              <h3 className="text-xl font-bold mb-6 text-white main-subtitle">
                 OUR PARTNERS
               </h3>
         <div className="grid grid-cols-3 gap-4 justify-between items-center">
@@ -49,8 +49,8 @@ export default function Footer() {
             </div>
 
             {/* Social Media Section */}
-            <div className="mb-[196px]">
-              <h3 className="text-xl font-bold mb-6 mt-[64px] text-white footer-font">
+            <div className="mb-[110px]">
+              <h3 className="text-xl font-bold mb-6 mt-[64px] text-white main-subtitle">
                 FOLLOW US
               </h3>
               <div className="flex space-x-6 items-center">
@@ -99,7 +99,7 @@ export default function Footer() {
                 <li key={text}>
                   <Link
                     href={href}
-                    className="footer-fontleft block text-base font-bold hover:text-blue-500 transition-all duration-300 transform hover:scale-110 hover:-translate-y-1"
+                    className="main-subtitleleft block text-base font-bold hover:text-blue-500 transition-all duration-300 transform hover:scale-110 hover:-translate-y-1"
                   >
                     {text}
                   </Link>
@@ -115,16 +115,16 @@ export default function Footer() {
         <div className="container mx-auto lg:px-0 py-16 flex flex-row justify-between">
           {/* Left content */}
           <nav className="space-y-5 mt-[80px] max-w-[748px] z-10 text-white">
-            <h2 className="text-2xl mb-[56px] footer-font ">
+            <h2 className="text-2xl mb-[56px] main-subtitle ">
               Whether you are an Artist, Industry Professional, or Music
               Enthusiast - There something for everyone!
             </h2>
-            <h3 className="text-3xl mb-[24px] footer-font">
+            <h3 className="text-3xl mb-[24px] main-subtitle">
               Let&apos;s shape the{" "}
               <span className="text-[#FE6F00]">Global Music</span> scene
               together.
             </h3>
-            <h3 className="text-xl footer-font">
+            <h3 className="text-xl main-subtitle">
               February 4-6, 2025 | W Goa, India
             </h3>
           </nav>
@@ -142,7 +142,7 @@ export default function Footer() {
                 <li key={text}>
                   <Link
                     href={href}
-                    className="footer-fontleft block text-[20px] font-bold hover:text-blue-500 transition-all duration-300 transform hover:scale-110 hover:-translate-y-1"
+                    className="main-subtitle block text-[24px] font-bold hover:text-blue-500 transition-all duration-300 transform hover:scale-110 hover:-translate-y-1"
                   >
                     {text}
                   </Link>
@@ -156,7 +156,7 @@ export default function Footer() {
         <div className="flex flex-row mt-32">
           {/* Partners Section */}
           <div className="mb-0">
-            <h3 className="text-2xl font-bold mb-[40px] text-white footer-font">
+            <h3 className="text-2xl font-bold mb-[40px] text-white main-subtitle">
               OUR PARTNERS
             </h3>
             <div className="grid grid-cols-3 gap-16 mb-[40px] items-center">
@@ -179,7 +179,7 @@ export default function Footer() {
 
           {/* Social Media Section */}
           <div className="ml-48 z-10">
-            <h3 className="text-2xl font-bold mb-[40px] text-white footer-font">
+            <h3 className="text-2xl font-bold mb-[40px] text-white main-subtitle">
               FOLLOW US
             </h3>
             <div className="flex space-x-[40px] items-center">

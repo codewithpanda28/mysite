@@ -51,7 +51,7 @@ function Navbar() {
         >
           <Link
             href="#"
-            className="main-desc block mx-[-30px] px-3 py-3 text-white text-xl transition-all duration-300 bg-[#56AEFF] hover:opacity-100 hover:transform hover:translate-x-[-30px] hover:scale-105 hover:shadow-lg hover:translate-y-1 hover:translate-x-1 whitespace-nowrap overflow-hidden text-ellipsis z-100 hidden md:block"
+            className="main-subtitle block mx-[-30px] px-3 py-3 text-white text-xl transition-all duration-300 bg-[#56AEFF] hover:opacity-100 hover:transform hover:translate-x-[-30px] hover:scale-105 hover:shadow-lg hover:translate-y-1 hover:translate-x-1 whitespace-nowrap overflow-hidden text-ellipsis z-100 hidden md:block"
           >
             FESTIVAL
           </Link>
@@ -63,7 +63,7 @@ function Navbar() {
             <div className="bg-[#56AEFF]">
               <Link
                 href="/artists"
-                className="news-title  block px-5 py-4 mt- text-white hover:bg-black/20 transition-colors"
+                className="main-subtitle  block px-5 py-4 mt- text-white hover:bg-black/20 transition-colors"
                 style={{
                   transition: "transform 0.3s",
                   transform: "translateZ(0)",
@@ -89,7 +89,7 @@ function Navbar() {
         >
           <Link
             href="#"
-            className="main-desc block mx-[-30px] px-3 py-3 text-white text-xl transition-all duration-300 bg-[#fe6f00] hover:opacity-100 hover:transform hover:translate-x-[-30px] hover:scale-105 hover:shadow-lg hover:translate-y-1 hover:translate-x-1 whitespace-nowrap overflow-hidden text-ellipsis z-100 hidden md:block"
+            className="main-subtitle block mx-[-30px] px-3 py-3 text-white text-xl transition-all duration-300 bg-[#fe6f00] hover:opacity-100 hover:transform hover:translate-x-[-30px] hover:scale-105 hover:shadow-lg hover:translate-y-1 hover:translate-x-1 whitespace-nowrap overflow-hidden text-ellipsis z-100 hidden md:block"
           >
             CONFERENCE
           </Link>
@@ -101,7 +101,7 @@ function Navbar() {
             <div className="bg-[#fe6f00] ml-12 ">
               <Link
                 href="/conference-timetable"
-                className="news-title  block px-5 py-3 text-white hover:bg-black/20 transition-colors"
+                className="main-subtitle  block px-5 py-3 text-white hover:bg-black/20 transition-colors"
                 style={{
                   transition: "transform 0.3s",
                   transform: "translateZ(0)",
@@ -127,7 +127,7 @@ function Navbar() {
         >
           <Link
             href="/info"
-            className="main-desc block mx-[-30px] px-3 py-3 text-white text-xl transition-all duration-300 bg-yellow-500 hover:opacity-100 hover:transform hover:translate-x-[-30px] hover:scale-105 hover:shadow-lg hover:translate-y-1 hover:translate-x-1 whitespace-nowrap overflow-hidden text-ellipsis z-100  md:block"
+            className="main-subtitle block mx-[-30px] px-3 py-3 text-white text-xl transition-all duration-300 bg-yellow-500 hover:opacity-100 hover:transform hover:translate-x-[-30px] hover:scale-105 hover:shadow-lg hover:translate-y-1 hover:translate-x-1 whitespace-nowrap overflow-hidden text-ellipsis z-100  md:block"
           >
             INFO
           </Link>
@@ -139,7 +139,7 @@ function Navbar() {
             <div className="bg-yellow-500">
               <Link
                 href="/contact"
-                className="news-title  block px-5 py-3 text-white hover:bg-black/20 transition-colors"
+                className="main-subtitle  block px-5 py-3 text-white hover:bg-black/20 transition-colors"
                 style={{
                   transition: "transform 0.3s",
                   transform: "translateZ(0)",
@@ -156,7 +156,7 @@ function Navbar() {
               </Link>
               <Link
                 href="/info"
-                className="news-title  block px-5 py-3 text-white hover:bg-black/20 transition-colors"
+                className="main-subtitle  block px-5 py-3 text-white hover:bg-black/20 transition-colors"
                 style={{
                   transition: "transform 0.3s",
                   transform: "translateZ(0)",
@@ -177,12 +177,12 @@ function Navbar() {
       </div>
 
       {isMenuOpen && (
-        <div className="fixed inset-0 bg-gradient-to-r from-blue-800 to-purple-600 z-99 flex flex-col items-start justify-start h-screen p-4 w-3/5 md:hidden z-50">
+        <div className="fixed main-subtitle inset-0 bg-gradient-to-r bg-[#56aeff] z-99 flex flex-col items-start justify-start h-screen p-4 w-3/5 md:hidden z-50">
           <div className="w-full">
             <Link
               href="#"
               className={`block w-full px-2 py-2 text-white ${
-                isMenuOpen ? "bg-[#56AEFF]" : ""
+                isMenuOpen ? "bg-[#001B37]" : ""
               } hover:bg-purple-700/80 text-left md:hidden transition-transform transform hover:scale-110 hover:shadow-xl`}
               onClick={(e) => e.preventDefault()}
             >

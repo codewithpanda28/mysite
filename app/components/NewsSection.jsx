@@ -93,7 +93,7 @@ export default function NewsSection() {
       style={{ zIndex: 2 }}
     >
       {/* news heading section */}
-      <h1 className="news-heading lg:ml-[-5%] ml-[16px] lg:mt-0 lg:mr-0  mr-[16px]    text-8xl lg:text-9xl font-black lg:mb-[72px] mb-[32px] tracking-tighter md:pl-[60px]">
+      <h1 className="main-subtitle lg:ml-[-5%] ml-[16px] lg:mt-0 lg:mr-0  mr-[16px]    text-8xl lg:text-[80px] font-black lg:mb-[72px] mb-[32px] tracking-tighter md:pl-[60px]">
         NEWS
       </h1>
 
@@ -127,10 +127,10 @@ export default function NewsSection() {
             }}
           />
         </div>
-        <h2 className="news-heading text-[20px] font-black tracking-tight upp line-clamp-2">
+        <h2 className="main-subtitle text-[20px] font-black tracking-tight upp line-clamp-2">
           {article.title}
         </h2>
-        <div className="news-date text-[20px] ">{article.date}</div>
+        <div className="section-card text-[20px] ">{article.date}</div>
       </div>
     </Link>
   ))}

@@ -70,165 +70,20 @@
 }
 
 
-.buy-ticket{
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 900;
-}
 
-/* .main-heading{
 
-    font-family: "Notable", serif;
-    font-weight: 400;
-    font-style: normal; 
-} */
 
-/* .main-2025{
 
-    font-family: "Modak", system-ui;
-    font-weight: 400;
-    font-style: normal;
-} */
-
-.main-desc{
- font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 900;
-}
 .main-subtitle{
-  font-family: "Montserrat", sans-serif;
+  font-family: "openSansBlack", sans-serif;
   font-optical-sizing: auto;
   font-weight: 900;
-}
-
-.main-count{
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 900;
-  font-style: normal;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-
-}
-.main-count1{
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 900;
-
-
-}
-
-/* .main-btn{
-    font-family: "Bowlby One", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-} */
-
-.main-bottom-h3{
-  font-family: "Anonymous Pro", monospace;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.news-date{
-
-    font-family: "Anonymous Pro", monospace;
-    font-weight: 600;
-    font-size: 15px;
-    font-style: normal;
   
 }
 
-.video-heading{
-  font-family: "Montserrat", sans-serif;
+.section-card{
+  font-family: "Open Sans", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 900;
-  font-style: normal;
-  font-size: 70px;
-  line-height: 100px;
-  margin-left: 15%;
-  margin-top: 12%;
-  font-style: italic;
-}
-
-.newsdiv{
-  position: absolute;
-  z-index: 10;
-}
-
-.news-heading{
-  font-family: "Montserrat", sans-serif;
-  font-weight: 900;
-  font-style: normal;
-}
-
-.news-title{
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 900;
-  font-style: normal;
-}
-
-.news-date{
-  font-family: "Nova Script", system-ui;
   font-weight: 400;
-  font-style: normal;
+  font-size: 16px;
 }
-
-.footer-font{
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.contact{
-  font-family: "Montserrat", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-}
-
-.footer-fontleft{
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 800;
-}
-
-/* .news-h2{
-  font-family: 'fontspring-demo-integral-cf-extra-bold-5', sans-serif;
-  font-weight: 800;
-  font-style: normal;
-} */
-
-/* news section date */
-.news-date {
-  font-family: "Anonymous Pro", monospace;
-  font-weight: 400;
-  font-style: normal;
-}
-.section-card {
-  font-family: "Anonymous Pro", monospace;
-  font-weight: 400;
-  font-style: normal;
-}
-
-/* .footer-nav{
-  position: relative;
-  top: 80px;
-} */
-
-/* .navbar-subnav{
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 600;
-  font-style: normal;
-} */
-
-/* .menu-nav{
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
-} */
-
-
