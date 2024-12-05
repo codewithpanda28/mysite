@@ -177,12 +177,12 @@ function Navbar() {
       </div>
 
       {isMenuOpen && (
-        <div className="fixed main-subtitle inset-0 bg-gradient-to-r bg-[#56aeff] z-99 flex flex-col items-start justify-start h-screen p-4 w-3/5 md:hidden z-50">
+        <div className="fixed main-subtitle inset-0 bg-gradient-to-r bg-[#012e5d] z-99 flex flex-col items-start justify-start h-screen p-4 w-3/5 md:hidden z-50">
           <div className="w-full">
             <Link
               href="#"
               className={`block w-full px-2 py-2 text-white ${
-                isMenuOpen ? "bg-[#001B37]" : ""
+                isMenuOpen ? "bg-[#56aeff]" : ""
               } hover:bg-purple-700/80 text-left md:hidden transition-transform transform hover:scale-110 hover:shadow-xl`}
               onClick={(e) => e.preventDefault()}
             >
@@ -190,7 +190,7 @@ function Navbar() {
             </Link>
             <Link
               href="/artists"
-              className="menu-nav block w-full px-4 py-2 text-white hover:bg-purple-700/80 text-left transition-transform transform hover:scale-110 hover:shadow-xl"
+              className="menu-nav block w-full text-[16px]  px-6 py-4 text-white hover:text-[#56aeff] text-left transition-transform transform "
             >
               ARTISTS
             </Link>
@@ -207,7 +207,7 @@ function Navbar() {
             </Link>
             <Link
               href="/conference-timetable"
-              className="menu-nav block w-full px-4 py-2 text-white hover:bg-purple-700/80 text-left transition-transform transform hover:scale-110 hover:shadow-xl"
+              className="menu-nav block w-full text-[16px]  px-6 py-4 text-white hover:text-[#fe6f00] text-left transition-transform transform "
             >
               SPEAKER
             </Link>
@@ -223,13 +223,13 @@ function Navbar() {
             </Link>
             <Link
               href="/contact"
-              className="menu-nav block w-full px-4 py-2 text-white hover:bg-purple-700/80 text-left transition-transform transform hover:scale-110 hover:shadow-xl"
+              className="menu-nav block w-full text-[16px]  px-6 py-4 text-white hover:text-yellow-500 text-left transition-transform transform"
             >
               CONTACT
             </Link>
             <Link
               href="/info"
-              className="menu-nav block w-full px-4 py-2 text-white hover:bg-purple-700/80 text-left transition-transform transform hover:scale-110 hover:shadow-xl"
+              className="menu-nav block w-full text-[16px] px-6 py-0 text-white hover:text-yellow-500 text-left transition-transform transform "
             >
               SCHEDULE
             </Link>
