@@ -160,8 +160,9 @@ export default function Page() {
                         <Link href="/ticket">BUY TICKETS</Link>
                       </button>
 
-                      <button className="main-subtitle item-[24px] main-btn lg:mt-0 mt-[-10%] mb-20 bg-[#FFFFFF] text-[#FE6F00] px-8 py-4 rounded-full font-semibold text-xl transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 hover:shadow-2xl hover:cursor-pointer">
-                        BECOME SPONSOR
+                      <button className="main-subtitle item-[24px] main-btn lg:mt-2 mt-[-10%] mb-20 bg-[#FFFFFF] text-[#FE6F00] px-8 lg:py-2 py-4 rounded-full font-semibold text-xl transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 hover:shadow-2xl hover:cursor-pointer">
+                      <Link href="/"> BECOME SPONSOR</Link>
+                       
                       </button>
                     </div>
                   </div>

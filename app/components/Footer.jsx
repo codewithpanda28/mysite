@@ -89,7 +89,7 @@ export default function Footer() {
 
           {/* Navigation Section */}
           <nav className="z-10 text-white">
-            <ul className="flex flex-col space-y-4">
+            <ul className="main-subtitle flex flex-col space-y-4">
               {[
                  ["ARTIST", "#link1"],
                  ["SPEAKER", "#link3"],
