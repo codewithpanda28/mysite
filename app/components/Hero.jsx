@@ -81,6 +81,8 @@ export default function Page() {
           </div>
         </header>
 
+        
+
         {/* Main content */}
         <main className="lg:pt-[132px] sm:pt-24 px-4 relative ">
           {/* Left side image */}
@@ -156,14 +158,14 @@ export default function Page() {
                   <div className="flex flex-row  justify-center items-center gap-5 lg:bg-hidden">
                     {/* button for large devices */}
                     <div className="flex justify-center w-full">
-                      <button className="main-subtitle hidden lg:flex item-[24px] main-btn mt-2 mb-20 bg-[#FE6F00] text-[#FFFFFF] px-8 py-4 rounded-full font-semibold text-xl transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 hover:shadow-2xl hover:cursor-pointer mr-10">
+                      <button className="main-subtitle hidden lg:flex item-[24px] main-btn mt-0 mb-16 bg-[#FE6F00] text-[#FFFFFF] px-10 py-5 rounded-full font-semibold text-xl transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 hover:shadow-2xl hover:cursor-pointer mr-10">
                         <Link href="/ticket">BUY TICKETS</Link>
                       </button>
 
-                      <button className="main-subtitle item-[24px] main-btn lg:mt-2 mt-[-10%] mb-20 bg-[#FFFFFF] text-[#FE6F00] px-8 lg:py-2 py-4 rounded-full font-semibold text-xl transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 hover:shadow-2xl hover:cursor-pointer">
+                      {/* <button className="main-subtitle item-[24px] main-btn lg:mt-2 mt-[-10%] mb-20 bg-[#FFFFFF] text-[#FE6F00] px-8 lg:py-2 py-4 rounded-full font-semibold text-xl transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 hover:shadow-2xl hover:cursor-pointer">
                       <Link href="/"> BECOME SPONSOR</Link>
                        
-                      </button>
+                      </button> */}
                     </div>
                   </div>
 

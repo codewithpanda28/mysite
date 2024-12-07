@@ -1,7 +1,7 @@
-// next.config.mjs
-
+// Using ESM export syntax
 export default {
   images: {
-    domains: ['example.com'],
+    domains: ['images.unsplash.com'],
   },
+  // other configurations...
 };
