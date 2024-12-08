@@ -79,6 +79,8 @@ export default function Page() {
               <Image src="/Tittle.svg" alt="SIde Logo" width={64} height={64} />
             </Link>
           </div>
+
+          
         </header>
 
         
@@ -131,6 +133,7 @@ export default function Page() {
                     CONFERENCE AND <span> SHOWCASE</span> <span>FESTIVAL.</span>
                   </p>
                 </div>
+                
 
                 {/* counter
                 <div
