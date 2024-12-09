@@ -50,7 +50,95 @@ function Navbar() {
       },
     },
     {
-      id: 4,
+      id: 5,
+      name: "CHACE",
+      image: "arijit.svg",
+      bio: "Bio for Artist Three.",
+      socialLinks: {
+        facebook: "https://facebook.com/artistthree",
+        instagram: "https://instagram.com/artistthree",
+        spotify: "https://spotify.com/artistthree",
+      },
+    },
+    {
+      id: 6,
+      name: "ARIJIT SINGH",
+      image: "arijit.svg",
+      bio: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt eveniet, aperiam quas cumque quasi molestiae labore voluptatem neque similique optio aliquam aspernatur provident cum dicta reiciendis quo quibusdam perferendis sint minima exercitationem amet libero soluta odio voluptates. Totam quos quidem quo, explicabo nisi commodi exercitationem modi! Explicabo consequatur ducimus ullam ipsam. Saepe quisquam ducimus numquam delectus earum, ad maxime non quam quis alias similique soluta error exercitationem libero repudiandae dolorem hic suscipit tempore harum veniam blanditiis cupiditate rem! Laborum, odio quis. Excepturi odio nesciunt eius ipsam architecto nisi saepe possimus. Illo commodi aliquam a odio, ratione culpa cum ipsum animi?",
+      socialLinks: {
+        facebook: "https://facebook.com/artistone",
+        instagram: "https://instagram.com/artistone",
+        spotify: "https://spotify.com/artistone",
+      },
+    },
+    {
+      id: 7,
+      name: "BOYS NOISE",
+      image: "arijit.svg",
+      bio: "Bio for Artist Two.",
+      socialLinks: {
+        facebook: "https://facebook.com/artisttwo",
+        instagram: "https://instagram.com/artisttwo",
+        spotify: "https://spotify.com/artisttwo",
+      },
+    },
+    {
+      id: 8,
+      name: "ANNA LUNOE",
+      image: "arijit.svg",
+      bio: "Bio for Artist Three.",
+      socialLinks: {
+        facebook: "https://facebook.com/artistthree",
+        instagram: "https://instagram.com/artistthree",
+        spotify: "https://spotify.com/artistthree",
+      },
+    },
+    {
+      id: 9,
+      name: "CHACE",
+      image: "arijit.svg",
+      bio: "Bio for Artist Three.",
+      socialLinks: {
+        facebook: "https://facebook.com/artistthree",
+        instagram: "https://instagram.com/artistthree",
+        spotify: "https://spotify.com/artistthree",
+      },
+    },
+    {
+      id: 10,
+      name: "ARIJIT SINGH",
+      image: "arijit.svg",
+      bio: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt eveniet, aperiam quas cumque quasi molestiae labore voluptatem neque similique optio aliquam aspernatur provident cum dicta reiciendis quo quibusdam perferendis sint minima exercitationem amet libero soluta odio voluptates. Totam quos quidem quo, explicabo nisi commodi exercitationem modi! Explicabo consequatur ducimus ullam ipsam. Saepe quisquam ducimus numquam delectus earum, ad maxime non quam quis alias similique soluta error exercitationem libero repudiandae dolorem hic suscipit tempore harum veniam blanditiis cupiditate rem! Laborum, odio quis. Excepturi odio nesciunt eius ipsam architecto nisi saepe possimus. Illo commodi aliquam a odio, ratione culpa cum ipsum animi?",
+      socialLinks: {
+        facebook: "https://facebook.com/artistone",
+        instagram: "https://instagram.com/artistone",
+        spotify: "https://spotify.com/artistone",
+      },
+    },
+    {
+      id: 11,
+      name: "BOYS NOISE",
+      image: "arijit.svg",
+      bio: "Bio for Artist Two.",
+      socialLinks: {
+        facebook: "https://facebook.com/artisttwo",
+        instagram: "https://instagram.com/artisttwo",
+        spotify: "https://spotify.com/artisttwo",
+      },
+    },
+    {
+      id: 12,
+      name: "ANNA LUNOE",
+      image: "arijit.svg",
+      bio: "Bio for Artist Three.",
+      socialLinks: {
+        facebook: "https://facebook.com/artistthree",
+        instagram: "https://instagram.com/artistthree",
+        spotify: "https://spotify.com/artistthree",
+      },
+    },
+    {
+      id: 13,
       name: "CHACE",
       image: "arijit.svg",
       bio: "Bio for Artist Three.",
@@ -181,7 +269,7 @@ function Navbar() {
           {/* artist Detail  */}
 
           <div
-            className={`fixed inset-y-0 lg:right-[31%] right-0  z-[9999] h-full transition-all duration-300 ease-in-out ${
+            className={`fixed inset-y-0 lg:right-[30%] right-0  z-[9999] h-full transition-all duration-300 ease-in-out ${
               selectedArtist
                 ? "w-full lg:max-w-[50%] max-w-[85%] bg-[#001B37] animate-slideInRight"
                 : "w-0 max-w-0  "
