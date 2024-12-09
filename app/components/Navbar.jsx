@@ -4,15 +4,10 @@ import { useState } from "react";
 import {
   XCircle,
   Menu,
-  LucideX,
-  ChevronLeft,
   Facebook,
   Instagram,
   Music2,
   AirplayIcon as Spotify,
-  ChevronRight,
-  ArrowLeft,
-  ArrowRight,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -23,9 +18,9 @@ function Navbar() {
   const [artists, setArtists] = useState([
     {
       id: 0,
-      name: "Artist One",
-      image: "news1.svg",
-      bio: "Bio for Artist One.",
+      name: "ARIJIT SINGH",
+      image: "arijit.svg",
+      bio: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt eveniet, aperiam quas cumque quasi molestiae labore voluptatem neque similique optio aliquam aspernatur provident cum dicta reiciendis quo quibusdam perferendis sint minima exercitationem amet libero soluta odio voluptates. Totam quos quidem quo, explicabo nisi commodi exercitationem modi! Explicabo consequatur ducimus ullam ipsam. Saepe quisquam ducimus numquam delectus earum, ad maxime non quam quis alias similique soluta error exercitationem libero repudiandae dolorem hic suscipit tempore harum veniam blanditiis cupiditate rem! Laborum, odio quis. Excepturi odio nesciunt eius ipsam architecto nisi saepe possimus. Illo commodi aliquam a odio, ratione culpa cum ipsum animi?",
       socialLinks: {
         facebook: "https://facebook.com/artistone",
         instagram: "https://instagram.com/artistone",
@@ -34,8 +29,8 @@ function Navbar() {
     },
     {
       id: 1,
-      name: "Artist Two",
-      image: "news2.svg",
+      name: "BOYS NOISE",
+      image: "arijit.svg",
       bio: "Bio for Artist Two.",
       socialLinks: {
         facebook: "https://facebook.com/artisttwo",
@@ -45,19 +40,8 @@ function Navbar() {
     },
     {
       id: 2,
-      name: "Artist Three",
-      image: "news3.svg",
-      bio: "Bio for Artist Three.",
-      socialLinks: {
-        facebook: "https://facebook.com/artistthree",
-        instagram: "https://instagram.com/artistthree",
-        spotify: "https://spotify.com/artistthree",
-      },
-    },
-    {
-      id: 3,
-      name: "Artist Three",
-      image: "news1.svg",
+      name: "ANNA LUNOE",
+      image: "arijit.svg",
       bio: "Bio for Artist Three.",
       socialLinks: {
         facebook: "https://facebook.com/artistthree",
@@ -67,8 +51,8 @@ function Navbar() {
     },
     {
       id: 4,
-      name: "Artist Three",
-      image: "news2.svg",
+      name: "CHACE",
+      image: "arijit.svg",
       bio: "Bio for Artist Three.",
       socialLinks: {
         facebook: "https://facebook.com/artistthree",
@@ -76,50 +60,7 @@ function Navbar() {
         spotify: "https://spotify.com/artistthree",
       },
     },
-    {
-      id: 5,
-      name: "Artist Three",
-      image: "news3.svg",
-      bio: "Bio for Artist Three.",
-      socialLinks: {
-        facebook: "https://facebook.com/artistthree",
-        instagram: "https://instagram.com/artistthree",
-        spotify: "https://spotify.com/artistthree",
-      },
-    },
-    {
-      id: 6,
-      name: "Artist Three",
-      image: "news1.svg",
-      bio: "Bio for Artist Three.",
-      socialLinks: {
-        facebook: "https://facebook.com/artistthree",
-        instagram: "https://instagram.com/artistthree",
-        spotify: "https://spotify.com/artistthree",
-      },
-    },
-    {
-      id: 7,
-      name: "Artist Three",
-      image: "news2.svg",
-      bio: "Bio for Artist Three.",
-      socialLinks: {
-        facebook: "https://facebook.com/artistthree",
-        instagram: "https://instagram.com/artistthree",
-        spotify: "https://spotify.com/artistthree",
-      },
-    },
-    {
-      id: 8,
-      name: "Artist Three",
-      image: "news3.svg",
-      bio: "Bio for Artist Three.",
-      socialLinks: {
-        facebook: "https://facebook.com/artistthree",
-        instagram: "https://instagram.com/artistthree",
-        spotify: "https://spotify.com/artistthree",
-      },
-    },
+
   ]);
 
   const [isOpen, setIsOpen] = useState(false);
@@ -128,6 +69,12 @@ function Navbar() {
 
   const togglePopup = () => {
     setIsOpen(!isOpen);
+  };
+
+  const closeArtistDetails = () => {
+    setIsPanelOpen(false);
+    setSelectedArtist(null);
+    setIsMenuOpen(false); // Close the side navbar
   };
 
   return (
@@ -187,31 +134,28 @@ function Navbar() {
           </div>
 
           {/* artist-image */}
-        <button
-  onClick={() => {
-    setIsPanelOpen(false);
-    setSelectedArtist(null);
-  }}
-  className={`absolute right-[-130%] top-[500%] px-3 py-3 rounded-full bg-white text-black transform transition-all duration-300 z-50 ${
-    !isPanelOpen ? "hidden" : ""
-  }`}
-  style={{ zIndex: 1000 }}
->
-  <Image
-    src="closeicon.svg"
-    alt="Button Image"
-    className="drop-shadow-md hover:drop-shadow-lg"
-    width={30}
-    height={30}
-  />
-</button>
+          <button
+            onClick={closeArtistDetails}
+            className={`absolute lg:right-[-130%] right-[-175px] top-[-80px] lg:top-[500%] px-3 py-3 rounded-full bg-white text-black transform transition-all duration-300 z-1000  ${
+              !isPanelOpen ? "hidden" : ""
+            }`}
+            style={{ zIndex: 99999 }}
+          >
+            <Image
+              src="closeicon.svg"
+              alt="Button Image"
+              className="drop-shadow-md hover:drop-shadow-lg"
+              width={30}
+              height={30}
+            />
+          </button>
           <div
-            className={` fixed inset-y-0 left-0 w-[70%] min-h-[100vh] h-[100vh] max-h-[100vh] bg-[#6046FF] transform transition-transform duration-100 ease-in-out z-40 overflow-y-auto ${
+            className={` fixed inset-y-0  left-0 lg:w-[70%] w-[100%] min-h-[100vh] h-[100vh] max-h-[100vh] bg-[#001B37] transform transition-transform duration-100 ease-in-out z-[9999] overflow-y-auto ${
               isPanelOpen ? "translate-x-0" : "-translate-x-full"
             }`}
           >
             <div className="p-0">
-              <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap- mt-0">
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap- mt-0">
                 {artists.map((artist) => (
                   <button
                     key={artist.id} // Use the unique id as the key
@@ -225,7 +169,7 @@ function Navbar() {
                       fill
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                  <h2 className="main-subtitle uppercase absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white text-[20px] font-bold w-[100%]">
+                    <h2 className="main-subtitle uppercase absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white text-[22px] font-bold w-[100%]">
                       {artist.name}
                     </h2>
                   </button>
@@ -237,22 +181,25 @@ function Navbar() {
           {/* artist Detail  */}
 
           <div
-            className={`fixed inset-y-0 right-[31%] h-full transition-all duration-300 ease-in-out ${
+            className={`fixed inset-y-0 lg:right-[31%] right-0  z-[9999] h-full transition-all duration-300 ease-in-out ${
               selectedArtist
-                ? "w-full max-w-[40%] bg-[#6046FF] animate-slideInRight"
+                ? "w-full lg:max-w-[50%] max-w-[85%] bg-[#001B37] animate-slideInRight"
                 : "w-0 max-w-0  "
             } z-50`}
           >
             {selectedArtist && (
-          <button
-  onClick={() => setSelectedArtist(null)}
-  className="absolute left-[-15%] top-[7%] bg-white text-black rounded-full p-2 flex items-center justify-center transform transition-all duration-300 hover:scale-110 hover:translate-z-4 hover:shadow-lg"
->
-  <Image src="arrowicon.svg"
-  width={30}
-  height={30}
-  alt="Arrow Right" className="w-7" />
-</button>
+              <button
+                onClick={() => setSelectedArtist(null)}
+                className="absolute left-[-15%] top-[7%] bg-white text-black rounded-full p-2 flex items-center justify-center transform transition-all duration-300 hover:scale-110 hover:translate-z-4 hover:shadow-lg"
+              >
+                <Image
+                  src="arrowicon.svg"
+                  width={30}
+                  height={30}
+                  alt="Arrow Right"
+                  className="w-7"
+                />
+              </button>
             )}
             {selectedArtist && (
               <div className="w-full h-full overflow-y-auto">
@@ -260,18 +207,20 @@ function Navbar() {
                   <Image
                     src={selectedArtist.image}
                     alt={selectedArtist.name}
-                    className="object-cover p-14 w-full h-full"
+                    className="object-cover lg:p-10 p-6 w-full h-full"
                     fill
                   />
                 </div>
 
-                <div className="p-14 text-white h-1/2 mt-[-14%]">
-                  <h1 className="main-subtitle text-4xl font-bold mb-6 ">
+                <div className="lg:p-10 p-6 text-white h-1/2 lg:mt-[-6%] mt-[-8%]">
+                  <h1 className="main-subtitle lg:text-4xl text-[25px] font-bold lg:mb-6 mb-2 ">
                     {selectedArtist.name}
                   </h1>
-                  <p className="section-card text-lg mb-8">{selectedArtist.bio}</p>
+                  <p className="section-card text-lg mb-8">
+                    {selectedArtist.bio}
+                  </p>
 
-                  <div className="flex gap-0">
+                  <div className="flex ml-[-3%]">
                     <a
                       href={selectedArtist.socialLinks.spotify}
                       target="_blank"
@@ -412,122 +361,12 @@ function Navbar() {
             >
               FESTIVAL
             </Link>
-            <Link
-              href="/artists"
-              className="menu-nav block w-full text-[16px]  px-6 py-4 text-white hover:text-[#56aeff] text-left transition-transform transform "
+            <button
+              onClick={() => setIsPanelOpen(true)}
+              className="menu-nav block w-full text-[16px] px-6 py-4 text-white hover:text-[#56aeff] text-left transition-transform transform"
             >
               ARTISTS
-            </Link>
-
-            {/* Main Artist Grid Panel */}
-            <div
-              className={` fixed inset-y-0 left-0 w-[60%] min-h-[100vh] h-[100vh] max-h-[100vh] bg-[#6046FF] transform transition-transform duration-500 ease-in-out z-40 overflow-y-auto ${
-                isPanelOpen ? "translate-x-0" : "-translate-x-full"
-              }`}
-            >
-              <div className="p-0">
-                <button
-                  onClick={() => setIsPanelOpen(false)}
-                  className="absolute right-4 top-2 text-white transform transition-all duration-300 
-  hover:scale-110 hover:rotate-12 hover:translate-y-[-2px] hover:translate-x-[2px]
-  hover:opacity-75 hover:shadow-lg hover:shadow-white/30
-  active:scale-95 active:rotate-0 active:translate-y-[1px]
-  motion-safe:animate-pulse
-  perspective-1000 hover:preserve-3d
-  border border-white/20 rounded-lg p-1
-  backdrop-blur-sm bg-white/10"
-                >
-                  <XCircle
-                    size={24}
-                    className="drop-shadow-md hover:drop-shadow-lg"
-                  />
-                </button>
-
-                <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1 mt-12">
-                  {artists.map((artist) => (
-                    <button
-                      key={artist.id} // Use the unique id as the key
-                      className="relative aspect-square overflow-hidden group"
-                      onClick={() => setSelectedArtist(artist)}
-                    >
-                      <img
-                        src={artist.image}
-                        alt={artist.name}
-                        className="object-cover transition-transform duration-300 group-hover:scale-110"
-                        style={{ width: "100%", height: "100%" }}
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                      <h2 className="absolute bottom-4 left-4 text-white text-xl font-bold">
-                        {artist.name}
-                      </h2>
-                    </button>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            {/* Artist Detail Panel */}
-            <div
-              className={`fixed inset-y-0 right-0 h-full w-full max-w-[40%] bg-[#6046FF] transform transition-transform duration-500 ease-in-out z-50 ${
-                selectedArtist ? "translate-x-0" : "translate-x-full"
-              }`}
-            >
-              {selectedArtist && (
-                <div className="w-full h-full overflow-y-auto">
-                  <div className="relative w-full h-1/2">
-                    <img
-                      src={selectedArtist.image}
-                      alt={selectedArtist.name}
-                      className="object-cover w-full h-full"
-                      style={{ width: "100%", height: "100%" }}
-                    />
-                    <button
-                      onClick={() => setSelectedArtist(null)}
-                      className="absolute left-0 top-[0%] text-white flex items-center justify-center transform transition-all duration-300 hover:scale-110 hover:translate-z-4 hover:shadow-lg"
-                    >
-                      <ChevronRight className="w-14 h-14 animate-pulse " />
-                    </button>
-                  </div>
-
-                  <div className="p-8 text-white h-1/2">
-                    <h1 className="text-4xl font-bold mb-6">
-                      {selectedArtist.name}
-                    </h1>
-                    <p className="text-lg mb-8">{selectedArtist.bio}</p>
-
-                    <div className="flex gap-4">
-                      <a
-                        href={selectedArtist.socialLinks.spotify}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="hover:opacity-75 transition-opacity"
-                      >
-                        <Spotify size={24} />
-                      </a>
-                      <a
-                        href={selectedArtist.socialLinks.facebook}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="hover:opacity-75 transition-opacity"
-                      >
-                        <Facebook size={24} />
-                      </a>
-                      <a
-                        href={selectedArtist.socialLinks.instagram}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="hover:opacity-75 transition-opacity"
-                      >
-                        <Instagram size={24} />
-                      </a>
-                      <button className="hover:opacity-75 transition-opacity">
-                        <Music2 size={24} />
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              )}
-            </div>
+            </button>
           </div>
           <div className="w-full">
             <Link
