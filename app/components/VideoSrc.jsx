@@ -32,7 +32,7 @@ export default function Home() {
       </video>
       {/* //summer sarted here */}
 
-      <div className="relative z-1 flex h-full flex-col items-center justify-center">
+      <div className="relative z-1 ml-[-5%] flex h-full flex-col items-center justify-center">
         <Image
           src="logo.svg"
           width={246}

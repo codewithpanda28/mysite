@@ -22,7 +22,7 @@ function Navbar() {
       image: "arijit.svg",
       bio: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt eveniet, aperiam quas cumque quasi molestiae labore voluptatem neque similique optio aliquam aspernatur provident cum dicta reiciendis quo quibusdam perferendis sint minima exercitationem amet libero soluta odio voluptates. Totam quos quidem quo, explicabo nisi commodi exercitationem modi! Explicabo consequatur ducimus ullam ipsam. Saepe quisquam ducimus numquam delectus earum, ad maxime non quam quis alias similique soluta error exercitationem libero repudiandae dolorem hic suscipit tempore harum veniam blanditiis cupiditate rem! Laborum, odio quis. Excepturi odio nesciunt eius ipsam architecto nisi saepe possimus. Illo commodi aliquam a odio, ratione culpa cum ipsum animi?",
       socialLinks: {
-        facebook: "https://facebook.com/artistone",
+        facebook: "https://www.linkedin.com/in/codewithpanda28/",
         instagram: "https://instagram.com/artistone",
         spotify: "https://spotify.com/artistone",
       },
@@ -148,12 +148,12 @@ function Navbar() {
         spotify: "https://spotify.com/artistthree",
       },
     },
-
   ]);
 
   const [isOpen, setIsOpen] = useState(false);
   const [isPanelOpen, setIsPanelOpen] = useState(false); // Added state for panel open
   const [selectedArtist, setSelectedArtist] = useState(null); // Added state for selected artist
+  const [selectedSpeaker, setSelectedSpeaker] = useState(null); // Added state for selected speaker
 
   const togglePopup = () => {
     setIsOpen(!isOpen);
@@ -162,6 +162,12 @@ function Navbar() {
   const closeArtistDetails = () => {
     setIsPanelOpen(false);
     setSelectedArtist(null);
+    setIsMenuOpen(false); // Close the side navbar
+  };
+
+  const closeSpeakerDetails = () => {
+    setIsPanelOpen(false);
+    setSelectedSpeaker(null);
     setIsMenuOpen(false); // Close the side navbar
   };
 
@@ -285,7 +291,7 @@ function Navbar() {
                   width={30}
                   height={30}
                   alt="Arrow Right"
-                  className="w-7"
+                  className="w-7 "
                 />
               </button>
             )}
@@ -360,9 +366,9 @@ function Navbar() {
             }`}
           >
             <div className="bg-[#fe6f00] ml-12 ">
-              <Link
-                href="/conference-timetable"
-                className="main-subtitle  block px-5 py-3 text-white hover:bg-black/20 transition-colors"
+              <button
+                onClick={() => setIsPanelOpen(true)}
+                className="main-subtitle block px-5 py-3 text-white hover:bg-black/20 transition-colors"
                 style={{
                   transition: "transform 0.3s",
                   transform: "translateZ(0)",
@@ -376,7 +382,7 @@ function Navbar() {
                 }
               >
                 SPEAKER
-              </Link>
+              </button>
             </div>
           </div>
         </div>
@@ -466,12 +472,12 @@ function Navbar() {
             >
               CONFERENCE
             </Link>
-            <Link
-              href="/conference-timetable"
+            <button
+              onClick={() => setIsPanelOpen(true)}
               className="menu-nav block w-full text-[16px]  px-6 py-4 text-white hover:text-[#fe6f00] text-left transition-transform transform "
             >
               SPEAKER
-            </Link>
+            </button>
           </div>
           <div className="w-full">
             <Link
